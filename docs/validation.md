@@ -5,7 +5,7 @@ This package is a generalized battery-paper writing skill. It contains no user m
 ## Structure and helper checks
 
 - The installed skill passed the available skill-creator structural validator.
-- The portable repository helper tests were actually executed: **22 tests, zero failures or errors**.
+- The portable repository helper tests were actually executed: **50 tests (22 original plus 28 logic regressions), zero failures or errors**.
 - The tests cover the recorded 60-work threshold, date boundaries and precision, duplicate-source counting, non-overwriting initialization, legacy-policy warnings, ID resolution, and exact sentence-to-paragraph consistency.
 - Internal documentation links and UTF-8 files were checked.
 - The public package was checked for local absolute paths, credential-like tokens, and unintended manuscript/data files; no such content was selected for publication.
@@ -30,3 +30,7 @@ python -X utf8 -m unittest discover -s tests -p "test_*.py" -v
 ~~~
 
 No external Python packages or network are needed for the helper tests. Source-paper research and document operations use whichever authorized tools are available in the host environment.
+
+## Subsequent logic audit
+
+A third independent usage scenario exercised author-confirmed experimental methods with intentionally missing parameters. It exposed a basis-classification gap; the gap was corrected and its unchanged delivery records were rechecked successfully. The expanded record probes, fixes and check boundaries are documented in [logic-audit.md](logic-audit.md).

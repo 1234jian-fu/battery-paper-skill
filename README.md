@@ -7,9 +7,9 @@
 ## 核心功能
 
 - 图间职责、图内证据、段落和句间逻辑联动。
-- 新稿按整篇累计至少60篇滚动近五年相关原始研究，按图和表达任务定向核读。
+- 新稿默认按整篇累计至少60篇滚动近五年相关原始研究，按图和表达任务定向核读。
 - 原文英文→中文含义→本稿表达的多对多映射，区分表达示范与正式引用。
-- 机理解释M、测试结果T、衔接组织L分类，说明每句用途、前后关系及改写操作。
+- 机理解释M、技术描述/证据T、衔接组织L分类（方法与结果分子类），说明每句用途、前后关系及改写操作。
 - 中文审阅和英文重构，保护材料状态、物理量、条件、比较方向及判断强度。
 - 最后一次学术自然化后回填报表，最终句表与正文逐字一致。
 - 项目接续、确认/候选版本、作者取舍和锁定范围；局部修改不重跑全流程。
@@ -75,7 +75,7 @@ python scripts/paper_workbench.py delivery-check --project-dir PROJECT --file DE
 python -X utf8 -m unittest discover -s tests -p "test_*.py" -v
 ~~~
 
-初始化只补缺，不覆盖已有记录。旧政策会被报告为needs_policy_update，不静默改成新政策。按对应命令--help查看参数；完整示例见[helper schema](docs/helper-schema-and-tests.md)。
+初始化只补缺，不覆盖已有记录。无明确作者变更依据的旧政策会被报告为needs_policy_update，不静默改成新政策；作者自定数量或时窗须记录明确决定，脚本分别报告默认与实际有效政策。按对应命令--help查看参数；完整示例见[helper schema](docs/helper-schema-and-tests.md)。
 
 ## 依赖与边界
 
@@ -87,4 +87,4 @@ Skill内置领域规则与流程。Nature、ARS、SciPilot、humanizer等技能�
 
 ## 设计与验证
 
-见[设计与规则分工](references/skill-integration.md)、[验证范围](docs/validation.md)和[辅助测试结果](docs/helper-test-summary.json)。
+见[设计与规则分工](references/skill-integration.md)、[验证范围](docs/validation.md)和[辅助测试结果](docs/helper-test-summary.json)及[逻辑审查与修复](docs/logic-audit.md)。

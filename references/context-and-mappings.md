@@ -13,7 +13,7 @@ Skill只保存方法，不自带用户研究的实验事实。每稿的工作目
 | issues.md | 冲突来源、影响句/结论、回答与验证状态、下一步 |
 | drafts/ | 候选/确认段落、图注、逐句报表和交付记录，按部分与版本保存 |
 
-初始化仅新建缺失项，保留已有记录。默认corpus_policy为minimum=60,target=60,recent_years=5；旧项目不自动改写，明确报告needs_policy_update，由已授权的政策迁移同步并留下决定。
+初始化仅新建缺失项，保留已有记录。默认corpus_policy为minimum=60,target=60,recent_years=5；旧项目不自动改写，明确报告needs_policy_update，由已授权的政策迁移同步并留下决定。作者明确改用其他数量/时窗时，另记录corpus_policy_override的authorized_by=user和非空decision_ref；脚本仅据记录采用自定政策，不验证用户授权真实性。
 
 阶段：scoped→evidence_mapped→sources_mapped→drafted→checked→author_accepted→assembled；新证据影响旧稿可标needs_recheck并保留旧接受记录。checked仅表示所记录检查范围完成，不等于实验证实、全文无误或作者接受。各小节状态独立。
 
@@ -35,7 +35,7 @@ sources.json为对象，items是来源卡列表。计数最低字段见[近期�
 
 read_scope可用metadata_only、secondary_record_only、abstract、relevant_body、full_main_text、full_main_and_SI、unknown。获取文件不等于阅读；只读旧卡标secondary_record_only，继承记录不冒称本轮亲读。可复用可追溯且仍有效的核读，不要求每图从头通读。
 
-自己的观察、来源结构、文献事实和作者组织分开；正式引用与表达示范来源分栏。必要短摘连续、准确、定位明确，遵循来源使用限制。
+自己的观察、来源结构、文献事实和作者组织分开；方法或原稿来自作者提供/确认时可用author_provided/author_confirmed记录，不强行归为实测观察，也不等于原始数据已核验。正式引用与表达示范来源分栏。必要短摘连续、准确、定位明确，遵循来源使用限制。
 
 ## 辅助命令
 
@@ -53,6 +53,6 @@ python scripts/paper_workbench.py delivery-check --project-dir PROJECT --file DE
 
 count可按start-marker/end-marker限定正文；完整参数用相应命令--help查看。正文与图注分别计数，默认去空白字符数含英文/标点，另列汉字数；英文另列词数。分句程序不是科学质量评价。
 
-init不覆盖现有内容；status/check为记录结构检查；corpus按来源卡声明的核验与阅读字段统计，不能证明确实读懂、日期真实或研究相关；delivery-check比较最终句表和正文及ID引用，不能验证语义。若旧项目政策不同，报告差异而不静默升级。
+init不覆盖现有内容；status/check为记录结构检查；corpus按来源卡声明的核验与阅读字段统计，不能证明确实读懂、日期真实或研究相关；重复来源ID和无效结构不能被数量达标掩盖。delivery-check比较交付JSON内部的最终句表和段落及ID引用，不能验证语义，也不自动读取实际Markdown/Word交付，另存正文须再逐字核对。若旧项目政策不同，报告差异而不静默升级。
 
 结束当前任务前保存当前源版本、确认稿、候选、未决问题、保护范围、下一步。下次从此继续，不重复全部检索和问答。

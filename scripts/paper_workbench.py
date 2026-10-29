@@ -24,7 +24,8 @@ STAGES = {
 }
 REQUIRED_FILES = ("project.json", "evidence.json", "sources.json", "decisions.md", "issues.md")
 DEFAULT_CORPUS_POLICY = {"minimum": 60, "target": 60, "recent_years": 5}
-NO_SOURCE_BASES = {"own_observation", "author_transition", "retained_accepted"}
+EVIDENCE_BASES = {"own_observation", "author_provided", "author_confirmed", "own_calculation"}
+NO_SOURCE_BASES = EVIDENCE_BASES | {"author_transition", "retained_accepted"}
 STRUCTURE_NOTE = "仅检查记录和字段结构，不判断实验真实性、引文准确性、语义保留或科学结论。"
 
 
@@ -54,13 +55,25 @@ def policy_audit(project):
         valid = (all(isinstance(value, int) and not isinstance(value, bool) and value > 0
                      for value in numbers) and numbers[1] >= numbers[0])
     compatible = valid and all(recorded.get(key) == value for key, value in DEFAULT_CORPUS_POLICY.items())
+    marker = project.get("corpus_policy_override")
+    authorized = (isinstance(marker, dict) and marker.get("authorized_by") == "user"
+                  and nonempty_string(marker.get("decision_ref")))
+    applied = bool(valid and authorized)
+    effective = ({key: recorded[key] for key in DEFAULT_CORPUS_POLICY}
+                 if applied else dict(DEFAULT_CORPUS_POLICY))
+    needs_update = not compatible and not applied
     return {
         "recorded_policy": recorded,
         "required_policy": dict(DEFAULT_CORPUS_POLICY),
         "recorded_policy_numbers_valid": valid,
-        "needs_policy_update": not compatible,
-        "policy_status": "current" if compatible else "needs_policy_update",
-        "policy_note": "原政策只读保留；政策更新须显式编辑并记录作者决定，工具不会自动迁移。",
+        "default_policy": dict(DEFAULT_CORPUS_POLICY),
+        "effective_policy": effective,
+        "effective_policy_source": "authorized_user_override" if applied else "skill_default",
+        "policy_override_applied": applied,
+        "policy_override_status": "authorized" if applied else "absent" if marker is None else "invalid_or_unusable",
+        "needs_policy_update": needs_update,
+        "policy_status": "authorized_override" if applied else "needs_policy_update" if needs_update else "current",
+        "policy_note": "原政策只读保留；自定政策仅在有效corpus_policy及authorized_by=user、非空decision_ref标记同时存在时生效，工具不会自动迁移。",
     }
 
 
@@ -88,7 +101,7 @@ def window_for(as_of, years=5):
 
 
 def publication_interval(item):
-    raw = item.get("publication_date") or item.get("first_online_date") or item.get("year")
+    raw = item.get("first_online_date") or item.get("publication_date") or item.get("year")
     token = str(raw or "").strip()
     try:
         if re.fullmatch(r"\d{4}", token):
@@ -125,7 +138,38 @@ def source_identity(item):
     doi = normalize_doi(item.get("doi"))
     if doi and re.fullmatch(r"10\.\d{4,9}/\S+", doi):
         return "doi:" + doi
-    return "work:" + str(item["unique_work_id"]) if item.get("unique_work_id") else None
+    return "work:" + item["unique_work_id"] if nonempty_string(item.get("unique_work_id")) else None
+
+
+def canonical_work_identities(records):
+    """Join DOI/work-ID aliases without discarding either explicit identity."""
+    parents, aliases = {}, []
+
+    def find(token):
+        parents.setdefault(token, token)
+        if parents[token] != token:
+            parents[token] = find(parents[token])
+        return parents[token]
+
+    for item in records:
+        tokens = []
+        doi = normalize_doi(item.get("doi"))
+        if doi and re.fullmatch(r"10\.\d{4,9}/\S+", doi):
+            tokens.append("doi:" + doi)
+        if nonempty_string(item.get("unique_work_id")):
+            tokens.append("work:" + item["unique_work_id"])
+        aliases.append(tokens)
+        for token in tokens:
+            find(token)
+        if len(tokens) == 2:
+            left, right = find(tokens[0]), find(tokens[1])
+            parents[max(left, right)] = min(left, right)
+    return [find(tokens[0]) if tokens else None for tokens in aliases]
+
+
+def valid_locations(value):
+    return nonempty_string(value) or (isinstance(value, list) and bool(value)
+                                     and all(nonempty_string(location) for location in value))
 
 
 def source_qualification(item, first, last):
@@ -135,6 +179,8 @@ def source_qualification(item, first, last):
         reasons.append("missing_source_id")
     if not source_identity(item):
         reasons.append("missing_verified_work_identity")
+    if "unique_work_id" in item and not nonempty_string(item["unique_work_id"]):
+        reasons.append("invalid_unique_work_id")
     if item.get("source_type") not in {"primary_research", "methods_research"}:
         reasons.append("not_identified_as_primary_research")
     if item.get("bibliographic_status") != "verified":
@@ -147,7 +193,7 @@ def source_qualification(item, first, last):
         reasons.append("publication_date_not_source_verified")
     if item.get("date_basis") not in {"publisher_first_online", "publisher_formal_publication"}:
         reasons.append("formal_first_publication_basis_missing")
-    if item.get("topical_fit") not in {"direct", "shared_test"} or not item.get("fit_reason"):
+    if item.get("topical_fit") not in {"direct", "shared_test"} or not nonempty_string(item.get("fit_reason")):
         reasons.append("task_fit_not_established")
     scopes = item.get("read_scope", [])
     scopes = [scopes] if isinstance(scopes, str) else scopes
@@ -156,7 +202,8 @@ def source_qualification(item, first, last):
                     for scope in scopes if isinstance(scope, str))):
         reasons.append("relevant_original_body_not_recorded_as_read")
     for key in ("exact_locations", "chinese_meaning", "source_paragraph_move", "source_data_expression"):
-        if not item.get(key):
+        valid = valid_locations(item.get(key)) if key == "exact_locations" else nonempty_string(item.get(key))
+        if not valid:
             reasons.append("missing_" + key)
     return recent, reasons
 
@@ -227,13 +274,18 @@ def project_sources(project_dir):
 
 
 def query_sources(args):
+    _, context = context_dir(args.project_dir)
+    project = read_json(context / "project.json")
+    if not isinstance(project, dict):
+        raise ValueError("Expected project.json object")
+    audit = policy_audit(project)
     records = project_sources(args.project_dir)
     terms = [term.casefold() for term in re.findall(r"[\w+-]+", args.query, flags=re.UNICODE)]
     if not terms:
         raise ValueError("Provide at least one query term")
     if args.limit < 1:
         raise ValueError("--limit must be positive")
-    first, last = window_for(args.as_of)
+    first, last = window_for(args.as_of, audit["effective_policy"]["recent_years"])
     ranked, recency_counts, query_matches = [], {}, 0
     for item in records:
         title = str(item.get("title", "")).casefold()
@@ -258,7 +310,7 @@ def query_sources(args):
             "exact_locations", "source_paragraph_move", "source_data_expression",
         )} | {"match_score": score, "recency": recent,
               "qualified_by_record": not reasons, "qualification_reasons": reasons})
-    emit({"index": ".paper-writing/sources.json", "query": args.query,
+    emit({"index": ".paper-writing/sources.json", "query": args.query, **audit,
           "query_matches_before_date_filter": query_matches,
           "window": {"from": first.isoformat(), "through": last.isoformat()},
           "recency_counts": recency_counts, "include_legacy": args.include_legacy,
@@ -273,20 +325,22 @@ def corpus_status(args):
         raise ValueError("Expected project.json object")
     records = project_sources(args.project_dir)
     audit = policy_audit(project)
-    # Audit the new skill's explicit standard without mutating or silently adopting it.
-    minimum, target, years = (DEFAULT_CORPUS_POLICY[key] for key in ("minimum", "target", "recent_years"))
+    minimum, target, years = (audit["effective_policy"][key] for key in ("minimum", "target", "recent_years"))
     first, last = window_for(args.as_of, years)
+    errors = []
+    checked_record_ids({"items": records}, "sources.json", "source_id", errors, allow_duplicate_works=True)
+    required_tasks = project.get("required_figure_tasks", [])
+    required_task_ids = checked_task_ids(required_tasks, "project.json: required_figure_tasks", errors)
     candidate_ids, relevant_ids, qualified_ids, mapped_tasks = set(), set(), set(), set()
     diagnostics, all_ids = [], []
-    for item in records:
-        identity = source_identity(item)
+    for item, identity in zip(records, canonical_work_identities(records)):
         if identity:
             all_ids.append(identity)
         recent, reasons = source_qualification(item, first, last)
         if identity and recent["status"] == "within_window":
             candidate_ids.add(identity)
         if (identity and item.get("source_type") in {"primary_research", "methods_research"}
-                and item.get("topical_fit") in {"direct", "shared_test"} and item.get("fit_reason")):
+                and item.get("topical_fit") in {"direct", "shared_test"} and nonempty_string(item.get("fit_reason"))):
             relevant_ids.add(identity)
         qualified = not reasons
         duplicate_qualified = qualified and identity in qualified_ids
@@ -294,17 +348,14 @@ def corpus_status(args):
             qualified_ids.add(identity)
             tasks = item.get("linked_figure_tasks", [])
             if isinstance(tasks, list):
-                mapped_tasks.update(str(task) for task in tasks)
+                mapped_tasks.update(task for task in tasks if nonempty_string(task))
         diagnostics.append({"source_id": item.get("source_id"), "identity": identity,
                             "recency": recent, "qualified_record": qualified,
                             "duplicate_qualified_record": duplicate_qualified, "reasons": reasons})
     count = len(qualified_ids)
-    baseline_status = "target_met_by_record" if count >= target else "baseline_incomplete"
-    required_tasks = project.get("required_figure_tasks", [])
-    if not isinstance(required_tasks, list):
-        raise ValueError("required_figure_tasks must be an array")
-    missing_tasks = sorted(set(str(task) for task in required_tasks) - mapped_tasks)
-    mapping_status = "not_specified" if not required_tasks else "incomplete" if missing_tasks else "complete_by_record"
+    baseline_status = "structure_errors" if errors else "target_met_by_record" if count >= target else "baseline_incomplete"
+    missing_tasks = sorted(required_task_ids - mapped_tasks)
+    mapping_status = "structure_errors" if errors else "not_specified" if not required_tasks else "incomplete" if missing_tasks else "complete_by_record"
     emit({"context": ".paper-writing", "as_of_date": last.isoformat(),
           "window": {"from": first.isoformat(), "through": last.isoformat()}, **audit,
           "records_discovered": len(records), "unique_identified_works": len(set(all_ids)),
@@ -312,11 +363,13 @@ def corpus_status(args):
           "date_eligible_candidates": len(candidate_ids), "topically_relevant_primary_works": len(relevant_ids),
           "qualified_read_baseline": count, "gap_to_minimum": max(0, minimum-count),
           "gap_to_target": max(0, target-count), "baseline_status": baseline_status,
-          "status": "needs_policy_update" if audit["needs_policy_update"] else baseline_status,
+          "status": "structure_errors" if errors else "needs_policy_update" if audit["needs_policy_update"] else baseline_status,
+          "record_structure_ok": not errors, "errors": errors,
           "recorded_figure_tasks": sorted(mapped_tasks),
           "figure_mapping": {"status": mapping_status, "required": required_tasks, "missing": missing_tasks},
           "records": diagnostics,
-          "note": "按60/60/5标准对记录资格和日期统计，不证明实际阅读、语义契合或科学正确。旧索引、摘要和二级卡片本身不能计作已核读基底；图任务充分性须人工检查。"})
+          "note": "按输出effective_policy对记录资格和日期统计，不证明实际阅读、语义契合或科学正确。结构错误时不得用于达标。旧索引、摘要和二级卡片本身不能计作已核读基底；图任务充分性须人工检查。"})
+    return 0 if not errors else 1
 
 
 def count_text(args):
@@ -344,7 +397,20 @@ def count_text(args):
     })
 
 
-def checked_record_ids(data, filename, id_key, errors):
+def checked_task_ids(value, label, errors):
+    if not isinstance(value, list):
+        errors.append(label + " must be an array")
+        return set()
+    result = set()
+    for index, task in enumerate(value):
+        if not nonempty_string(task):
+            errors.append(f"{label}[{index}] must be a nonempty string")
+        else:
+            result.add(task)
+    return result
+
+
+def checked_record_ids(data, filename, id_key, errors, allow_duplicate_works=False):
     if not isinstance(data, dict):
         errors.append(f"{filename}: expected object")
         return set()
@@ -352,7 +418,7 @@ def checked_record_ids(data, filename, id_key, errors):
     if not isinstance(rows, list):
         errors.append(f"{filename}: items must be an array")
         return set()
-    seen, dois = set(), set()
+    seen, dois, work_ids = set(), set(), set()
     for index, row in enumerate(rows):
         if not isinstance(row, dict):
             errors.append(f"{filename}: items[{index}] must be an object")
@@ -366,10 +432,25 @@ def checked_record_ids(data, filename, id_key, errors):
             seen.add(identifier)
         if filename == "sources.json":
             doi = normalize_doi(row.get("doi"))
-            if doi and doi in dois:
+            if doi and doi in dois and not allow_duplicate_works:
                 errors.append(f"sources.json: duplicate DOI {doi}; combine usage in one source card")
             if doi:
                 dois.add(doi)
+            if "unique_work_id" in row:
+                work_id = row["unique_work_id"]
+                if not nonempty_string(work_id):
+                    errors.append(f"sources.json: items[{index}] unique_work_id must be a nonempty string")
+                elif work_id in work_ids and not allow_duplicate_works:
+                    errors.append("sources.json: duplicate unique_work_id " + work_id + "; combine usage in one source card")
+                else:
+                    work_ids.add(work_id)
+            for key in ("fit_reason", "exact_locations", "chinese_meaning", "source_paragraph_move", "source_data_expression"):
+                if key in row:
+                    valid = valid_locations(row[key]) if key == "exact_locations" else nonempty_string(row[key])
+                    if not valid:
+                        errors.append(f"sources.json: items[{index}] {key} needs nonempty text of the expected type")
+            if "linked_figure_tasks" in row:
+                checked_task_ids(row["linked_figure_tasks"], f"sources.json: items[{index}] linked_figure_tasks", errors)
     return seen
 
 
@@ -396,6 +477,13 @@ def check_context(args):
                 errors.append(f"project.json: missing {key}")
         if project.get("current_stage") not in STAGES:
             errors.append("project.json: unsupported current_stage")
+        version = project.get("schema_version")
+        if not isinstance(version, int) or isinstance(version, bool) or version < 1:
+            errors.append("project.json: schema_version must be a positive integer")
+        for key in ("project_name", "domain"):
+            if not nonempty_string(project.get(key)):
+                errors.append(f"project.json: {key} must be a nonempty string")
+        checked_task_ids(project.get("required_figure_tasks", []), "project.json: required_figure_tasks", errors)
         for key in ("protected_sections", "terminology", "source_paths"):
             if key in project and not isinstance(project[key], list):
                 errors.append(f"project.json: {key} must be an array")
@@ -451,6 +539,8 @@ def delivery_check(args):
         if not isinstance(text, str):
             errors.append(label + ": text must be a string")
             continue
+        if not text.strip():
+            errors.append(label + ": final paragraph text must contain non-whitespace content")
         paragraph_map[pid] = text
         ordered_paragraphs.append(pid)
     seen_sentences, orders, grouped = set(), set(), {}
@@ -478,7 +568,7 @@ def delivery_check(args):
             errors.append(label + ": duplicate order in paragraph " + pid)
         elif valid_pid:
             orders.add((pid, order))
-        if not isinstance(text, str) or text == "":
+        if not nonempty_string(text):
             errors.append(label + ": final text must be a nonempty string")
         elif valid_pid and valid_order:
             grouped.setdefault(pid, []).append((order, text))
@@ -497,11 +587,17 @@ def delivery_check(args):
                     seen_refs.add(ref)
                     if ref not in known:
                         errors.append(label + ": unknown " + key + " reference " + ref)
+        basis = row.get("basis")
         if isinstance(row.get("source_ids"), list) and not row["source_ids"]:
-            if row.get("basis") not in NO_SOURCE_BASES:
-                errors.append(label + ": empty source_ids requires basis own_observation, author_transition, or retained_accepted")
-            elif row["basis"] == "retained_accepted" and not nonempty_string(row.get("basis_ref")):
+            if not isinstance(basis, str) or basis not in NO_SOURCE_BASES:
+                errors.append(label + ": empty source_ids requires an allowed basis: " + ", ".join(sorted(NO_SOURCE_BASES)))
+            elif basis == "retained_accepted" and not nonempty_string(row.get("basis_ref")):
                 errors.append(label + ": retained_accepted without sources requires nonempty basis_ref to an accepted record")
+        if isinstance(basis, str) and basis in EVIDENCE_BASES:
+            refs = row.get("evidence_ids")
+            if (not isinstance(refs, list) or not refs or
+                    not all(nonempty_string(ref) and ref in evidence_ids for ref in refs)):
+                errors.append(label + ": " + basis + " requires nonempty valid evidence_ids")
     comparisons = []
     for pid in ordered_paragraphs:
         rows = grouped.get(pid, [])
@@ -531,7 +627,7 @@ def delivery_check(args):
           "comparisons": comparisons, "errors": errors, "warnings": warnings,
           "assembly_rule": "Group by paragraph_id; sort positive order ascending; concatenate final text with no inserted separator. Punctuation, internal/edge spaces, and newlines are compared exactly.",
           "id_rule": "sentence_id must be a nonempty unique string; authors retain the same ID across revisions. Cross-version stability is not inferred from one delivery file.",
-          "reference_rule": "Every evidence_ids/source_ids entry must resolve to the project records. Many-to-many references are allowed. Empty source_ids requires an allowed basis; retained_accepted also requires basis_ref.",
+          "reference_rule": "Every evidence_ids/source_ids entry must resolve to the project records. Many-to-many references are allowed. Empty source_ids requires an allowed basis. own_observation, author_provided, author_confirmed, and own_calculation require nonempty valid evidence_ids; author_transition may omit evidence; retained_accepted requires basis_ref when source_ids is empty.",
           "note": STRUCTURE_NOTE + "正文和记录均未改写；basis_ref仅检查非空，不核定接受事实。"})
     return 0 if not errors else 1
 
@@ -554,7 +650,7 @@ def make_parser():
     sources.add_argument("--as-of", required=True, help="Client/task cutoff date YYYY-MM-DD; never inferred from the system clock")
     sources.add_argument("--include-legacy", action="store_true", help="Show historical/date-uncertain project entries for navigation only")
     sources.set_defaults(handler=query_sources)
-    corpus = subs.add_parser("corpus", help="Audit 60/60-source rolling five-year baseline from project records only")
+    corpus = subs.add_parser("corpus", help="Audit recorded baseline using the 60/60/5 default or an explicitly authorized policy")
     corpus.add_argument("--project-dir", required=True)
     corpus.add_argument("--as-of", required=True, help="Client/task cutoff date YYYY-MM-DD; inclusive five-year window")
     corpus.set_defaults(handler=corpus_status)
@@ -567,7 +663,7 @@ def make_parser():
     check.add_argument("--project-dir", required=True)
     check.set_defaults(handler=check_context)
     delivery = subs.add_parser("delivery-check", help="Check exact final sentence-to-paragraph assembly and existing record IDs",
-        description="Read-only delivery JSON check. Required: sentences=[{sentence_id,paragraph_id,order,text,evidence_ids:[],source_ids:[]}], paragraphs=[{paragraph_id,text}]. Sort sentences per paragraph by positive integer order and concatenate text without adding spaces. Empty source_ids needs basis=own_observation|author_transition|retained_accepted; retained_accepted also needs nonempty basis_ref. Optional propositions=[] is for human meaning review only. Many-to-many evidence/source links are supported; semantics and cross-version ID stability are not inferred.")
+        description="Read-only delivery JSON check. Required: sentences=[{sentence_id,paragraph_id,order,text,evidence_ids:[],source_ids:[]}], paragraphs=[{paragraph_id,text}]. Sort sentences per paragraph by positive integer order and concatenate text without adding spaces. Empty source_ids needs basis=own_observation|author_provided|author_confirmed|own_calculation|author_transition|retained_accepted. Observation, author, and calculation bases require nonempty valid evidence_ids; author_transition may omit evidence; retained_accepted needs nonempty basis_ref. Text must contain non-whitespace content; original edge spaces are preserved in exact comparison. Optional propositions=[] is for human meaning review only. Many-to-many evidence/source links are supported; semantics and cross-version ID stability are not inferred.")
     delivery.add_argument("--project-dir", required=True)
     delivery.add_argument("--file", required=True, help="Delivery JSON; sentences.text must be the final delivered text")
     delivery.set_defaults(handler=delivery_check)

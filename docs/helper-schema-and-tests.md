@@ -1,172 +1,131 @@
-# Helper record schema and executed checks
+# Helper records and check boundaries
 
-All examples and test fixtures here are **SYNTHETIC**. They are not real literature,
-experimental facts, author acceptance, or scientific verification.
+All examples are **SYNTHETIC**, not real literature, experiments or author acceptance.
+The helper uses only Python's standard library. It does not rewrite manuscripts,
+verify source-reading claims, check scientific truth, or prove faithful meaning.
 
-The helper uses only Python's standard library. Its checks do not establish that
-research was actually read, that evidence is genuine, that prose preserves meaning,
-or that a scientific conclusion is correct. No manuscript is rewritten.
+## Initialization and policy
 
-## Project initialization
+init requires an explicit existing project directory. It creates only missing
+.paper-writing/project.json, evidence.json, sources.json, decisions.md, issues.md
+and drafts/. Evidence and source items start empty. Existing files stay unchanged.
 
-`init --project-dir <explicit-existing-dir> --name <name>` creates only missing files:
+The default corpus_policy is minimum=60, target=60, recent_years=5. An old policy
+without an explicit author decision is preserved and flagged needs_policy_update.
+To use an author-requested policy, record both valid positive integers
+(target must be at least minimum) and a real decision reference:
 
-- `.paper-writing/project.json`
-- `.paper-writing/evidence.json`
-- `.paper-writing/sources.json`
-- `.paper-writing/decisions.md`
-- `.paper-writing/issues.md`
-- `.paper-writing/drafts/`
-
-Both evidence and source `items` arrays start empty. The new policy is
-`{"minimum":60,"target":60,"recent_years":5}`. Existing files and policies remain
-byte-for-byte unchanged. Missing or different policy records report
-`needs_policy_update`. Updating them requires an explicit recorded author decision.
-
-`corpus` audits the 60/60/5 standard and reports the recorded policy separately.
-It does not adopt or rewrite that policy. A legacy policy blocks the overall
-`target_met_by_record` status even when the counted records reach 60.
-
-`corpus` and `sources` require an explicit `--as-of YYYY-MM-DD` supplied by the
-client/task. There is no system-clock fallback. The rolling window is inclusive
-from cutoff minus five calendar years through cutoff; the lower boundary clamps
-February 29 when necessary. A year or month date qualifies only when the complete
-date interval lies within that window. Overlaps require date verification.
-
-## Evidence and source shapes
-
-Both files require an object with `items`. Minimal ID structure accepted by `check`:
-
-```json
+~~~json
 {
-  "schema_version": 1,
-  "items": [
-    {"evidence_id": "SYNTHETIC-EV-1", "observation": "Synthetic structural fixture only"}
-  ]
+  "corpus_policy": {"minimum": 80, "target": 80, "recent_years": 5},
+  "corpus_policy_override": {
+    "authorized_by": "user",
+    "decision_ref": "decisions.md#synthetic-example-of-a-recorded-decision"
+  }
 }
-```
+~~~
 
-`source_id` substitutes for `evidence_id` in `sources.json`. This minimal source
-shape does **not** qualify for the reading baseline. Each ID must be a nonempty
-unique string. A recorded DOI is normalized for duplicate detection. Authors may
-add locators, file paths, evidence boundaries, and other project fields; this helper
-does not validate their scientific content.
+The marker is a record assertion, not authentication. Do not create it without an
+actual author instruction. Outputs show default_policy, effective_policy and
+effective_policy_source. The helper never silently migrates or edits the project.
 
-A complete synthetic source shape that passes the recorded qualification checks:
+corpus and sources require client/task --as-of YYYY-MM-DD. Dates are inclusive.
+The default window is five calendar years; an explicitly authorized policy may
+change it. first_online_date takes precedence over publication_date/issue year;
+an invalid explicitly supplied first-online date is not replaced by a newer issue
+date. Year/month precision qualifies only when its whole interval is in range.
 
-```json
+## Evidence and source IDs
+
+Both JSON files use an object with an items array. IDs are nonempty unique strings:
+
+~~~json
 {
   "schema_version": 1,
   "items": [
     {
-      "source_id": "SYNTHETIC-SRC-1",
-      "unique_work_id": "synthetic-not-a-real-work-1",
-      "title": "SYNTHETIC TEST ONLY; not a real publication",
-      "source_type": "primary_research",
-      "bibliographic_status": "verified",
-      "publication_date": "2025-06-01",
-      "publication_date_verified": true,
-      "date_source_url": "https://example.invalid/synthetic-only",
-      "date_basis": "publisher_first_online",
-      "topical_fit": "direct",
-      "fit_reason": "Synthetic test field; no scientific fit is claimed",
-      "read_scope": ["relevant_body"],
-      "exact_locations": ["SYNTHETIC section 1"],
-      "chinese_meaning": "合成测试记录，不代表真实阅读",
-      "source_paragraph_move": "SYNTHETIC argument move",
-      "source_data_expression": "SYNTHETIC expression, no real data",
-      "linked_figure_tasks": ["SYNTHETIC-FIG-1"]
+      "evidence_id": "SYNTHETIC-EV-1",
+      "provenance": "author_confirmed",
+      "description": "Synthetic method description; not a verified experiment"
     }
   ]
 }
-```
+~~~
 
-An identifiable syntactically valid DOI can substitute for `unique_work_id`.
-Accepted research types are `primary_research` and `methods_research`.
-Accepted fit values are `direct` and `shared_test` with a nonempty `fit_reason`.
-Accepted body-read scopes are `relevant_body`, `full_main_text`, and
-`full_main_and_SI`; a string or array is accepted. Abstract, secondary-card,
-old-index, and `prior_read_scope` fields alone do not qualify. Accepted date bases
-are `publisher_first_online` and `publisher_formal_publication`, with a verified
-date and nonempty date-source URL. Corrections, errata, retractions, and preprints
-are excluded. Qualifications are record assertions, not independently verified facts.
+sources.json uses source_id instead. Minimal ID records do not qualify as a read
+corpus. Duplicate source_id blocks readiness. Multiple entries for the same study
+must not inflate work count: DOI spellings are normalized and shared
+unique_work_id joins DOI/no-DOI aliases transitively. Keep one canonical source card
+for final use; check flags duplicate work records for consolidation.
 
-`sources --project-dir <dir> --query <terms> --as-of <date>` searches only that
-project's `.paper-writing/sources.json`. It has no bundled historical index.
+Qualification requires a formal original research identity (primary_research or
+methods_research), verified bibliography/date, date-source URL and publication
+basis, direct/shared_test fit with a nonblank fit_reason, actual relevant-body
+reading scope, exact_locations, chinese_meaning, source_paragraph_move and
+source_data_expression. DOI or verified unique_work_id identifies the work.
 
-## Delivery shape
+The explanatory fields must be nonblank text; exact_locations may instead be a
+nonempty array of nonblank text. unique_work_id, when supplied, must be nonblank
+text. A missing field keeps a candidate incomplete; boolean/object/blank values
+cannot substitute for completed reading. Task IDs in required_figure_tasks and
+linked_figure_tasks must be nonblank strings, never coerced from numbers/objects.
 
-```json
+Metadata, abstracts, secondary cards, old indexes and prior_read_scope alone do
+not establish current reading. No helper can verify that a user really read the
+paper. Figure-tag coverage also does not prove sentence-level mapping is complete.
+
+## Delivery JSON
+
+~~~json
 {
-  "schema_version": 1,
   "sentences": [
     {
       "sentence_id": "SYNTHETIC-S1",
       "paragraph_id": "SYNTHETIC-P1",
       "order": 1,
-      "text": "First synthetic sentence. ",
+      "text": "Synthetic preparation description.",
       "evidence_ids": ["SYNTHETIC-EV-1"],
-      "source_ids": ["SYNTHETIC-SRC-1"]
-    },
-    {
-      "sentence_id": "SYNTHETIC-S2",
-      "paragraph_id": "SYNTHETIC-P1",
-      "order": 2,
-      "text": "Second synthetic sentence.",
-      "evidence_ids": [],
       "source_ids": [],
-      "basis": "retained_accepted",
-      "basis_ref": "SYNTHETIC acceptance record version 1; not real acceptance"
+      "basis": "author_confirmed"
     }
   ],
   "paragraphs": [
-    {"paragraph_id": "SYNTHETIC-P1", "text": "First synthetic sentence. Second synthetic sentence."}
-  ],
-  "propositions": [
-    {"proposition_id": "SYNTHETIC-PROP-1", "text": "Human meaning-review fixture only", "sentence_ids": ["SYNTHETIC-S1"]}
+    {
+      "paragraph_id": "SYNTHETIC-P1",
+      "text": "Synthetic preparation description."
+    }
   ]
 }
-```
+~~~
 
-`delivery-check --project-dir <dir> --file <delivery.json>` groups the final
-`sentences[].text` by `paragraph_id`, sorts by positive integer `order`, and
-concatenates without inserting separators. The result must exactly equal the
-matching `paragraphs[].text`. Punctuation, Unicode, internal/edge spaces, and
-newlines are not normalized. Sentence and paragraph IDs must be unique; sentence
-IDs must also be nonempty strings without whitespace. Authors retain those IDs
-across revisions; a single-file check cannot infer cross-version stability.
+delivery-check groups sentences by paragraph_id, sorts positive integer order,
+then concatenates text without adding separators. Punctuation, internal/edge
+spaces and newlines are compared exactly. Text must contain non-whitespace
+content. Sentence/paragraph IDs must be unique; references resolve to existing
+project records. Many-to-many links are supported.
 
-Every evidence/source ID in a sentence must resolve to the existing project's
-`evidence_id`/`source_id`. Many-to-many arrays are supported. Empty `source_ids`
-requires `basis` of `own_observation`, `author_transition`, or `retained_accepted`.
-For `retained_accepted`, nonempty `basis_ref` is also required; the helper checks
-only that the reference text exists, not whether acceptance actually occurred.
-Optional `propositions` must be an array and are left for human meaning review.
+Empty source_ids requires one of:
+- own_observation, own_calculation, author_provided, author_confirmed: nonempty,
+  valid evidence_ids are required. An author method record is not a measured result.
+- author_transition: evidence may be absent for pure organization.
+- retained_accepted: a nonblank basis_ref is required when sources are absent;
+  the helper cannot verify actual acceptance.
 
-Exit codes: `0` completed check/no structural errors; `1` structural errors;
-`2` invalid arguments, unreadable files, or unusable input. A policy-migration
-warning is reported in JSON without changing files and does not itself use code 1.
+Optional propositions is an array for human review. Basis labels do not prove
+scientific support. The check only compares JSON-internal text and references;
+it does not automatically extract the final Markdown/Word or browser text.
+Compare the actual delivered prose separately before claiming full consistency.
 
-## Actual executed tests
+## Commands, exit codes and tests
 
-Executed with the installed Python 3.14 interpreter, with `BATTERY_SKILL_DIR` set
-to the new skill directory:
+Run the appropriate subcommand --help for arguments. Exit 0 means no recorded
+structural errors; exit 1 means structural errors; exit 2 means unusable input or
+arguments. A policy-migration warning does not modify files.
 
-```powershell
-$env:BATTERY_SKILL_DIR = '<skill-dir>'
-py -3.14 -X utf8 './test_paper_workbench.py'
-```
+The initial 22 tests remain unchanged. The logic audit adds 28 regression tests;
+all 50 were actually run successfully. Fixtures are synthetic and portable.
+See helper-test-summary.json and logic-audit.md for the latest scope. Reproduce:
 
-Final run: **22 tests, 0 failures, 0 errors; 7.657 seconds**. The machine-readable
-`test_summary.json` records results without local absolute paths. The tests cover
-the 59/60 threshold; all five-year boundaries, future dates, date precision, and
-leap day; normalized duplicate DOI counting; abstract/legacy-card exclusions;
-empty fact-free initialization; preservation of existing files and old policies;
-explicit project/date arguments; project-source querying; read-only checking;
-text-region counting; exact delivery reconstruction; stale sentence tables,
-punctuation and internal-space mismatches; ID resolution and uniqueness;
-many-to-many references; and no-source acceptance-record handling.
-
-Temporary directories are created beside this test file and removed after each
-test. No network or external libraries are used. The test source is portable via
-`BATTERY_SKILL_DIR` or a repository containing `battery-paper-skill/scripts/`.
+~~~text
+python -B -X utf8 -m unittest discover -s tests -p "test_*.py" -v
+~~~
