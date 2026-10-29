@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+.paper-writing/
+.env
+.env.*
+*.log
+synthetic_battery_*/

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Battery Paper Skill"
+  short_description: "电池论文写作：近期原文映射、图文逻辑、中英表达及逐句可追溯审校"
+  default_prompt: "使用 $battery-paper-skill 接续我的电池论文，先核对当前图稿和已有确认内容，再建立近期原文映射，逐部分完成写作与审校。"

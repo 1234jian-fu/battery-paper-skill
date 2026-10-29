@@ -1,0 +1,9 @@
+{
+  "fixture_notice": "All fixtures are SYNTHETIC; no real literature, project facts, or scientific validation.",
+  "runner": "Python standard-library unittest; no installed dependencies or network",
+  "tests_run": 22,
+  "failures": 0,
+  "errors": 0,
+  "successful": true,
+  "command_template": "BATTERY_SKILL_DIR=<skill-dir> python -X utf8 test_paper_workbench.py"
+}
