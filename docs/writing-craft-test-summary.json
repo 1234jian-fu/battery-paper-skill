@@ -1,0 +1,46 @@
+{
+  "checked_on": "2026-10-30",
+  "scope": "Writing-guide structure and a known synthetic editing exercise; not scientific validation or a general quality benchmark.",
+  "catalog_records": 51,
+  "new_papers": 0,
+  "sources_revisited": [
+    "B03",
+    "B16",
+    "B21",
+    "B24",
+    "B30",
+    "B33",
+    "B39",
+    "B43",
+    "B52"
+  ],
+  "deterministic_blackbox": {
+    "checks": 8,
+    "checks_passed": 8,
+    "assertions": 115,
+    "assertions_passed": 115,
+    "cases_without_checks": 0
+  },
+  "manual_numeric_crosscheck": "Caption fixture: 图 (1) + digit 1 (1) + two full stops (2) + Test (4) = 8 non-whitespace characters, matching the emitted value.",
+  "skill_structure": "passed",
+  "scripts_or_existing_tests_modified": false,
+  "unit_tests_rerun": false,
+  "writing_check": {
+    "independent_first_runs": 2,
+    "continuation_revisions": 1,
+    "blind": false,
+    "held_out": false,
+    "records": "../evals/writing-craft/assessment.json"
+  },
+  "guide_hashes": {
+    "SKILL.md": "0d78b93dd216dab6cbed8ff4d29b2d4b18ecd6f627625cc7f39f70c937590119",
+    "references/section-writing.md": "45c4f6e888b4c56d17bc36d87aea7a86820708913af7a20930dbb9d25303eb5f",
+    "references/sentence-craft.md": "0d403c54041a4495e76a2ba4ff51f06d7468b86229db5138892e32b1ba901e7d",
+    "references/paragraph-craft.md": "e6becb652d5ec4ccd772fae6fd04139399aaae1bb68e508fb1f3bd4af719cc15",
+    "references/english-workflow.md": "eba9f2c66932244fcb27d23f1e86ec3f9cb72e433e4076124e2cccf480e54518",
+    "references/argument-design.md": "f36715d0c40ff6e5979fc552eb4b990534275613f27ff087f65f9af39332b753",
+    "references/review-protocol.md": "b5508e4ee3fd04c8f51d88c3bcb212595c79c27c237efa59816522f3cc5f696e",
+    "references/workflow.md": "1be163db1251e59ecad2ad5e308c997113314d2fd341de9d40ccb9a74ce1f05c"
+  },
+  "hash_convention": "SHA256 of UTF-8 text with LF line endings; prose in original outputs preserved"
+}

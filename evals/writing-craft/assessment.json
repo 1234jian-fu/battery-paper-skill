@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-30",
+  "design": "known synthetic development task; paired first outputs followed by one continuation revision",
+  "blind": false,
+  "held_out": false,
+  "automatic_trigger_test": false,
+  "without_skill_control": false,
+  "independent_first_runs": 2,
+  "continuation_revisions": 1,
+  "configurations": {
+    "A": {
+      "version": "b4f65bcc1ee2e78151046c66ac51b6f86a55b007",
+      "output": "run-a.md"
+    },
+    "B_initial": {
+      "version": "r1 frozen instructions",
+      "output": "run-b.md"
+    },
+    "B_revision": {
+      "version": "r2 frozen instructions",
+      "output": "run-b-revised.md",
+      "continues": "B_initial",
+      "editor_review_supplied": false,
+      "other_run_supplied": false
+    }
+  },
+  "model_control": "Both first-run agents inherited the same parent default configuration; no explicit model or effort override. Runtime model identifiers, token cost and sampling variance were not independently measured.",
+  "review_disclosure": "Initial cross-reviewer contributed to sentence-guide development. Primary integrator read all outputs and performed the revision checks. This is non-blind editing, not independent scientific or journal review.",
+  "initial_findings": {
+    "substantive_factual_error_found": false,
+    "relative_strengths": {
+      "A": "More selective abstract and tighter introduction",
+      "B": "Result paragraph identifies the unequal between-pressure changes in C and U, adding a correct descriptive insight"
+    },
+    "remaining_issues": [
+      "Opening and closing repeat the association in Results paragraph two",
+      "B repeats the pre-cycling morphology limitation across Results and Discussion"
+    ],
+    "overall_winner": "not established"
+  },
+  "revision_checks": [
+    {
+      "decision": "observed",
+      "location": "Abstract",
+      "finding": "Secondary pore-fraction and resistance numbers removed from abstract but retained in Results; central capacity comparison and inference boundary retained"
+    },
+    {
+      "decision": "observed",
+      "location": "Introduction",
+      "finding": "Two abstract sentences about what the design does removed; question, matched design and purpose of low-pressure characterization retained"
+    },
+    {
+      "decision": "observed",
+      "location": "Results paragraph one",
+      "finding": "Numerical insight about the smaller between-pressure change for C retained; means and replication remain identified"
+    },
+    {
+      "decision": "observed",
+      "location": "Results paragraph two and Discussion",
+      "finding": "Repeated association ending removed; absence of pre-cycling morphology discussed once in the interpretation"
+    },
+    {
+      "decision": "observed",
+      "location": "Methods and Figure caption",
+      "finding": "Compared with first B output: unchanged, and still consistent with provided conditions and sampling levels"
+    },
+    {
+      "decision": "observed",
+      "location": "All submitted fragments",
+      "finding": "No new substantive factual error identified; no fictitious chemical recipe, voltage limits, variance, microscopy cell replication or unique mechanism claim"
+    }
+  ],
+  "not_tested": [
+    "Real original-paper sentence alignment in the generated task",
+    "Complete real manuscript end-to-end",
+    "Journal acceptance or native-editor assessment",
+    "Automatic skill discovery",
+    "Generalization or consistent superiority to the prior release"
+  ],
+  "hash_convention": "SHA256 of UTF-8 text with LF line endings; prose in original outputs preserved",
+  "artifact_hashes": {
+    "task.md": "6e3728b0f41099a94765ed17ba042c794dc692f3601fe4eafd639e49484162de",
+    "run-a.md": "04f45aae1070035d9083d182a375b090c69978c997630dca42714f932997090a",
+    "run-b.md": "040468e6a646f6fbe7ca924d1c8f127b010fcd2555d40878d78582965a08e13e",
+    "run-b-revised.md": "ef95c5fa403aab8f01a1f1b8ad7f0efc7fadc84b506f2aa68c0315edfc31a581",
+    "editor-review.md": "127aed3c0ff2c5dc0a0677ff89f610475ae7b85ab73919b54ee4b3c5d6d14426"
+  },
+  "instruction_snapshot_hashes": {
+    "r0": {
+      "SKILL.md": "30bd3ec0ab2f7926512123393d2dd8360cbedf0c1af516996278a5094840a57d",
+      "references/english-workflow.md": "f8ede3228137d3e3ca717ba80398a3e0781bbfb7c7b5cbbdb2e4527375e93dee",
+      "references/argument-design.md": "a3ce9329e7e08986f6ad8690d681332e4ca2c3028f195705f3fdfaca59dc90c9",
+      "references/review-protocol.md": "9ddd9b68919be6fd25496e6879c88b23cca6969c5f75de02c125ebb0c9149847",
+      "references/workflow.md": "6d5b9bb98a7d94fe0915e3f7ebcdc7acc311226a632fe6520aa5b044ca4a01cb"
+    },
+    "r1": {
+      "SKILL.md": "0d78b93dd216dab6cbed8ff4d29b2d4b18ecd6f627625cc7f39f70c937590119",
+      "references/section-writing.md": "9377e18d578e2e897e647c51501d80b3b694277758a1cd1bf9ec058bd0239f16",
+      "references/sentence-craft.md": "0d403c54041a4495e76a2ba4ff51f06d7468b86229db5138892e32b1ba901e7d",
+      "references/paragraph-craft.md": "b0d10a7e768f01ff819cea57bef72449b65242d6b69707083c463c23b9cd67fd",
+      "references/english-workflow.md": "eba9f2c66932244fcb27d23f1e86ec3f9cb72e433e4076124e2cccf480e54518",
+      "references/argument-design.md": "f36715d0c40ff6e5979fc552eb4b990534275613f27ff087f65f9af39332b753",
+      "references/review-protocol.md": "b5508e4ee3fd04c8f51d88c3bcb212595c79c27c237efa59816522f3cc5f696e",
+      "references/workflow.md": "1be163db1251e59ecad2ad5e308c997113314d2fd341de9d40ccb9a74ce1f05c"
+    },
+    "r2": {
+      "SKILL.md": "0d78b93dd216dab6cbed8ff4d29b2d4b18ecd6f627625cc7f39f70c937590119",
+      "references/section-writing.md": "45c4f6e888b4c56d17bc36d87aea7a86820708913af7a20930dbb9d25303eb5f",
+      "references/sentence-craft.md": "0d403c54041a4495e76a2ba4ff51f06d7468b86229db5138892e32b1ba901e7d",
+      "references/paragraph-craft.md": "e6becb652d5ec4ccd772fae6fd04139399aaae1bb68e508fb1f3bd4af719cc15",
+      "references/english-workflow.md": "eba9f2c66932244fcb27d23f1e86ec3f9cb72e433e4076124e2cccf480e54518",
+      "references/argument-design.md": "f36715d0c40ff6e5979fc552eb4b990534275613f27ff087f65f9af39332b753",
+      "references/review-protocol.md": "b5508e4ee3fd04c8f51d88c3bcb212595c79c27c237efa59816522f3cc5f696e",
+      "references/workflow.md": "1be163db1251e59ecad2ad5e308c997113314d2fd341de9d40ccb9a74ce1f05c"
+    }
+  }
+}
