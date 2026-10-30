@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-30",
+  "type": "targeted_development_regression",
+  "synthetic": true,
+  "blind": false,
+  "held_out": false,
+  "runs_per_case": 1,
+  "assessor": "primary integration agent; input and output visible",
+  "criteria": [
+    {
+      "case": "A",
+      "checked": [
+        "capacity fit alone not unique proof",
+        "LLI/LAM derived from same curves, not independent direct mechanism measurements",
+        "new SOC validation and 5 C failure retained in paragraph and conclusion"
+      ],
+      "result": "observed in this run",
+      "evidence": "capacity agreement alone did not distinguish them; not independent measurements; failed at 5 °C"
+    },
+    {
+      "case": "B",
+      "checked": [
+        "A/B/C/D configurations remain separate",
+        "0.03 C/min remains detection threshold, not relabelled runaway criterion",
+        "280 C upper tested temperature retained",
+        "mean 190 C distinguished from representative 200 C; no invented uncertainty"
+      ],
+      "result": "observed in this run",
+      "evidence": "these values were not achieved in the same device; mean of 190 °C; representative curve ... 200 °C"
+    },
+    {
+      "case": "C",
+      "checked": [
+        "0.4 s pretreatment separated from 750 C/10 h hold",
+        "matched initial specific-capacity recovery retained",
+        "no invented whole-process duration, energy, yield or LCA advantage"
+      ],
+      "result": "observed in this run",
+      "evidence": "describes only one step; Total process duration and energy use were not quantified"
+    }
+  ],
+  "limitations": [
+    "No journal-editor assessment or superiority inference",
+    "No full-manuscript review or actual experimental validation",
+    "No matched original-paper sentence comparison",
+    "Single run on known developer scenarios"
+  ],
+  "hashes": {
+    "input.md": "e177eb55fa71121a177f93d5edd5cb4b77796b98eb32c24a6f1bc3f73f2a509c",
+    "output.md": "8ca47d53b04e33f6dc2dd4d95b602541b1251f2eb3315c59640fcf6501601530"
+  }
+}

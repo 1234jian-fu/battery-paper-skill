@@ -1,0 +1,49 @@
+{
+  "checked_on": "2026-10-30",
+  "batch": "2026-10-30-b02",
+  "scope": "Archive integrity and targeted synthetic development checks; not experimental reproduction or a journal/market quality evaluation.",
+  "unit_tests": {
+    "rerun_this_batch": false,
+    "reason": "Scripts and existing tests unchanged; previous results retained in growth-test-summary.json"
+  },
+  "deterministic_blackbox": {
+    "checks": 8,
+    "checks_passed": 8,
+    "assertions": 115,
+    "assertions_passed": 115,
+    "cases_without_checks": 0
+  },
+  "skill_structure": "passed",
+  "catalog": {
+    "unique_verified_reading_cards": 51,
+    "main_archive_hashes_verified": 51,
+    "si_archive_hashes_verified": 79,
+    "structure_survey_count": 19,
+    "new_records": 20,
+    "new_main_pdf_pages": 233,
+    "new_si_files": 50,
+    "new_si_pending": 20,
+    "index_page_record_counts": [
+      50,
+      1
+    ]
+  },
+  "hashes": {
+    "scripts/corpus_catalog.py": "53ddd200e1f7a266d3a5c0d95e2e474850f7a62d00e944f72f2e7b2758d7d822",
+    "tests/test_corpus_catalog.py": "286defaa0655540237744e9369ae03d11cddccb28da522e17dd9aa700efa8d5a",
+    "SKILL.md": "30bd3ec0ab2f7926512123393d2dd8360cbedf0c1af516996278a5094840a57d",
+    "references/characterization-writing.md": "e54cafb816ff18b280f84ed0158dcf5ff27e350136948431ab5f598fcc4ce2ea",
+    "references/review-protocol.md": "9ddd9b68919be6fd25496e6879c88b23cca6969c5f75de02c125ebb0c9149847",
+    "references/battery-language-library.md": "6d20ce959797f4f854dfaf5d68a0d494708a8eeedb963c6733e1237e68134049"
+  },
+  "writing_regression": {
+    "cases": 3,
+    "runs_per_case": 1,
+    "synthetic": true,
+    "blind": false,
+    "held_out": false,
+    "assessment": "../evals/growth-regression-b02/assessment.json",
+    "input.md": "e177eb55fa71121a177f93d5edd5cb4b77796b98eb32c24a6f1bc3f73f2a509c",
+    "output.md": "8ca47d53b04e33f6dc2dd4d95b602541b1251f2eb3315c59640fcf6501601530"
+  }
+}

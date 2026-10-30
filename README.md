@@ -6,7 +6,7 @@
 
 **从图与数据出发，构建有证据、有逻辑、可追溯的电池论文。**
 
-[![Corpus: 31 original papers](https://img.shields.io/badge/Corpus-31_original_papers-0F766E?style=flat-square)](references/literature-corpus.md)
+[![Corpus: 51 original papers](https://img.shields.io/badge/Corpus-51_original_papers-0F766E?style=flat-square)](references/literature-corpus.md)
 [![Review: 3 levels](https://img.shields.io/badge/Review-3_levels-1E3A5F?style=flat-square)](references/review-protocol.md)
 [![Writing: Chinese and English](https://img.shields.io/badge/Writing-CN_%2F_EN-526477?style=flat-square)](references/english-workflow.md)
 
@@ -175,7 +175,7 @@ flowchart LR
 
 ## 论文语料库
 
-**31 篇已核读原始研究 · 目标 1000 篇 · 按写作任务选读**
+**51 篇已核读原始研究 · 目标 1000 篇 · 按写作任务选读**
 
 <table>
   <tr>
@@ -185,24 +185,24 @@ flowchart LR
     </td>
     <td align="center" width="33%">
       <a href="https://www.nature.com/nenergy/"><img src="assets/nature-energy-card.svg" alt="Nature Energy" width="190"></a><br>
-      <strong>Nature Energy</strong><br>4 篇
+      <strong>Nature Energy</strong><br>10 篇
     </td>
     <td align="center" width="33%">
       <a href="https://www.nature.com/ncomms/"><img src="assets/nature-communications-card.svg" alt="Nature Communications" width="190"></a><br>
-      <strong>Nature Communications</strong><br>10 篇
+      <strong>Nature Communications</strong><br>18 篇
     </td>
   </tr>
   <tr>
     <td align="center">
       <a href="https://advanced.onlinelibrary.wiley.com/journal/15214095"><img src="assets/advanced-materials.jpg" alt="Advanced Materials" width="160"></a><br>
-      <strong>Advanced Materials</strong><br>4 篇
+      <strong>Advanced Materials</strong><br>6 篇
     </td>
     <td align="center">
       <a href="https://advanced.onlinelibrary.wiley.com/journal/16146840"><img src="assets/advanced-energy-materials.jpg" alt="Advanced Energy Materials" width="160"></a><br>
-      <strong>Advanced Energy Materials</strong><br>6 篇
+      <strong>Advanced Energy Materials</strong><br>10 篇
     </td>
     <td align="center">
-      <strong>31 篇来源</strong><br><br>
+      <strong>51 篇来源</strong><br><br>
       逐篇定位 · 组织分析<br>表达示范 · 证据边界
     </td>
   </tr>
@@ -210,7 +210,7 @@ flowchart LR
 
 <sub>期刊标识用于说明语料来源，不代表合作或背书。[视觉资源来源](assets/README.md)。</sub>
 
-每篇卡片记录论文身份、版本、来源入口、实际阅读位置、可借鉴的写作动作和不可迁移的事实边界。**31 篇均有相关正文阅读记录，其中 16 篇另有主文组织通览**；具体核读范围逐篇声明。
+每篇卡片记录论文身份、版本、来源入口、实际阅读位置、可借鉴的写作动作和不可迁移的事实边界。**51 篇均有相关正文阅读记录，其中 19 篇另有主文组织通览**；具体核读范围逐篇声明。
 
 [浏览语料索引 →](references/literature-corpus.md) · [按任务检索 →](docs/corpus-catalog.md) · [查看升级记录 →](docs/upgrades.md)
 
