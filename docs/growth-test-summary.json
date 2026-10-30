@@ -1,0 +1,43 @@
+{
+  "checked_on": "2026-10-30",
+  "python": "3.14.7",
+  "scope": "Synthetic software checks and targeted development writing; not scientific validation or a market comparison.",
+  "unit_tests": {
+    "command": "python -X utf8 -m unittest discover -s tests -p \"test_*.py\" -v",
+    "passed": 68,
+    "total": 68,
+    "duration_seconds": 52.438,
+    "existing": 59,
+    "new_catalog": 9
+  },
+  "deterministic_blackbox": {
+    "checks": 8,
+    "checks_passed": 8,
+    "assertions": 115,
+    "assertions_passed": 115,
+    "cases_without_checks": 0
+  },
+  "skill_structure": "passed",
+  "catalog": {
+    "unique_verified_reading_cards": 31,
+    "main_archive_hashes_verified": 31,
+    "si_archive_hashes_verified": 28,
+    "structure_survey_count": 16
+  },
+  "hashes": {
+    "scripts/corpus_catalog.py": "53ddd200e1f7a266d3a5c0d95e2e474850f7a62d00e944f72f2e7b2758d7d822",
+    "tests/test_corpus_catalog.py": "286defaa0655540237744e9369ae03d11cddccb28da522e17dd9aa700efa8d5a",
+    "SKILL.md": "30bd3ec0ab2f7926512123393d2dd8360cbedf0c1af516996278a5094840a57d",
+    "references/characterization-writing.md": "3fa9bba1653b63dc6c00c2798484d0510a0678336a20bbb5c9c4c3f68371a101",
+    "references/review-protocol.md": "dba6cdcaa360dc47f4c1e782588bf4607a9fd865d340e439ffb6a93777ac5a8f"
+  },
+  "writing_regression": {
+    "cases": 3,
+    "runs_per_case": 1,
+    "synthetic": true,
+    "blind": false,
+    "held_out": false,
+    "input_sha256": "c1e3822b6837d52014ecda905dd252b2fc0e00e27d0ee874716098819ce5ebac",
+    "output_sha256": "512e9172a1a6e5c7af3078967647598cd70cc4461417be2b82154bff92087794"
+  }
+}

@@ -1,0 +1,1411 @@
+{
+  "schema_version": 1,
+  "updated_on": "2026-10-30",
+  "target": 1000,
+  "records": [
+    {
+      "id": "B01",
+      "doi": "10.1038/s41467-024-55657-1",
+      "title": "Electrolyte design for reversible zinc metal chemistry",
+      "journal": "Nature Communications",
+      "first_online": "2025-01-02",
+      "added_on": "2026-10-30",
+      "article_type": "original_research",
+      "article_url": "https://www.nature.com/articles/s41467-024-55657-1",
+      "pdf_url": "https://www.nature.com/articles/s41467-024-55657-1.pdf",
+      "relative_pdf_path": "10.1038_s41467-024-55657-1/fulltext/article.pdf",
+      "sha256": "1a391bd5a30c3217ee5910758b3ef2da68391c633caa5f7557f6d7783ca20afe",
+      "pages": 10,
+      "bytes": 2721903,
+      "topic": "溶剂化与局域配位",
+      "methods": [
+        "FTIR",
+        "Raman",
+        "XANES",
+        "EXAFS",
+        "MD"
+      ],
+      "read_scope": "此前核读官方HTML的Characterization of solvation structure and hydration structure、Fig.3及相关方法/配方/性能边界；本轮复核PDF对应pp.4–5与pp.7–8方法定位。未独立核验SI与原始数据。",
+      "structure_survey": false,
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "card": "references/corpus/b01.md",
+      "source_note": "出版社正式版；核读来源为官方HTML/XML与Fig.3原图，PDF另行归档验证。",
+      "reading_provenance": "沿用既有核读记录；此次目录迁移不表示重新通读。",
+      "si": {
+        "status": "legacy_not_audited",
+        "files": [],
+        "pending": [],
+        "read_scope": "此次未复核既有 SI 获取及阅读范围，后续逐批补齐。"
+      }
+    },
+    {
+      "id": "B02",
+      "doi": "10.1038/s41467-024-46472-9",
+      "title": "A solid-state lithium-ion battery with micron-sized silicon anode operating free from external pressure",
+      "journal": "Nature Communications",
+      "first_online": "2024-03-13",
+      "added_on": "2026-10-30",
+      "article_type": "original_research",
+      "article_url": "https://www.nature.com/articles/s41467-024-46472-9",
+      "pdf_url": "https://www.nature.com/articles/s41467-024-46472-9.pdf",
+      "relative_pdf_path": "10.1038_s41467-024-46472-9/fulltext/article.pdf",
+      "sha256": "42c0cb805c4eb6d1ca62502ba992879191323d9cc5088778451ef5709cb583b9",
+      "pages": 12,
+      "bytes": 7046639,
+      "topic": "固态接触与力学",
+      "methods": [
+        "XR-CT",
+        "FE",
+        "electrochemistry"
+      ],
+      "read_scope": "此前核读官方HTML内建压力、接触结构、有限元及分构型性能段落/方法，实际目视Fig.4–5；本轮复核PDF对应pp.6–9定位。未核读SI与Source Data，未复现实验。",
+      "structure_survey": false,
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "card": "references/corpus/b02.md",
+      "source_note": "出版社正式版；核读官方HTML及Fig.4–5原图，PDF另行归档验证。",
+      "reading_provenance": "沿用既有核读记录；此次目录迁移不表示重新通读。",
+      "si": {
+        "status": "legacy_not_audited",
+        "files": [],
+        "pending": [],
+        "read_scope": "此次未复核既有 SI 获取及阅读范围，后续逐批补齐。"
+      }
+    },
+    {
+      "id": "B03",
+      "doi": "10.1038/s41586-024-07045-4",
+      "title": "Ligand-channel-enabled ultrafast Li-ion conduction",
+      "journal": "Nature",
+      "first_online": "2024-02-28",
+      "added_on": "2026-10-30",
+      "article_type": "original_research",
+      "article_url": "https://www.nature.com/articles/s41586-024-07045-4",
+      "pdf_url": "https://bpb-us-e1.wpmucdn.com/blog.umd.edu/dist/7/477/files/2024/02/a21f7670-47bb-49ed-b24c-c65c9626dea5-17deb821140e7716.pdf",
+      "relative_pdf_path": "10.1038_s41586-024-07045-4/fulltext/article.pdf",
+      "sha256": "068ca6e2c30504144338cc86f449f0fb0fc145d0d886c6fcae4eb8b283023028",
+      "pages": 9,
+      "bytes": 6241731,
+      "topic": "离子输运与模型接续",
+      "methods": [
+        "MD",
+        "AIMD",
+        "TEM",
+        "XAS",
+        "conductivity"
+      ],
+      "read_scope": "该9页PDF第3页Fig.2和电导相关段；第4页Ligand-channel-facilitated mechanism首段及上下文；第6页Fig.4与界面相关段；第8页表征/MD方法。未通读全部SI。",
+      "structure_survey": false,
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "card": "references/corpus/b03.md",
+      "source_note": "高校站点公开排版副本；首页在线日期为占位符，未与最终VOR逐字比对。正式发表身份由出版社元数据核对。",
+      "reading_provenance": "沿用既有核读记录；此次目录迁移不表示重新通读。",
+      "si": {
+        "status": "legacy_not_audited",
+        "files": [],
+        "pending": [],
+        "read_scope": "此次未复核既有 SI 获取及阅读范围，后续逐批补齐。"
+      }
+    },
+    {
+      "id": "B04",
+      "doi": "10.1002/adma.202307708",
+      "title": "Diagnosing the Electrostatic Shielding Mechanism for Dendrite Suppression in Aqueous Zinc Batteries",
+      "journal": "Advanced Materials",
+      "first_online": "2023-10-25",
+      "added_on": "2026-10-30",
+      "article_type": "original_research",
+      "article_url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.202307708",
+      "pdf_url": "https://wrap.warwick.ac.uk/id/eprint/186968/3/Advanced%20Materials%20-%202023%20-%20Yuan%20-%20Diagnosing%20the%20Electrostatic%20Shielding%20Mechanism%20for%20Dendrite%20Suppression%20in%20Aqueous.pdf",
+      "relative_pdf_path": "10.1002_adma.202307708/fulltext/article.pdf",
+      "sha256": "6fbafd3c6638db14f3b4a4e0ee5eb2dd006df0f93900db02265601a8b04cd25a",
+      "pages": 12,
+      "bytes": 3400924,
+      "topic": "原位成像与谱学",
+      "methods": [
+        "LC-TEM",
+        "Raman",
+        "DFT"
+      ],
+      "read_scope": "Results/Discussion中的LC-TEM及LiCl对照（PDF第4页）、Fig.2/3（第5页）与Fig.5图注；第9页Raman段及正文相关条件。未核读SI实验方法或视频。",
+      "structure_survey": false,
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "card": "references/corpus/b04.md",
+      "source_note": "高校机构库中的出版社正式版，12页。",
+      "reading_provenance": "沿用既有核读记录；此次目录迁移不表示重新通读。",
+      "si": {
+        "status": "legacy_not_audited",
+        "files": [],
+        "pending": [],
+        "read_scope": "此次未复核既有 SI 获取及阅读范围，后续逐批补齐。"
+      }
+    },
+    {
+      "id": "B05",
+      "doi": "10.1038/s41586-023-06992-8",
+      "title": "Recovery of isolated lithium through discharged state calendar ageing",
+      "journal": "Nature",
+      "first_online": "2024-02-07",
+      "added_on": "2026-10-30",
+      "article_type": "original_research",
+      "article_url": "https://www.nature.com/articles/s41586-023-06992-8",
+      "pdf_url": "https://web.stanford.edu/group/cui_group/papers/s41586-023-06992-8.pdf",
+      "relative_pdf_path": "10.1038_s41586-023-06992-8/fulltext/article.pdf",
+      "sha256": "ba7f4a5e54142effce3915f3aec264d4380758ce28d5c20b7a3b3f31e47c0868",
+      "pages": 19,
+      "bytes": 4873659,
+      "topic": "异常效率、容量来源与时序证据",
+      "methods": [
+        "连续循环与放电后静置的交替协议，用后续释放电量识别先前损失容量的部分回收。",
+        "TGC辅助区分金属锂与SEI贡献；保持堆压的原位光学装置追踪孤立锂与主体重新连接。",
+        "图像阈值分割得到二维面积恢复指标；化学表征用于补充而非替代形貌证据。"
+      ],
+      "read_scope": "PDF pp.1–6主文通览；pp.2–5 Fig.1–4图注；p.8电化学、TGC、光学及图像处理方法。未目视核验图像，未通读扩展数据或独立SI。",
+      "structure_survey": true,
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "card": "references/corpus/b05.md",
+      "source_note": "出版社最终版本（Version of Record），作者课题组公开托管副本",
+      "reading_provenance": "沿用既有核读记录；此次目录迁移不表示重新通读。",
+      "si": {
+        "status": "legacy_not_audited",
+        "files": [],
+        "pending": [],
+        "read_scope": "此次未复核既有 SI 获取及阅读范围，后续逐批补齐。"
+      }
+    },
+    {
+      "id": "B06",
+      "doi": "10.1038/s41586-026-10415-9",
+      "title": "Mechanically driven Li dendrite penetration in garnet solid electrolyte",
+      "journal": "Nature",
+      "first_online": "2026-04-22",
+      "added_on": "2026-10-30",
+      "article_type": "original_research",
+      "article_url": "https://www.nature.com/articles/s41586-026-10415-9",
+      "pdf_url": "https://pure.mpg.de/rest/items/item_3705891_3/component/file_3705892/content",
+      "relative_pdf_path": "10.1038_s41586-026-10415-9/fulltext/article.pdf",
+      "sha256": "a1cf09c24c1a8f99da7f32c2b820c0bf571107d4f76ee273f05f038098c752d6",
+      "pages": 12,
+      "bytes": 8361133,
+      "topic": "裂纹尖端与竞争失效机制",
+      "methods": [
+        "面内LLZTO/针电极几何控制裂纹路径，并与对称电池样品区分。",
+        "惰性转移和低温FIB/SEM/EBSD结合三维切片，识别晶界与穿晶生长及二维投影歧义。",
+        "裂纹尖端与前方位置的STEM/EELS用于检验是否已有锂填充；模型用于机制一致性而非直接测压。"
+      ],
+      "read_scope": "PDF pp.1–4背景、Intergranular and transgranular dendrite growth、Nanoscale Li mapping at the crack tip及邻近讨论；Fig.1–2图注；p.8生长和冷冻方法。未目视核图、通览全篇或读SI。",
+      "structure_survey": false,
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "card": "references/corpus/b06.md",
+      "source_note": "出版社最终版本（Version of Record），Max Planck机构库公开副本",
+      "reading_provenance": "沿用既有核读记录；此次目录迁移不表示重新通读。",
+      "si": {
+        "status": "legacy_not_audited",
+        "files": [],
+        "pending": [],
+        "read_scope": "此次未复核既有 SI 获取及阅读范围，后续逐批补齐。"
+      }
+    },
+    {
+      "id": "B07",
+      "doi": "10.1038/s41586-026-11138-7",
+      "title": "Evidence for multi-Li+ clustering in lithium-ion battery electrolytes",
+      "journal": "Nature",
+      "first_online": "2026-10-14",
+      "added_on": "2026-10-30",
+      "article_type": "original_research",
+      "article_url": "https://www.nature.com/articles/s41586-026-11138-7",
+      "pdf_url": "https://www.nature.com/articles/s41586-026-11138-7.pdf?error=cookies_not_supported",
+      "relative_pdf_path": "10.1038_s41586-026-11138-7/fulltext/article.pdf",
+      "sha256": "bd234ebef830bf3c6e2e0a723ceec694f495fbc39e097956407180c763fddb62",
+      "pages": 11,
+      "bytes": 7173615,
+      "topic": "谱学辨别结构、模型验证",
+      "methods": [
+        "机器学习力场与传统力场先做能量及凝聚态性质对照，再生成局部配位和谱学预测。",
+        "闪冻不同浓度LiPF6/EC，结合7Li直接激发、H/F到Li交叉极化及13C谱，比较空间邻近性与线形。",
+        "将实验谱形和预测结构关联，同时区分低温固态NMR条件与模拟温度。"
+      ],
+      "read_scope": "官方主文模型背景、Simulation of condensed-phase properties、NMR characterization of electrolyte和结论；PDF pp.3–4 NMR、Fig.3图注，p.8样品/NMR方法。未核图、全篇通览或读SI。",
+      "structure_survey": false,
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "card": "references/corpus/b07.md",
+      "source_note": "出版社最终版本（Version of Record）",
+      "reading_provenance": "沿用既有核读记录；此次目录迁移不表示重新通读。",
+      "si": {
+        "status": "legacy_not_audited",
+        "files": [],
+        "pending": [],
+        "read_scope": "此次未复核既有 SI 获取及阅读范围，后续逐批补齐。"
+      }
+    },
+    {
+      "id": "B08",
+      "doi": "10.1038/s41560-023-01405-6",
+      "title": "Borate–pyran lean electrolyte-based Li-metal batteries with minimal Li corrosion",
+      "journal": "Nature Energy",
+      "first_online": "2023-11-23",
+      "added_on": "2026-10-30",
+      "article_type": "original_research",
+      "article_url": "https://www.nature.com/articles/s41560-023-01405-6",
+      "pdf_url": "https://www.nature.com/articles/s41560-023-01405-6.pdf?error=cookies_not_supported",
+      "relative_pdf_path": "10.1038_s41560-023-01405-6/fulltext/article.pdf",
+      "sha256": "4efcba28e6ae003cc77c5347f660e54d04f05c12fdb6f06d952dea76272b25c6",
+      "pages": 13,
+      "bytes": 5910959,
+      "topic": "储存前后界面重构",
+      "methods": [
+        "相同沉积条件下比较三种电解液中储存前后的锂与SEI，分开形貌问题和腐蚀问题。",
+        "冷冻TEM、FFT/逆FFT描写结晶尺度变化，XPS补充化学组分变化，厚度统计提供另一条约束。",
+        "方法明确图像处理与取点方式；全电池配方与基础表征配方不能自动互换。"
+      ],
+      "read_scope": "引言、Interphase restructuring in borate–pyran electrolyte全节及相邻Reduction stability段；PDF pp.2–3表征与Fig.2图注，p.10方法。未核图或通览全篇/SI。",
+      "structure_survey": false,
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "card": "references/corpus/b08.md",
+      "source_note": "出版社最终版本（Version of Record）",
+      "reading_provenance": "沿用既有核读记录；此次目录迁移不表示重新通读。",
+      "si": {
+        "status": "legacy_not_audited",
+        "files": [],
+        "pending": [],
+        "read_scope": "此次未复核既有 SI 获取及阅读范围，后续逐批补齐。"
+      }
+    },
+    {
+      "id": "B09",
+      "doi": "10.1038/s41560-025-01847-0",
+      "title": "High plating currents without dendrites at the interface between a lithium anode and solid electrolyte",
+      "journal": "Nature Energy",
+      "first_online": "2025-09-04",
+      "added_on": "2026-10-30",
+      "article_type": "original_research",
+      "article_url": "https://www.nature.com/articles/s41560-025-01847-0",
+      "pdf_url": "https://link.springer.com/content/pdf/10.1038/s41560-025-01847-0.pdf",
+      "relative_pdf_path": "10.1038_s41560-025-01847-0/fulltext/article.pdf",
+      "sha256": "72c56cefa1827040f240e455a710be38e3aab11d0c233a24db7a3ba2354634fa",
+      "pages": 10,
+      "bytes": 2498726,
+      "topic": "微结构、模型与非对称电流验证",
+      "methods": [
+        "控制LPSCl致密化程度，组合三电极临界电流测试与原位XCT检查侵入/裂纹。",
+        "近表面FIB-SEM三维几何量化进入孔/裂纹压力模型，分别分析相反的参数影响。",
+        "重复高电流沉积的验证保留低电流剥离、每半圈容量和堆压条件。"
+      ],
+      "read_scope": "PDF pp.1–6全部主文和Fig.1–6图注；p.7关键电化学、XCT及FIB方法。未目视独立判图、重算或读SI。",
+      "structure_survey": true,
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "card": "references/corpus/b09.md",
+      "source_note": "出版社最终版本（Version of Record）",
+      "reading_provenance": "沿用既有核读记录；此次目录迁移不表示重新通读。",
+      "si": {
+        "status": "legacy_not_audited",
+        "files": [],
+        "pending": [],
+        "read_scope": "此次未复核既有 SI 获取及阅读范围，后续逐批补齐。"
+      }
+    },
+    {
+      "id": "B10",
+      "doi": "10.1038/s41560-022-01144-0",
+      "title": "Electrode potential influences the reversibility of lithium-metal anodes",
+      "journal": "Nature Energy",
+      "first_online": "2022-10-27",
+      "added_on": "2026-10-30",
+      "article_type": "original_research",
+      "article_url": "https://www.nature.com/articles/s41560-022-01144-0",
+      "pdf_url": "https://link.springer.com/content/pdf/10.1038/s41560-022-01144-0.pdf",
+      "relative_pdf_path": "10.1038_s41560-022-01144-0/fulltext/article.pdf",
+      "sha256": "ad1745e0bbc1ddd7a8623932b3206f2743d2d208b176c2ea0da43f5f42e409a2",
+      "pages": 8,
+      "bytes": 1554560,
+      "topic": "电位参照、描述符与性能关联",
+      "methods": [
+        "以Fc/Fc+内标比较不同电解液的Li电极电位，并配套镀/剥锂效率测试。",
+        "MD构建溶剂化/离子配位描述符，PLS回归筛选关联，再以FSI的拉曼振动区间检查配位趋势。",
+        "区分第2–20圈平均效率与长循环实验，并保留首次循环排除及重复电池范围。"
+      ],
+      "read_scope": "背景、Accurate measurement of ELi、三种醚对照、Machine learning regression analysis及结论边界；PDF pp.3–5与Fig.4图注，p.6方法。未独立核图、全篇通览或读SI。",
+      "structure_survey": false,
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "card": "references/corpus/b10.md",
+      "source_note": "出版社最终版本（Version of Record）",
+      "reading_provenance": "沿用既有核读记录；此次目录迁移不表示重新通读。",
+      "si": {
+        "status": "legacy_not_audited",
+        "files": [],
+        "pending": [],
+        "read_scope": "此次未复核既有 SI 获取及阅读范围，后续逐批补齐。"
+      }
+    },
+    {
+      "id": "B11",
+      "doi": "10.1002/adma.202201877",
+      "title": "Concentrated Electrolytes Enabling Stable Aqueous Ammonium-Ion Batteries",
+      "journal": "Advanced Materials",
+      "first_online": "2022-06-14",
+      "added_on": "2026-10-30",
+      "article_type": "original_research",
+      "article_url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.202201877",
+      "pdf_url": "https://publikationen.bibliothek.kit.edu/1000149074/149084041",
+      "relative_pdf_path": "10.1002_adma.202201877/fulltext/article.pdf",
+      "sha256": "f88667fe9ee6317791ce52b40680262800ea263bb72f39d534fb6477acb8115e",
+      "pages": 16,
+      "bytes": 8752383,
+      "topic": "模拟结构与散射验证",
+      "methods": [
+        "经典MD：1 m与5.8 m (NH4)2SO4比较；SDF等值面为平均体密度2倍，RDF区分各氢键对；GAFF/RESP，300 K平衡后10 ns生产轨迹。",
+        "SWAXS实验与同一模型计算的散射曲线比较；Cu Kα、100 mm样品探测器距离、空毛细管背景扣除，测量10 min。"
+      ],
+      "read_scope": "PDF pp.2–4引言收束、Results开头模型/散射连续段及Fig.1图注；pp.13–14方法。PDF首页空白，与印刷页差1页。未目视图像、通览全篇或读SI。",
+      "structure_survey": false,
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "card": "references/corpus/b11.md",
+      "source_note": "Version of Record（机构仓储公开的出版商排版正文）",
+      "reading_provenance": "沿用既有核读记录；此次目录迁移不表示重新通读。",
+      "si": {
+        "status": "legacy_not_audited",
+        "files": [],
+        "pending": [],
+        "read_scope": "此次未复核既有 SI 获取及阅读范围，后续逐批补齐。"
+      }
+    },
+    {
+      "id": "B12",
+      "doi": "10.1002/adma.202401576",
+      "title": "Achieving Planar Zn Electroplating in Aqueous Zinc Batteries with Cathode-Compatible Current Densities by Cycling under Pressure",
+      "journal": "Advanced Materials",
+      "first_online": "2024-06-04",
+      "added_on": "2026-10-30",
+      "article_type": "original_research",
+      "article_url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.202401576",
+      "pdf_url": "https://wrap.warwick.ac.uk/id/eprint/186973/3/Advanced%20Materials%20-%202024%20-%20Li%20-%20Achieving%20Planar%20Zn%20Electroplating%20in%20Aqueous%20Zinc%20Batteries%20with%20Cathode%E2%80%90Compatible.pdf",
+      "relative_pdf_path": "10.1002_adma.202401576/fulltext/article.pdf",
+      "sha256": "ff3e1fff4100ad9c31b4b822d72e8ac788017fa099111ea995d617987ad68f41",
+      "pages": 11,
+      "bytes": 7107776,
+      "topic": "形貌、力学与成核机制分离",
+      "methods": [
+        "SEM与XRD相对织构系数：比较0与5.6 MPa及不同电流密度，形貌/XRD样品沉积量为1 mAh cm−2。",
+        "Berkovich纳米压痕：熔融石英校准、50 mN峰值、保持60 s，多位置压痕；Fig.3样品沉积量为10 mAh cm−2。",
+        "液体池TEM在Pt电极比较10与120 mA cm−2成核分布；电化学效率测试用Ti，拆解形貌改用Zn并在正文解释剥离问题。"
+      ],
+      "read_scope": "PDF p.2问题/设计、pp.4–8微结构/压痕/覆盖率、p.10收束；Fig.2–4图注和正文测试条件。未目视图像或读SI，详细仪器参数未补写。",
+      "structure_survey": false,
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "card": "references/corpus/b12.md",
+      "source_note": "Version of Record（机构仓储公开的出版商排版正文）",
+      "reading_provenance": "沿用既有核读记录；此次目录迁移不表示重新通读。",
+      "si": {
+        "status": "legacy_not_audited",
+        "files": [],
+        "pending": [],
+        "read_scope": "此次未复核既有 SI 获取及阅读范围，后续逐批补齐。"
+      }
+    },
+    {
+      "id": "B13",
+      "doi": "10.1002/adma.202411601",
+      "title": "Low-Temperature Lithium Metal Batteries Achieved by Synergistically Enhanced Screening Li+ Desolvation Kinetics",
+      "journal": "Advanced Materials",
+      "first_online": "2024-12-16",
+      "added_on": "2026-10-30",
+      "article_type": "original_research",
+      "article_url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.202411601",
+      "pdf_url": "https://publikationen.bibliothek.kit.edu/1000179882/157564830",
+      "relative_pdf_path": "10.1002_adma.202411601/fulltext/article.pdf",
+      "sha256": "90af7c3b4b76e41af0c1e8be951e08ea1a8437857e6f0107de60cd3e6d5c2c21",
+      "pages": 10,
+      "bytes": 4152146,
+      "topic": "对照响应与界面脱溶剂化解释",
+      "methods": [
+        "MOF对照：MIL-125/NH2-MIL-125用于检验官能团影响，另与较小孔径ZIF-8/ZIF-67比较；DFT用Li(DME)4+简化溶剂化簇。",
+        "Raman讨论离子缔合分布；界面敏感原位SFG比较开路与施加偏压后的DME相关信号，配合FTIR与NMR讨论相互作用。",
+        "SEM/ToF-SIMS看沉积形貌与循环后界面组分；预沉积Li为5 mAh cm−2，正文给出全电池N/P≈3.3与低温条件。"
+      ],
+      "read_scope": "PDF pp.2–3材料/模型对照，pp.4–8电化学至界面谱学/SIMS，p.9低温器件与结论；Fig.1–5相关图注。未核图或读SI；未明确的采集/计算细节保留未知。",
+      "structure_survey": false,
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "card": "references/corpus/b13.md",
+      "source_note": "Version of Record（机构仓储公开的出版商排版正文）",
+      "reading_provenance": "沿用既有核读记录；此次目录迁移不表示重新通读。",
+      "si": {
+        "status": "legacy_not_audited",
+        "files": [],
+        "pending": [],
+        "read_scope": "此次未复核既有 SI 获取及阅读范围，后续逐批补齐。"
+      }
+    },
+    {
+      "id": "B14",
+      "doi": "10.1002/aenm.202302729",
+      "title": "Deposition of Sodium Metal at the Copper-NaSICON Interface for Reservoir-Free Solid-State Sodium Batteries",
+      "journal": "Advanced Energy Materials",
+      "first_online": "2023-12-08",
+      "added_on": "2026-10-30",
+      "article_type": "original_research",
+      "article_url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/aenm.202302729",
+      "pdf_url": "https://publikationen.bibliothek.kit.edu/1000165840/151881054",
+      "relative_pdf_path": "10.1002_aenm.202302729/fulltext/article.pdf",
+      "sha256": "eedbf1ed4a6fdf6944b92236be09ce9db2324b5de7b693f7122f4771feb324bd",
+      "pages": 14,
+      "bytes": 6354994,
+      "topic": "阻抗几何、接触代理与矛盾修正",
+      "methods": [
+        "Cu|NZSP|Naid：固定2 MPa改变电流，固定200 μA cm−2改变压力；25 °C，总沉积0.5 mAh cm−2，每0.05 mAh cm−2间隔EIS。",
+        "EIS按cell constant归一化，阻挡/非阻挡状态使用不同等效电路；利用Naid减少对电极贡献并讨论电流收缩几何效应。",
+        "3D共焦成像定位后FIB-SEM切片检验Cu凸起与真实Na接触的差别；另用120 nm Cu的TEM薄片偏压观察早期生长。"
+      ],
+      "read_scope": "PDF pp.1–13正文/方法通览；重点pp.3–9结果及Fig.1–8图注；实际目视p.9 Fig.6定位截面。未读SI或统计全部图像。",
+      "structure_survey": true,
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "card": "references/corpus/b14.md",
+      "source_note": "Version of Record（机构仓储公开的出版商排版正文）",
+      "reading_provenance": "沿用既有核读记录；此次目录迁移不表示重新通读。",
+      "si": {
+        "status": "legacy_not_audited",
+        "files": [],
+        "pending": [],
+        "read_scope": "此次未复核既有 SI 获取及阅读范围，后续逐批补齐。"
+      }
+    },
+    {
+      "id": "B15",
+      "doi": "10.1002/aenm.202403195",
+      "title": "Toward Realistic Full Cells with Protected Lithium-Metal-Anodes: the Effect of an Adaptive Self-healing Artificial SEI",
+      "journal": "Advanced Energy Materials",
+      "first_online": "2024-12-23",
+      "added_on": "2026-10-30",
+      "article_type": "original_research",
+      "article_url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/aenm.202403195",
+      "pdf_url": "https://publikationen.bibliothek.kit.edu/1000177797/156364098",
+      "relative_pdf_path": "10.1002_aenm.202403195/fulltext/article.pdf",
+      "sha256": "4d6a8a212cebcc6c9480750b0615e802bc07371835b9b3691f2c529f4f4c8852",
+      "pages": 21,
+      "bytes": 23587139,
+      "topic": "成分归属与跨方法厚度冲突",
+      "methods": [
+        "静态SIMS先测LiBFEP参考，利用BFEP−特征碎片核对处理电极；动态谱跟踪BFEP相关与LiH2−等离子。",
+        "ToF-SIMS：25 keV Bi+分析，10 keV Ar1500+溅射；分析区100×100 μm2、溅射区300×300 μm2，正文说明仪器条件。",
+        "循环后SEM/EDX与SIMS交叉比较；取样惰性转移；电极EMC清洗1 min，截面在−40 °C冷台上切割。"
+      ],
+      "read_scope": "PDF pp.1–4方案背景，p.13循环后SEM上下文、pp.15–16静态/动态SIMS、pp.18–19方法；Fig.13–15图注。未目视图像、通览全部性能或读SI。",
+      "structure_survey": false,
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "card": "references/corpus/b15.md",
+      "source_note": "Version of Record（机构仓储公开的出版商排版正文）",
+      "reading_provenance": "沿用既有核读记录；此次目录迁移不表示重新通读。",
+      "si": {
+        "status": "legacy_not_audited",
+        "files": [],
+        "pending": [],
+        "read_scope": "此次未复核既有 SI 获取及阅读范围，后续逐批补齐。"
+      }
+    },
+    {
+      "id": "B16",
+      "doi": "10.1002/aenm.202402996",
+      "title": "Sulfur Distribution Analysis in Lithium−Sulfur Cathode via Confined Inverse Vulcanization in Carbon Frameworks",
+      "journal": "Advanced Energy Materials",
+      "first_online": "2024-10-09",
+      "added_on": "2026-10-30",
+      "article_type": "original_research",
+      "article_url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/aenm.202402996",
+      "pdf_url": "https://publikationen.bibliothek.kit.edu/1000179128/157005028",
+      "relative_pdf_path": "10.1002_aenm.202402996/fulltext/article.pdf",
+      "sha256": "53bdce93e6a7723e7e67483aea79f28c214d332c0761bedc34f4dd70ac1f78c9",
+      "pages": 12,
+      "bytes": 16789510,
+      "topic": "显微标定、混相歧义与反应进程",
+      "methods": [
+        "EsB检测前用半覆硫HOPG作C/S对照；离子抛光截面在惰性条件转移，电极比较保持工作距离3.8 mm、600 pA等条件一致。",
+        "Operando Raman跟踪充放电硫物种，XPS辅助长期循环后物种解释；EsB灰度转换为热图不改变原始信号的多义性。",
+        "CV扫描速率拟合保留为动力学参数；孔内受限扩散不满足原始Randles–Sevcik的半无限扩散条件。"
+      ],
+      "read_scope": "PDF pp.1–11正文与方法通览；重点pp.4–8 EsB标定、谱学与混相歧义，pp.10–11方法；Fig.1–6图注。实际目视p.5 Fig.3；未读SI。",
+      "structure_survey": true,
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "card": "references/corpus/b16.md",
+      "source_note": "Version of Record（机构仓储公开的出版商排版正文）",
+      "reading_provenance": "沿用既有核读记录；此次目录迁移不表示重新通读。",
+      "si": {
+        "status": "legacy_not_audited",
+        "files": [],
+        "pending": [],
+        "read_scope": "此次未复核既有 SI 获取及阅读范围，后续逐批补齐。"
+      }
+    },
+    {
+      "id": "B17",
+      "doi": "10.1038/s41467-023-44222-x",
+      "title": "Asynchronous domain dynamics and equilibration in layered oxide battery cathode",
+      "journal": "Nature Communications",
+      "first_online": "2023-12-18",
+      "added_on": "2026-10-30",
+      "article_type": "original_research",
+      "article_url": "https://www.nature.com/articles/s41467-023-44222-x",
+      "pdf_url": "https://www.nature.com/articles/s41467-023-44222-x.pdf",
+      "relative_pdf_path": "10.1038_s41467-023-44222-x/fulltext/article.pdf",
+      "sha256": "826179b07d08ccfceb95d0c38a5f5baaa573a1f2a6d232d89372ca1cb0d885bb",
+      "pages": 8,
+      "bytes": 3086248,
+      "topic": "局部晶畴时序与多尺度诊断",
+      "methods": [
+        "NMC532复合正极；operando CMCD追踪(003)附近单晶畴衍射斑点：约1×1 μm²、9 keV、C/5、2.5–4.5 V。",
+        "光学显微读取抛光截面，固定位置每分钟成像，C/20；以强度及其时间变化表征局部反应，与CMCD属于互补实验。",
+        "七晶畴二维有限元模型以传输、界面反应和损伤解释反应异步，作者说明未完整复现实际实验构型。"
+      ],
+      "read_scope": "PDF pp.1–7：引言、三组结果和Discussion通览；pp.3–6对应Fig.1–4图注；pp.6–7方法与斑点追踪限制。未读SI、视频和代码；图像目视记录另存本地。",
+      "structure_survey": true,
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "card": "references/corpus/b17.md",
+      "source_note": "Publisher version of record; Nature Communications 14, 8394 (2023)",
+      "reading_provenance": "沿用既有核读记录；此次目录迁移不表示重新通读。",
+      "si": {
+        "status": "legacy_not_audited",
+        "files": [],
+        "pending": [],
+        "read_scope": "此次未复核既有 SI 获取及阅读范围，后续逐批补齐。"
+      }
+    },
+    {
+      "id": "B18",
+      "doi": "10.1038/s41467-023-43792-0",
+      "title": "Defective oxygen inert phase stabilized high-voltage nickel-rich cathode for high-energy lithium-ion batteries",
+      "journal": "Nature Communications",
+      "first_online": "2023-12-06",
+      "added_on": "2026-10-30",
+      "article_type": "original_research",
+      "article_url": "https://www.nature.com/articles/s41467-023-43792-0",
+      "pdf_url": "https://www.nature.com/articles/s41467-023-43792-0.pdf",
+      "relative_pdf_path": "10.1038_s41467-023-43792-0/fulltext/article.pdf",
+      "sha256": "bca9c50e37e70f18cc50cf08ae2d499261921ea6c19e159c0f45c782da8e0ce2",
+      "pages": 11,
+      "bytes": 4689738,
+      "topic": "氧释放、表面化学与晶格变化",
+      "methods": [
+        "NCM811与3 wt.% La2Mo2O9改性材料对照；初次充电2.7–4.5 V的in situ DEMS比较氧气信号。",
+        "sXAS为拆解样品TEY，约15 nm探测深度；充电到4.5 V后的表面谱学与循环后硬X射线XANES/EXAFS各有尺度。",
+        "电化学in situ XRD跟踪首圈结构；HT-XRD对拆解后的4.5 V电极从25升到600 °C。",
+        "有限元及简化LiNiO2/La2Mo2O9表面DFT补充传输、应力及氧相互作用解释；不等同直接观测。"
+      ],
+      "read_scope": "PDF pp.2–6选定氧活性、性能、结构与循环后表征段；Fig.1–3、5图注及pp.9–10方法；实际目视p.5 Fig.3。未完整通览所有DFT讨论，未读SI。",
+      "structure_survey": false,
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "card": "references/corpus/b18.md",
+      "source_note": "Publisher version of record; Nature Communications 14, 8087 (2023)",
+      "reading_provenance": "沿用既有核读记录；此次目录迁移不表示重新通读。",
+      "si": {
+        "status": "legacy_not_audited",
+        "files": [],
+        "pending": [],
+        "read_scope": "此次未复核既有 SI 获取及阅读范围，后续逐批补齐。"
+      }
+    },
+    {
+      "id": "B19",
+      "doi": "10.1038/s41467-024-54656-6",
+      "title": "Revealing how internal sensors in a smart battery impact the local graphite lithiation mechanism",
+      "journal": "Nature Communications",
+      "first_online": "2024-11-26",
+      "added_on": "2026-10-30",
+      "article_type": "original_research",
+      "article_url": "https://www.nature.com/articles/s41467-024-54656-6",
+      "pdf_url": "https://www.nature.com/articles/s41467-024-54656-6.pdf",
+      "relative_pdf_path": "10.1038_s41467-024-54656-6/fulltext/article.pdf",
+      "sha256": "f3d14740042ae6588983ac56b0476c84d2bab3148787644ba12a17d940a31f8e",
+      "pages": 11,
+      "bytes": 1432216,
+      "topic": "测量扰动、局部与平均响应",
+      "methods": [
+        "1.1 Ah商业石墨||NMC622多层软包内置参比与热致发光光纤，使用相同商业电极制成单层对照。",
+        "ESRF BM02透射operando XRD，25 keV、60×60 μm；中心、参比区及距光纤约500 μm处采集，所得为深度平均。",
+        "单层峰拟合与多层峰强度加权中心(CoM)并用；多层复杂叠峰未强行用单层峰拟合替代。",
+        "主比较为C/5及2C充电；较热的4C放电耦合问题明确不纳入深入分析。"
+      ],
+      "read_scope": "PDF pp.1–8正文通览；Fig.1–4图注；pp.8–9方法。实际目视p.7 Fig.4；未读SI、层析和原始XRD数据。",
+      "structure_survey": true,
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "card": "references/corpus/b19.md",
+      "source_note": "Publisher version of record; Nature Communications 15, 10258 (2024)",
+      "reading_provenance": "沿用既有核读记录；此次目录迁移不表示重新通读。",
+      "si": {
+        "status": "legacy_not_audited",
+        "files": [],
+        "pending": [],
+        "read_scope": "此次未复核既有 SI 获取及阅读范围，后续逐批补齐。"
+      }
+    },
+    {
+      "id": "B20",
+      "doi": "10.1038/s41467-023-39838-y",
+      "title": "Slab gliding, a hidden factor that induces irreversibility and redox asymmetry of lithium-rich layered oxide cathodes",
+      "journal": "Nature Communications",
+      "first_online": "2023-07-12",
+      "added_on": "2026-10-30",
+      "article_type": "original_research",
+      "article_url": "https://www.nature.com/articles/s41467-023-39838-y",
+      "pdf_url": "https://www.nature.com/articles/s41467-023-39838-y.pdf",
+      "relative_pdf_path": "10.1038_s41467-023-39838-y/fulltext/article.pdf",
+      "sha256": "766f71dc899389144794bf442555caf434444a8691e26231bbc6bb90ff968422",
+      "pages": 10,
+      "bytes": 6970422,
+      "topic": "竞争机制、迁移路径与能垒",
+      "methods": [
+        "Li2−xRuO3为模型体系；室温in situ XRD配合Li金属对电极，25 mA g−1、2.0–4.6 V、每幅约20 min。",
+        "DFT使用optB86b-vdW、GGA+U（Ru U=4.0）、520 eV；以不同堆垛与锂构型比较相对能量。",
+        "Li0.875RuO3超胞用于滑移/迁移路径，氧pDOS选择迁移附近六个氧；实验堆垛峰与计算路径层次分开。"
+      ],
+      "read_scope": "PDF pp.2–8结构、竞争路径和氧电子结构相关结果链；Fig.1–4图注；pp.8–9方法。实际目视p.3 Fig.1；未读补充构型或重算能垒。",
+      "structure_survey": false,
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "card": "references/corpus/b20.md",
+      "source_note": "Publisher version of record; Nature Communications 14, 4149 (2023)",
+      "reading_provenance": "沿用既有核读记录；此次目录迁移不表示重新通读。",
+      "si": {
+        "status": "legacy_not_audited",
+        "files": [],
+        "pending": [],
+        "read_scope": "此次未复核既有 SI 获取及阅读范围，后续逐批补齐。"
+      }
+    },
+    {
+      "id": "B21",
+      "doi": "10.1038/s41586-026-10862-4",
+      "title": "Avalanche-like intercalation and intraparticle correlations in graphite",
+      "journal": "Nature",
+      "first_online": "2026-07-29",
+      "article_url": "https://www.nature.com/articles/s41586-026-10862-4",
+      "pdf_url": "https://www.nature.com/articles/s41586-026-10862-4.pdf",
+      "relative_pdf_path": "10.1038_s41586-026-10862-4/fulltext/article.pdf",
+      "sha256": "c95b412b4f46295af6b658333682e024902492df05583c9c2c9f62a47ad6f286",
+      "pages": 11,
+      "bytes": 3639778,
+      "topic": "局部动态、代理信号与时序关联",
+      "methods": [
+        "operando optical microscopy",
+        "dQ/dV",
+        "EBSD",
+        "AFM",
+        "random-field Ising model",
+        "cross-correlation"
+      ],
+      "read_scope": "正文PDF pp.1–5：引言、光学代理、离散事件、模型、时空关联与结论；Fig.1–4图注；p.7方法。实际目视p.5 Fig.4。SI PDF pp.11–13、26–27、29–30：反射率模型、有效深度、模型限制及相关分析；其余SI未核读，视频未观看。",
+      "structure_survey": true,
+      "card": "references/corpus/b21.md",
+      "added_on": "2026-10-30",
+      "article_type": "original_research",
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "source_note": "正式出版方开放版本；具体版本、更正与阅读位置见阅读卡。",
+      "si": {
+        "status": "partial",
+        "files": [
+          {
+            "path": "10.1038_s41586-026-10862-4/supplementary/41586_2026_10862_MOESM1_ESM.pdf",
+            "sha256": "e21c5eae5282ca0e7fc1badeaa17d295acc7b8c7d093b09d0d429e9ff408a515",
+            "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-026-10862-4/MediaObjects/41586_2026_10862_MOESM1_ESM.pdf",
+            "label": "Supplementary Information (download PDF     )",
+            "bytes": 12707517,
+            "read_scope": "SI PDF pp.11–13,26–27,29–30; remaining SI not read; videos not watched",
+            "pages": 36
+          },
+          {
+            "path": "10.1038_s41586-026-10862-4/supplementary/41586_2026_10862_MOESM4_ESM.mp4",
+            "sha256": "68e22023387d5d0881dee758449fa8abc67810e8d479260138fede9aafcea469",
+            "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-026-10862-4/MediaObjects/41586_2026_10862_MOESM4_ESM.mp4",
+            "label": "Supplementary Video 2 (download MP4     )",
+            "bytes": 9135089,
+            "read_scope": "not read/watched"
+          },
+          {
+            "path": "10.1038_s41586-026-10862-4/supplementary/41586_2026_10862_MOESM5_ESM.mp4",
+            "sha256": "7fb58426a524e0c01e6a9663752a36f62393e48b192bd283ac02f9951c2c0d44",
+            "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-026-10862-4/MediaObjects/41586_2026_10862_MOESM5_ESM.mp4",
+            "label": "Supplementary Video 3 (download MP4     )",
+            "bytes": 4448091,
+            "read_scope": "not read/watched"
+          },
+          {
+            "path": "10.1038_s41586-026-10862-4/supplementary/41586_2026_10862_MOESM6_ESM.mp4",
+            "sha256": "d7b94bcf79bf5b0649f9693a55cd28307a22a7c2999fc9ce5ef9eed9ababb555",
+            "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-026-10862-4/MediaObjects/41586_2026_10862_MOESM6_ESM.mp4",
+            "label": "Supplementary Video 4 (download MP4     )",
+            "bytes": 684779,
+            "read_scope": "not read/watched"
+          },
+          {
+            "path": "10.1038_s41586-026-10862-4/supplementary/41586_2026_10862_MOESM7_ESM.mp4",
+            "sha256": "7704624a1975732386bb7171ff2f057147d26f190130c87f350f177bd99f96fd",
+            "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-026-10862-4/MediaObjects/41586_2026_10862_MOESM7_ESM.mp4",
+            "label": "Supplementary Video 5 (download MP4     )",
+            "bytes": 1726301,
+            "read_scope": "not read/watched"
+          }
+        ],
+        "pending": [
+          {
+            "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-026-10862-4/MediaObjects/41586_2026_10862_MOESM3_ESM.mp4",
+            "label": "Supplementary Video 1 (download MP4     )",
+            "status": "incomplete_pending_retry"
+          }
+        ],
+        "read_scope": "SI PDF pp.11–13,26–27,29–30; remaining SI not read; videos not watched"
+      }
+    },
+    {
+      "id": "B22",
+      "doi": "10.1038/s41586-024-08140-2",
+      "title": "Selective ion transport through hydrated micropores in polymer membranes",
+      "journal": "Nature",
+      "first_online": "2024-11-06",
+      "article_url": "https://www.nature.com/articles/s41586-024-08140-2",
+      "pdf_url": "https://www.nature.com/articles/s41586-024-08140-2.pdf",
+      "relative_pdf_path": "10.1038_s41586-024-08140-2/fulltext/article.pdf",
+      "sha256": "84951d0f3c3b31077f4e9a8628e73f98e7468dae7649acb0856a467e6c281b33",
+      "pages": 18,
+      "bytes": 11403318,
+      "topic": "水合孔道、跨尺度扩散与器件约束",
+      "methods": [
+        "SAXS/WAXS",
+        "molecular dynamics",
+        "NMR",
+        "PFG-NMR",
+        "QENS",
+        "EIS",
+        "redox flow battery"
+      ],
+      "read_scope": "正文PDF pp.1–6：设计约束、水合结构、跨尺度输运、液流电池验证与结论；Fig.1–4图注。实际目视p.3 Fig.2。SI仅下载及文件核验，未科学核读；未复现模拟或拟合。",
+      "structure_survey": true,
+      "card": "references/corpus/b22.md",
+      "added_on": "2026-10-30",
+      "article_type": "original_research",
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "source_note": "正式出版方开放版本；具体版本、更正与阅读位置见阅读卡。",
+      "si": {
+        "status": "downloaded",
+        "files": [
+          {
+            "path": "10.1038_s41586-024-08140-2/supplementary/41586_2024_8140_MOESM1_ESM.pdf",
+            "sha256": "2f7a70d2c1eff84751d161d9c3d1195dc5a88ff1d24943460089d1718f698a7c",
+            "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-024-08140-2/MediaObjects/41586_2024_8140_MOESM1_ESM.pdf",
+            "label": "Supplementary Information (download PDF     )",
+            "bytes": 7168614,
+            "read_scope": "downloaded and format verified only; not scientifically read",
+            "pages": 43
+          }
+        ],
+        "pending": [],
+        "read_scope": "downloaded and format verified only; not scientifically read"
+      }
+    },
+    {
+      "id": "B23",
+      "doi": "10.1038/s41586-023-06827-6",
+      "title": "The persistence of memory in ionic conduction probed by nonlinear optics",
+      "journal": "Nature",
+      "first_online": "2024-01-24",
+      "article_url": "https://www.nature.com/articles/s41586-023-06827-6",
+      "pdf_url": "https://www.nature.com/articles/s41586-023-06827-6.pdf",
+      "relative_pdf_path": "10.1038_s41586-023-06827-6/fulltext/article.pdf",
+      "sha256": "d344677349d099ed2c637b66b38b98e11a2fc5313fe4423202964a2f29624ee9",
+      "pages": 15,
+      "bytes": 3585238,
+      "topic": "瞬态信号归属、反证与时间尺度",
+      "methods": [
+        "terahertz Kerr effect",
+        "transient birefringence",
+        "molecular dynamics",
+        "temperature-dependent relaxation"
+      ],
+      "read_scope": "正文PDF pp.1–5：问题、信号归属、温变/模拟/对照、尝试频率和结论；Fig.1–4图注；p.7方法。实际目视p.3 Fig.2–3及更正后的阴影。SI仅下载及文件核验，未科学核读。",
+      "structure_survey": true,
+      "card": "references/corpus/b23.md",
+      "added_on": "2026-10-30",
+      "article_type": "original_research",
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "source_note": "正式出版方开放版本；具体版本、更正与阅读位置见阅读卡。 已核对2024-01-30出版方更正，Fig.3a显示修正；更正不单独计篇。",
+      "si": {
+        "status": "downloaded",
+        "files": [
+          {
+            "path": "10.1038_s41586-023-06827-6/supplementary/41586_2023_6827_MOESM1_ESM.pdf",
+            "sha256": "4550b12765d446e56b5577527ddb094eb4cd6bb6ba8d37376162e8e71e0ea18b",
+            "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-023-06827-6/MediaObjects/41586_2023_6827_MOESM1_ESM.pdf",
+            "label": "Supplementary Information (download PDF     )",
+            "bytes": 5982178,
+            "read_scope": "downloaded and format verified only; not scientifically read",
+            "pages": 20
+          }
+        ],
+        "pending": [],
+        "read_scope": "downloaded and format verified only; not scientifically read"
+      }
+    },
+    {
+      "id": "B24",
+      "doi": "10.1038/s41560-023-01375-9",
+      "title": "In situ formed partially disordered phases as earth-abundant Mn-rich cathode materials",
+      "journal": "Nature Energy",
+      "first_online": "2023-10-05",
+      "article_url": "https://www.nature.com/articles/s41560-023-01375-9",
+      "pdf_url": "https://www.nature.com/articles/s41560-023-01375-9.pdf",
+      "relative_pdf_path": "10.1038_s41560-023-01375-9/fulltext/article.pdf",
+      "sha256": "37afe9b05eb09afe20fca16eaca2d869ddcc0ce5ae86a43d75a422620b6fb59e",
+      "pages": 10,
+      "bytes": 2387313,
+      "topic": "部分有序结构、互补表征与混杂变量",
+      "methods": [
+        "synchrotron XRD",
+        "Rietveld refinement",
+        "7Li ssNMR",
+        "XAS",
+        "HAADF-STEM",
+        "DFT-NEB"
+      ],
+      "read_scope": "正文PDF pp.1–7：引言、组分对照、结构/性能、驱动力及验证、结论；Fig.1–4图注；pp.7–8方法。实际目视p.5 Fig.3。SI PDF p.2 Note 1、pp.13–14 Fig.S6–S8及图注，目视SI p.13：价态对照；其余SI未系统核读，未重做精修、NMR拟合或NEB。",
+      "structure_survey": true,
+      "card": "references/corpus/b24.md",
+      "added_on": "2026-10-30",
+      "article_type": "original_research",
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "source_note": "正式出版方开放版本；具体版本、更正与阅读位置见阅读卡。",
+      "si": {
+        "status": "downloaded",
+        "files": [
+          {
+            "path": "10.1038_s41560-023-01375-9/supplementary/41560_2023_1375_MOESM1_ESM.pdf",
+            "sha256": "c9ba87e11f11f4b999ed94287b1634a1576d69bde3fdcabda60fb9cc5d5fc63d",
+            "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41560-023-01375-9/MediaObjects/41560_2023_1375_MOESM1_ESM.pdf",
+            "label": "Supplementary Information (download PDF     )",
+            "bytes": 13853385,
+            "read_scope": "SI PDF p.2 Note 1 and pp.13–14 Figs.S6–S8/captions; visual inspection p.13; remaining SI not systematically read",
+            "pages": 24
+          },
+          {
+            "path": "10.1038_s41560-023-01375-9/supplementary/41560_2023_1375_MOESM2_ESM.xlsx",
+            "sha256": "cec20c42fc8369aeca772d1e6d8c20f4a41aa86021bb9a9fb54de27d113b2fce",
+            "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41560-023-01375-9/MediaObjects/41560_2023_1375_MOESM2_ESM.xlsx",
+            "label": "Source Data Fig. 1 (download XLSX     )",
+            "bytes": 196317,
+            "read_scope": "not read/watched"
+          },
+          {
+            "path": "10.1038_s41560-023-01375-9/supplementary/41560_2023_1375_MOESM3_ESM.xlsx",
+            "sha256": "486ef4439c489db564feb141b4c16a3c18350e2c7d0224083144a476e1911dda",
+            "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41560-023-01375-9/MediaObjects/41560_2023_1375_MOESM3_ESM.xlsx",
+            "label": "Source Data Fig. 2 (download XLSX     )",
+            "bytes": 924231,
+            "read_scope": "not read/watched"
+          },
+          {
+            "path": "10.1038_s41560-023-01375-9/supplementary/41560_2023_1375_MOESM4_ESM.xlsx",
+            "sha256": "a1dfbcb6cf3ba1282a2588d988f618306f4e6e960c1be27ce0e3fb70b968f2e7",
+            "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41560-023-01375-9/MediaObjects/41560_2023_1375_MOESM4_ESM.xlsx",
+            "label": "Source Data Fig. 3 (download XLSX     )",
+            "bytes": 1056864,
+            "read_scope": "not read/watched"
+          },
+          {
+            "path": "10.1038_s41560-023-01375-9/supplementary/41560_2023_1375_MOESM5_ESM.xlsx",
+            "sha256": "9e83d7e1fe142d75c239ecdb88fa31bb68f6424c7be8cd11d5fbe504f1483ed4",
+            "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41560-023-01375-9/MediaObjects/41560_2023_1375_MOESM5_ESM.xlsx",
+            "label": "Source Data Fig. 4 (download XLSX     )",
+            "bytes": 136342,
+            "read_scope": "not read/watched"
+          }
+        ],
+        "pending": [],
+        "read_scope": "SI PDF p.2 Note 1 and pp.13–14 Figs.S6–S8/captions; visual inspection p.13; remaining SI not systematically read"
+      }
+    },
+    {
+      "id": "B25",
+      "doi": "10.1002/aenm.202203966",
+      "title": "A Solution-Mediated Pathway for the Growth of the Solid Electrolyte Interphase in Lithium-Ion Batteries",
+      "journal": "Advanced Energy Materials",
+      "first_online": "2023-02-17",
+      "article_url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/aenm.202203966",
+      "pdf_url": "https://publikationen.bibliothek.kit.edu/1000160408/150986612",
+      "relative_pdf_path": "10.1002_aenm.202203966/fulltext/article.pdf",
+      "sha256": "8bd2b6be8f0f10191999a33c6e80e83f87536e8e536cd7b30171a2eeaec19de6",
+      "pages": 13,
+      "bytes": 2902774,
+      "topic": "反应网络、参数不确定性与定性实验对照",
+      "methods": [
+        "KMC",
+        "Latin hypercube sampling",
+        "K-means",
+        "UMAP",
+        "literature microscopy comparison"
+      ],
+      "read_scope": "PDF pp.1–12 主文及 Fig.1–10 图注；实际目视 p.5 Fig.1；未复现计算。",
+      "structure_survey": true,
+      "card": "references/corpus/b25.md",
+      "added_on": "2026-10-30",
+      "article_type": "original_research",
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "source_note": "KIT 出版社排版版，13页。",
+      "license": "CC BY-NC",
+      "si": {
+        "status": "pending_access",
+        "files": [],
+        "pending": [
+          {
+            "url": "https://advanced.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Faenm.202203966&file=aenm202203966-sup-0001-SuppMat.pdf",
+            "label": "aenm202203966-sup-0001-SuppMat.pdf",
+            "status": "publisher_verification_waiting_user"
+          }
+        ],
+        "read_scope": "SI 未取得，未核读。"
+      }
+    },
+    {
+      "id": "B26",
+      "doi": "10.1002/aenm.202404037",
+      "title": "Efficient and Effective Synthesis of CaV6O16·2.7H2O as High-Performance Cathode Material for Aqueous Zinc Metal Batteries",
+      "journal": "Advanced Energy Materials",
+      "first_online": "2024-12-05",
+      "article_url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/aenm.202404037",
+      "pdf_url": "https://publikationen.bibliothek.kit.edu/1000178312/156572803",
+      "relative_pdf_path": "10.1002_aenm.202404037/fulltext/article.pdf",
+      "sha256": "5ef1ce95e921ea66b9556351b611b4efbd015ff8862515c03a9a6194fb63b67b",
+      "pages": 11,
+      "bytes": 4286531,
+      "topic": "充放电态对照、混相信号排歧与制样影响",
+      "methods": [
+        "ex situ XRD",
+        "FTIR",
+        "XPS",
+        "TEM/EDS",
+        "ICP-OES",
+        "DFT"
+      ],
+      "read_scope": "PDF pp.1–9 主文及 Fig.1–6 图注；实际目视 p.7 Fig.5；未复现计算。",
+      "structure_survey": true,
+      "card": "references/corpus/b26.md",
+      "added_on": "2026-10-30",
+      "article_type": "original_research",
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "source_note": "KIT 出版社排版早期副本，Published online 留空，正式日期据 Wiley 核验。",
+      "license": "CC BY",
+      "si": {
+        "status": "pending_access",
+        "files": [],
+        "pending": [
+          {
+            "url": "https://advanced.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Faenm.202404037&file=aenm202404037-sup-0001-SuppMat.docx",
+            "label": "aenm202404037-sup-0001-SuppMat.docx",
+            "status": "deferred_after_provider_verification_block"
+          }
+        ],
+        "read_scope": "SI 未取得，未核读。"
+      }
+    },
+    {
+      "id": "B27",
+      "doi": "10.1002/aenm.202302577",
+      "title": "Adaptive Multi-Site Gradient Adsorption of Siloxane-Based Protective Layers Enable High Performance Lithium-Metal Batteries",
+      "journal": "Advanced Energy Materials",
+      "first_online": "2023-10-22",
+      "article_url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/aenm.202302577",
+      "pdf_url": "https://publikationen.bibliothek.kit.edu/1000163935/151613854",
+      "relative_pdf_path": "10.1002_aenm.202302577/fulltext/article.pdf",
+      "sha256": "5f78d0a315cce03b9d30254d609f9a98c16bb776c93fd68203640b40f2509f0b",
+      "pages": 9,
+      "bytes": 5938728,
+      "topic": "固定沉积容量下的形貌对照与电池构型边界",
+      "methods": [
+        "in situ optical microscopy",
+        "SEM",
+        "XPS",
+        "EIS",
+        "DFT"
+      ],
+      "read_scope": "PDF pp.1–8 主文及 Fig.1–6 图注；实际目视 p.5 Fig.3；未复现计算。",
+      "structure_survey": true,
+      "card": "references/corpus/b27.md",
+      "added_on": "2026-10-30",
+      "article_type": "original_research",
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "source_note": "KIT 出版社排版早期副本，未与最终卷期文件逐页比对。",
+      "license": "CC BY",
+      "si": {
+        "status": "pending_access",
+        "files": [],
+        "pending": [
+          {
+            "url": "https://advanced.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Faenm.202302577&file=aenm202302577-sup-0001-SuppMat.pdf",
+            "label": "aenm202302577-sup-0001-SuppMat.pdf",
+            "status": "deferred_after_provider_verification_block"
+          },
+          {
+            "url": "https://advanced.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Faenm.202302577&file=aenm202302577-sup-0002-VideoS1.mp4",
+            "label": "aenm202302577-sup-0002-VideoS1.mp4",
+            "status": "publisher_verification_waiting_user"
+          },
+          {
+            "url": "https://advanced.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Faenm.202302577&file=aenm202302577-sup-0003-VideoS2.mp4",
+            "label": "aenm202302577-sup-0003-VideoS2.mp4",
+            "status": "publisher_verification_waiting_user"
+          }
+        ],
+        "read_scope": "SI 未取得，未核读。"
+      }
+    },
+    {
+      "id": "B29",
+      "doi": "10.1038/s41467-024-44855-6",
+      "title": "Alkaline-based aqueous sodium-ion batteries for large-scale energy storage",
+      "journal": "Nature Communications",
+      "first_online": "2024-01-17",
+      "article_url": "https://www.nature.com/articles/s41467-024-44855-6",
+      "pdf_url": "https://www.nature.com/articles/s41467-024-44855-6.pdf",
+      "relative_pdf_path": "10.1038_s41467-024-44855-6/fulltext/article.pdf",
+      "sha256": "af076ca0c792f3dd15c82ad14ea26349f1f130253757e03add1b8383f5c088f8",
+      "pages": 10,
+      "bytes": 3301116,
+      "topic": "水系钠电：局部界面环境、产气与性能归一化",
+      "methods": [
+        "in situ ATR-IR",
+        "operando DEMS",
+        "operando XRPD",
+        "Raman",
+        "STEM-EDS",
+        "soft XAS"
+      ],
+      "read_scope": "PDF pp.1–8：引言、性能、局部环境、Ni 取代和方法；Fig.1–5 图注；目视 p.4 Fig.3。SI pp.2–3 Text S1–S3、pp.11–15 Fig.S13–S21 图注、pp.20–23 Table S2–S7，重点核对能量密度分母、虚拟软包参数与 Ni L-edge 的解释。未重算能量密度或拟合谱图，未观看视频。",
+      "structure_survey": true,
+      "card": "references/corpus/b29.md",
+      "added_on": "2026-10-30",
+      "article_type": "original_research",
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "source_note": "正式出版方开放版本；具体版本、更正与阅读位置见阅读卡。",
+      "license": "CC BY 4.0",
+      "si": {
+        "status": "downloaded",
+        "files": [
+          {
+            "path": "10.1038_s41467-024-44855-6/supporting-information/41467_2024_44855_MOESM1_ESM.pdf",
+            "sha256": "61934ee9d2526ea232f6e28e2333ca0bb1b96ca68842058a0a224d02516ec460",
+            "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-024-44855-6/MediaObjects/41467_2024_44855_MOESM1_ESM.pdf",
+            "label": "Supplementary Information (download PDF )",
+            "bytes": 2577556,
+            "read_scope": "MOESM1: PDF pp.2–3,11–15,20–23；正文说明、相关图注和表格部分核读，未逐图复现；视频未看，源数据未分析。",
+            "kind": "primary_si",
+            "pages": 26
+          },
+          {
+            "path": "10.1038_s41467-024-44855-6/supporting-information/41467_2024_44855_MOESM3_ESM.pdf",
+            "sha256": "d01e09ac598094caa7bece1521dcdd7a2e618ccb1ed4a84699a5aaaa583298f8",
+            "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-024-44855-6/MediaObjects/41467_2024_44855_MOESM3_ESM.pdf",
+            "label": "Description of Additional Supplementary Files (download PDF )",
+            "bytes": 168172,
+            "read_scope": "not_read_or_analysed",
+            "kind": "supplementary_attachment",
+            "pages": 1
+          },
+          {
+            "path": "10.1038_s41467-024-44855-6/supporting-information/41467_2024_44855_MOESM4_ESM.mp4",
+            "sha256": "543eb09f7bf6e79177dd30dc99ee94c5b92f98e1dbcef69c415ce58f7bc87497",
+            "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-024-44855-6/MediaObjects/41467_2024_44855_MOESM4_ESM.mp4",
+            "label": "Supplementary Movie 1 (download MP4 )",
+            "bytes": 4366652,
+            "read_scope": "not_read_or_analysed",
+            "kind": "supplementary_attachment"
+          },
+          {
+            "path": "10.1038_s41467-024-44855-6/supporting-information/41467_2024_44855_MOESM5_ESM.mp4",
+            "sha256": "ecc633f963cb7c38202f1f78d604460aab1164a12f80af0a639119a8be7fc357",
+            "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-024-44855-6/MediaObjects/41467_2024_44855_MOESM5_ESM.mp4",
+            "label": "Supplementary Movie 2 (download MP4 )",
+            "bytes": 9450682,
+            "read_scope": "not_read_or_analysed",
+            "kind": "supplementary_attachment"
+          },
+          {
+            "path": "10.1038_s41467-024-44855-6/supporting-information/41467_2024_44855_MOESM6_ESM.mp4",
+            "sha256": "6f3d275ab1443ece80b1273786201d6a39881dc615671ee93080f35ab6bd3dbc",
+            "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-024-44855-6/MediaObjects/41467_2024_44855_MOESM6_ESM.mp4",
+            "label": "Supplementary Movie 3 (download MP4 )",
+            "bytes": 1911183,
+            "read_scope": "not_read_or_analysed",
+            "kind": "supplementary_attachment"
+          },
+          {
+            "path": "10.1038_s41467-024-44855-6/supporting-information/41467_2024_44855_MOESM7_ESM.xlsx",
+            "sha256": "32761a576ef588feffc85b6c66f7fb3128e8bfb9b2861e07b04a62dbafd86ac9",
+            "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-024-44855-6/MediaObjects/41467_2024_44855_MOESM7_ESM.xlsx",
+            "label": "Source Data (download XLSX )",
+            "bytes": 12663625,
+            "read_scope": "not_read_or_analysed",
+            "kind": "source_data"
+          }
+        ],
+        "pending": [],
+        "read_scope": "MOESM1: PDF pp.2–3,11–15,20–23；正文说明、相关图注和表格部分核读，未逐图复现；视频未看，源数据未分析。"
+      }
+    },
+    {
+      "id": "B30",
+      "doi": "10.1038/s41467-024-51647-5",
+      "title": "Understanding the electrochemical processes of SeS2 positive electrodes for developing high-performance non-aqueous lithium sulfur batteries",
+      "journal": "Nature Communications",
+      "first_online": "2024-09-03",
+      "article_url": "https://www.nature.com/articles/s41467-024-51647-5",
+      "pdf_url": "https://www.nature.com/articles/s41467-024-51647-5.pdf",
+      "relative_pdf_path": "10.1038_s41467-024-51647-5/fulltext/article.pdf",
+      "sha256": "b52780401434e7067aadbe27ad8876f5cc790193bdf768bdf0f7701d70ba2e5f",
+      "pages": 13,
+      "bytes": 3863078,
+      "topic": "锂硫/硒硫：跨方法时序、成核与生长",
+      "methods": [
+        "operando XRD",
+        "operando TXM",
+        "ex situ SEM-BSE/EDS",
+        "DFT"
+      ],
+      "read_scope": "PDF pp.1–11 的正文与方法，Fig.1–8 图注；目视 p.5 Fig.3。SI pp.3–8 Fig.S2–S7 图注、p.18 Note 1–3，核对灰度辨别、洗涤与同位置再组装对照。未观看 TXM 视频、重算图像或验证 DFT 能垒。",
+      "structure_survey": true,
+      "card": "references/corpus/b30.md",
+      "added_on": "2026-10-30",
+      "article_type": "original_research",
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "source_note": "正式出版方开放版本；具体版本、更正与阅读位置见阅读卡。",
+      "license": "CC BY-NC-ND 4.0",
+      "si": {
+        "status": "downloaded",
+        "files": [
+          {
+            "path": "10.1038_s41467-024-51647-5/supporting-information/41467_2024_51647_MOESM1_ESM.pdf",
+            "sha256": "909e3ff45405fe5400a3204ee93cb4c09d0878d2b774e23fa54c6b7bb1b6a449",
+            "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-024-51647-5/MediaObjects/41467_2024_51647_MOESM1_ESM.pdf",
+            "label": "Supplementary Information (download PDF )",
+            "bytes": 3752253,
+            "read_scope": "MOESM1: PDF pp.3–8 与 p.18；Note 1–3、相关图注部分核读；视频未观看，数据未重分析。",
+            "kind": "primary_si",
+            "pages": 18
+          },
+          {
+            "path": "10.1038_s41467-024-51647-5/supporting-information/41467_2024_51647_MOESM3_ESM.pdf",
+            "sha256": "0fec59b622b5bc4602c57e8832cb0bda95fa20db7b818452b12b96172752b622",
+            "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-024-51647-5/MediaObjects/41467_2024_51647_MOESM3_ESM.pdf",
+            "label": "Description of Additional Supplementary Files (download PDF )",
+            "bytes": 114387,
+            "read_scope": "not_read_or_analysed",
+            "kind": "supplementary_attachment",
+            "pages": 1
+          },
+          {
+            "path": "10.1038_s41467-024-51647-5/supporting-information/41467_2024_51647_MOESM4_ESM.mp4",
+            "sha256": "70abfdfd58e41c09aafb6595b27c74b77270e049b5e71e40ca9dc66fbed95e2c",
+            "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-024-51647-5/MediaObjects/41467_2024_51647_MOESM4_ESM.mp4",
+            "label": "Supplementary Movie 1 (download MP4 )",
+            "bytes": 2450388,
+            "read_scope": "not_read_or_analysed",
+            "kind": "supplementary_attachment"
+          },
+          {
+            "path": "10.1038_s41467-024-51647-5/supporting-information/41467_2024_51647_MOESM5_ESM.mp4",
+            "sha256": "347c9177b89130b1f682965f007397823dc5d5f8669d6aa4cb1d1bc81ae8cc20",
+            "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-024-51647-5/MediaObjects/41467_2024_51647_MOESM5_ESM.mp4",
+            "label": "Supplementary Movie 2 (download MP4 )",
+            "bytes": 2132264,
+            "read_scope": "not_read_or_analysed",
+            "kind": "supplementary_attachment"
+          },
+          {
+            "path": "10.1038_s41467-024-51647-5/supporting-information/41467_2024_51647_MOESM6_ESM.mp4",
+            "sha256": "f39046216f584fb87fdcd1c925b440306d91994b075cd9e0e0925a59ecb48709",
+            "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-024-51647-5/MediaObjects/41467_2024_51647_MOESM6_ESM.mp4",
+            "label": "Supplementary Movie 3 (download MP4 )",
+            "bytes": 3709323,
+            "read_scope": "not_read_or_analysed",
+            "kind": "supplementary_attachment"
+          },
+          {
+            "path": "10.1038_s41467-024-51647-5/supporting-information/41467_2024_51647_MOESM7_ESM.mp4",
+            "sha256": "e751d8a28c139a99f1de431859a70d9c30dc1087279c1cc6a71e5a3e4d8e8b7b",
+            "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-024-51647-5/MediaObjects/41467_2024_51647_MOESM7_ESM.mp4",
+            "label": "Supplementary Movie 4 (download MP4 )",
+            "bytes": 2524966,
+            "read_scope": "not_read_or_analysed",
+            "kind": "supplementary_attachment"
+          }
+        ],
+        "pending": [],
+        "read_scope": "MOESM1: PDF pp.3–8 与 p.18；Note 1–3、相关图注部分核读；视频未观看，数据未重分析。"
+      }
+    },
+    {
+      "id": "B31",
+      "doi": "10.1038/s41467-025-63902-4",
+      "title": "Directing selective solvent presentations at electrochemical interfaces to enable initially anode-free sodium metal batteries",
+      "journal": "Nature Communications",
+      "first_online": "2025-09-15",
+      "article_url": "https://www.nature.com/articles/s41467-025-63902-4",
+      "pdf_url": "https://www.nature.com/articles/s41467-025-63902-4.pdf",
+      "relative_pdf_path": "10.1038_s41467-025-63902-4/fulltext/article.pdf",
+      "sha256": "27a4f8f3137f95b1d1134ba5cebffe6721e29b40e63438204ef8143c96594157",
+      "pages": 13,
+      "bytes": 4364548,
+      "topic": "无负极钠：溶剂选择性、模型定义和界面归因",
+      "methods": [
+        "MD/RDF",
+        "23Na and 17O NMR",
+        "Raman",
+        "XPS depth profiling",
+        "SEM"
+      ],
+      "read_scope": "PDF pp.1–7、10–11：溶剂分布、正负极验证、寿命讨论与表征/模拟方法；Fig.1–4 图注；目视 p.3 Fig.2。SI p.2 Note 1、p.22 Table 6、p.29 Note 2 首段、p.31 Table 12、p.35 Note 3，核对浓度选择、两套分母、截断敏感性及模拟时长。未重跑 MD 或分析轨迹。",
+      "structure_survey": false,
+      "card": "references/corpus/b31.md",
+      "added_on": "2026-10-30",
+      "article_type": "original_research",
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "source_note": "正式出版方开放版本；具体版本、更正与阅读位置见阅读卡。",
+      "license": "CC BY-NC-ND 4.0",
+      "si": {
+        "status": "downloaded",
+        "files": [
+          {
+            "path": "10.1038_s41467-025-63902-4/supporting-information/41467_2025_63902_MOESM1_ESM.pdf",
+            "sha256": "adf6139838ae495fea4f73846ced2dc757de274cf97d45c45b2fa99066039e6d",
+            "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-025-63902-4/MediaObjects/41467_2025_63902_MOESM1_ESM.pdf",
+            "label": "Supplementary Information (download PDF )",
+            "bytes": 3202100,
+            "read_scope": "MOESM1: PDF pp.2,22,29,31,35；相关定义、表格与方法说明部分核读，未复现计算或检查全部原始数据。",
+            "kind": "primary_si",
+            "pages": 39
+          },
+          {
+            "path": "10.1038_s41467-025-63902-4/supporting-information/41467_2025_63902_MOESM3_ESM.xlsx",
+            "sha256": "622a4ef223821262f657277208f559aef1d1d6d8b1a641cbf68e942e39ed5312",
+            "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-025-63902-4/MediaObjects/41467_2025_63902_MOESM3_ESM.xlsx",
+            "label": "Source Data (download XLSX )",
+            "bytes": 12741045,
+            "read_scope": "not_read_or_analysed",
+            "kind": "source_data"
+          }
+        ],
+        "pending": [],
+        "read_scope": "MOESM1: PDF pp.2,22,29,31,35；相关定义、表格与方法说明部分核读，未复现计算或检查全部原始数据。"
+      }
+    },
+    {
+      "id": "B32",
+      "doi": "10.1038/s41467-025-59437-3",
+      "title": "Axial ligand induces the charge localization of Ca single-atom sites for efficient Na–S batteries",
+      "journal": "Nature Communications",
+      "first_online": "2025-05-12",
+      "article_url": "https://www.nature.com/articles/s41467-025-59437-3",
+      "pdf_url": "https://www.nature.com/articles/s41467-025-59437-3.pdf",
+      "relative_pdf_path": "10.1038_s41467-025-59437-3/fulltext/article.pdf",
+      "sha256": "65d564fe5c2eba6db2f97f9d6e83315c0ef6f33b89c46d8244f47fa2b04286e6",
+      "pages": 11,
+      "bytes": 3850072,
+      "topic": "钠硫：单原子配位、多证据归属与计算路径",
+      "methods": [
+        "HAADF-STEM",
+        "XANES/EXAFS/WT",
+        "in situ XRD",
+        "ex situ XPS",
+        "DFT/CI-NEB/pCOHP"
+      ],
+      "read_scope": "PDF pp.1–9：结构归属、吸附/动力学、器件表现、相转化、计算讨论及方法；Fig.1–6 图注；目视 p.4 Fig.2。SI p.8 Fig.S11–S12 图注、pp.25–26 Table S1–S5，并目视 p.25 拟合参数表。未重新拟合 EXAFS 或重算 DFT。",
+      "structure_survey": true,
+      "card": "references/corpus/b32.md",
+      "added_on": "2026-10-30",
+      "article_type": "original_research",
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "source_note": "正式出版方开放版本；具体版本、更正与阅读位置见阅读卡。",
+      "license": "CC BY-NC-ND 4.0",
+      "si": {
+        "status": "downloaded",
+        "files": [
+          {
+            "path": "10.1038_s41467-025-59437-3/supporting-information/41467_2025_59437_MOESM1_ESM.pdf",
+            "sha256": "348df6f2b7bac56eb655dd1a0bb047342846537039f0b1eb1c8fb2683b567f73",
+            "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-025-59437-3/MediaObjects/41467_2025_59437_MOESM1_ESM.pdf",
+            "label": "Supplementary Information (download PDF )",
+            "bytes": 10199076,
+            "read_scope": "MOESM1: PDF p.8, pp.25–26；相关图注和表格部分核读；p.25 目视核对，未重拟合或复现实验。",
+            "kind": "primary_si",
+            "pages": 26
+          },
+          {
+            "path": "10.1038_s41467-025-59437-3/supporting-information/41467_2025_59437_MOESM3_ESM.xlsx",
+            "sha256": "84b9f35bc382f3e1f777a487b5ea493df34ff023fcd2f103c5d4843742e73431",
+            "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-025-59437-3/MediaObjects/41467_2025_59437_MOESM3_ESM.xlsx",
+            "label": "Source Data (download XLSX )",
+            "bytes": 6659479,
+            "read_scope": "not_read_or_analysed",
+            "kind": "source_data"
+          }
+        ],
+        "pending": [],
+        "read_scope": "MOESM1: PDF p.8, pp.25–26；相关图注和表格部分核读；p.25 目视核对，未重拟合或复现实验。"
+      }
+    }
+  ]
+}

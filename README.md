@@ -6,7 +6,7 @@
 
 **从图与数据出发，构建有证据、有逻辑、可追溯的电池论文。**
 
-[![Corpus: 20 original papers](https://img.shields.io/badge/Corpus-20_original_papers-0F766E?style=flat-square)](references/literature-corpus.md)
+[![Corpus: 31 original papers](https://img.shields.io/badge/Corpus-31_original_papers-0F766E?style=flat-square)](references/literature-corpus.md)
 [![Review: 3 levels](https://img.shields.io/badge/Review-3_levels-1E3A5F?style=flat-square)](references/review-protocol.md)
 [![Writing: Chinese and English](https://img.shields.io/badge/Writing-CN_%2F_EN-526477?style=flat-square)](references/english-workflow.md)
 
@@ -175,21 +175,21 @@ flowchart LR
 
 ## 论文语料库
 
-**20 篇真实原始研究 · 5 种期刊 · 按写作任务选读**
+**31 篇已核读原始研究 · 目标 1000 篇 · 按写作任务选读**
 
 <table>
   <tr>
     <td align="center" width="33%">
       <a href="https://www.nature.com/"><img src="assets/nature-card.svg" alt="Nature" width="190"></a><br>
-      <strong>Nature</strong><br>4 篇
+      <strong>Nature</strong><br>7 篇
     </td>
     <td align="center" width="33%">
       <a href="https://www.nature.com/nenergy/"><img src="assets/nature-energy-card.svg" alt="Nature Energy" width="190"></a><br>
-      <strong>Nature Energy</strong><br>3 篇
+      <strong>Nature Energy</strong><br>4 篇
     </td>
     <td align="center" width="33%">
       <a href="https://www.nature.com/ncomms/"><img src="assets/nature-communications-card.svg" alt="Nature Communications" width="190"></a><br>
-      <strong>Nature Communications</strong><br>6 篇
+      <strong>Nature Communications</strong><br>10 篇
     </td>
   </tr>
   <tr>
@@ -199,10 +199,10 @@ flowchart LR
     </td>
     <td align="center">
       <a href="https://advanced.onlinelibrary.wiley.com/journal/16146840"><img src="assets/advanced-energy-materials.jpg" alt="Advanced Energy Materials" width="160"></a><br>
-      <strong>Advanced Energy Materials</strong><br>3 篇
+      <strong>Advanced Energy Materials</strong><br>6 篇
     </td>
     <td align="center">
-      <strong>20 篇来源</strong><br><br>
+      <strong>31 篇来源</strong><br><br>
       逐篇定位 · 组织分析<br>表达示范 · 证据边界
     </td>
   </tr>
@@ -210,9 +210,11 @@ flowchart LR
 
 <sub>期刊标识用于说明语料来源，不代表合作或背书。[视觉资源来源](assets/README.md)。</sub>
 
-每篇卡片记录论文身份、版本、来源入口、实际阅读位置、可借鉴的写作动作和不可迁移的事实边界。**20 篇均有相关正文阅读记录，其中 6 篇另有主文组织通览**；具体核读范围逐篇声明。
+每篇卡片记录论文身份、版本、来源入口、实际阅读位置、可借鉴的写作动作和不可迁移的事实边界。**31 篇均有相关正文阅读记录，其中 16 篇另有主文组织通览**；具体核读范围逐篇声明。
 
-[浏览语料索引 →](references/literature-corpus.md) · [查看逐篇阅读卡 →](references/corpus/) · [查看扩库与验证范围 →](docs/corpus-expansion.md)
+[浏览语料索引 →](references/literature-corpus.md) · [按任务检索 →](docs/corpus-catalog.md) · [查看升级记录 →](docs/upgrades.md)
+
+语料逐步扩充至 **1000 篇**，每批将真实阅读中的发现落实到写作规则、段落与全文审查，并用实际写作场景回归。维护目标为每天新增200篇，只有完成核验及相关正文阅读的来源才计数；正文与可取得的补充材料一同归档。详见[持续扩库与能力评测](docs/corpus-growth.md)。
 
 全文 PDF 与相关资料独立归档到本地资料库。仓库提供索引和阅读卡，不包含论文全文、论文原图或用户实验数据；表达示范来源不自动进入本稿的正式参考文献。首页封面与流程配图均为 AI 生成的概念插画。
 
@@ -242,7 +244,7 @@ battery-paper-skill/
 │   ├── review-protocol.md           句子—段落—文章审查
 │   ├── characterization-writing.md  表征表达与证据层级
 │   ├── english-workflow.md          英文重构与保义
-│   ├── literature-corpus.md         20 篇真实论文索引
+│   ├── literature-corpus.md         真实论文分页索引
 │   ├── corpus/                      逐篇阅读卡
 │   ├── workflow.md                  S01–S12 完整流程
 │   ├── field-routing.md             电池体系与研究部件
@@ -292,7 +294,8 @@ python -X utf8 -m unittest discover -s tests -p "test_*.py" -v
 | [辅助脚本测试](docs/helper-test-summary.json) | 59 项测试通过 | 合成测试，检查工具行为 |
 | [真实论文写作对照](evals/real-paper/README.md) | 2 个案例 × 3 组，共 6 份有效正文；两位独立模型评审盲评 | 局部开发案例，不代表完整稿件或未见样本表现 |
 | [英文表达审读](evals/style-audit/README.md) | 34 句复核与改写示范 | 非盲编辑审读，未替换原对照分数 |
-| [语料与结构核查](docs/corpus-expansion.md) | 20 篇来源记录、阅读卡与规则分工复查 | 来源数量不等于写作质量试验次数 |
+| [首次语料与结构核查](docs/corpus-expansion.md) | 当时20篇来源的记录、阅读卡与规则分工复查 | 历史批次，当前数量以语料目录为准 |
+| [持续升级](docs/upgrades.md) | 可检索目录、按批次规则升级与实际写作回归 | 科学阅读、脚本测试与写作回归分别记录 |
 
 <details>
 <summary><strong>展开评测方法与适用范围</strong></summary>
@@ -303,7 +306,7 @@ python -X utf8 -m unittest discover -s tests -p "test_*.py" -v
 
 另根据 Nature 与 Advanced Materials 原始研究完成非盲表达审读，强化信息落点、主题连接与限定去重。这些记录不证明稳定达到目标期刊发表水准。
 
-更多记录：[验证范围](docs/validation.md) · [逻辑审查与修复](docs/logic-audit.md) · [设计与规则分工](references/skill-integration.md)。
+更多记录：[验证范围](docs/validation.md) · [逻辑审查与修复](docs/logic-audit.md) · [设计与规则分工](references/skill-integration.md) · [扩库与评测计划](docs/corpus-growth.md)。
 
 </details>
 

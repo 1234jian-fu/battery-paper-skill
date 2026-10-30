@@ -24,7 +24,7 @@ metadata:
 | 表征、性能或计算结果描述 | [表征写作](references/characterization-writing.md)，再选[测试证据库](references/battery-language-library.md)对应条目 |
 | 英文起草、翻译或润色 | [英文重构](references/english-workflow.md)；已有英文可直接修改，不强制重译中文 |
 | 段落修改、全文审查或合稿 | [三级审查](references/review-protocol.md)；只审实际可见和受影响内容 |
-| 寻找真实表达范例 | [论文语料索引](references/literature-corpus.md)按证据任务选卡，再核读对应原文；不能将卡片摘要当作本轮亲读 |
+| 寻找真实表达范例 | [论文语料索引](references/literature-corpus.md)按任务检索少量相关卡，再核读原文；可用 `scripts/corpus_catalog.py search`，不默认加载整库，不能将卡片摘要当作本轮亲读 |
 | 核对完整交付或近期库资格 | [输出契约](references/output-contract.md)、[近期语料政策](references/recent-corpus-policy.md) |
 
 ## 写作与审查主线
