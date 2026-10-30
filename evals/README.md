@@ -49,4 +49,4 @@ python -B -X utf8 PATH_TO_SKILL_EVALUATOR/scripts/run_script_checks.py --skill P
 - JSON 内部逐字一致不证明实际 Markdown/Word/浏览器交付一致；没有自动解析实际正文。
 - 不涵盖全部恶意输入、操作系统权限、符号链接、并发写入和所有日期/字符组合；更细的输入边界由 `tests/` 补充。
 - `trigger-queries.json` 有 20 条标签查询：10 条应触发，10 条共享电池或论文关键词的近似负例。它是待运行数据集，不能据此宣称触发准确率。
-- 尚未执行模型触发重复运行、with-skill/without-skill 写作质量对照或真实文献任务，因此不报告它们的通过率或增益。
+- 本层不包含模型生成或真实文献核读；另行完成的[真实论文局部写作对照](real-paper/README.md)和[目标期刊句子表达复核](style-audit/README.md)分别记录，不与这115条脚本断言混算。模型自动触发重复测试仍未执行。

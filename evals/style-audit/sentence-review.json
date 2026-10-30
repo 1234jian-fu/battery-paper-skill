@@ -1,0 +1,317 @@
+{
+  "scope": "Main-agent editorial review of two existing generated excerpts; not blinded, not an independent expert rating or a new skill generation.",
+  "base_commit": "ae1fe5cdb622f3fea711905d0637cb1912827642",
+  "sentences_reviewed": 34,
+  "inputs": [
+    {
+      "file": "../real-paper/outputs/zinc-optimized-post-review.md",
+      "normalized_text_sha256": "a40604cff365ee0a9b965199eb078337477cd72f548a2d223d8715b1bf327bd3"
+    },
+    {
+      "file": "../real-paper/outputs/solidstate-optimized.md",
+      "normalized_text_sha256": "7212a67ca5ea088d85ba55da8f6f112c1558261f4f2fef7973ea83064b90460e"
+    }
+  ],
+  "source_moves": {
+    "N-MD": {
+      "doi": "10.1038/s41586-024-07045-4",
+      "location": "Read PDF page 4, left column, first paragraph under Ligand-channel-facilitated mechanism; Fig. 2 caption on page 3.",
+      "role": "模型身份、具体量、比较及局部解释的顺序；不能迁移其锂体系机制。"
+    },
+    "N-IF": {
+      "doi": "10.1038/s41586-024-07045-4",
+      "location": "Read PDF page 6, body below Fig. 4, interphase-analysis paragraph and corresponding caption.",
+      "role": "测量/计算分工和观察与解释的相邻放置；不照搬来源因果强度。"
+    },
+    "A-IMG": {
+      "doi": "10.1002/adma.202307708",
+      "location": "Published PDF page 4, paragraph below Fig. 2 introducing LiCl comparison; continuation on right; Fig. 3 on page 5.",
+      "role": "对象、条件、时间序列及形貌对照；不能把来源原位条件移植给非原位XR-CT。"
+    },
+    "A-SPEC": {
+      "doi": "10.1002/adma.202307708",
+      "location": "Published PDF page 9, lower left, Raman/solvation paragraph associated with Fig. 5i,j; preceding context.",
+      "role": "峰归属、定量比较与解释分层；不同谱带不可被虚设为同分母。"
+    }
+  },
+  "reviews": [
+    {
+      "sentence_id": "Z1.1",
+      "original": "In the electrolyte series reported by Zhang et al., SE contained 4 m ZnOTf₂, DE contained 4 m ZnOTf₂ + 1 m ZnOAc₂, and HDE contained 2.8 m ZnOTf₂ + 0.7 m ZnOAc₂ with 30 wt% DMF relative to water, where m denotes molality.",
+      "action": "拆分",
+      "reason": "三种配方与molality定义同句，读者需同时保存多个对象；按SE/DE与HDE分句。原数值和水质量基准均保留。",
+      "expression_comparison": "A-SPEC",
+      "fact_basis": "../real-paper/facts/zinc.json"
+    },
+    {
+      "sentence_id": "Z1.2",
+      "original": "Deconvolution of the liquid-electrolyte FTIR O–H stretching bands at 3200–3600 cm⁻¹ showed a smaller strongly hydrogen-bonded contribution in DE and HDE than in SE, with the lowest contribution in HDE.",
+      "action": "保留",
+      "reason": "测量对象、谱段、拟合身份、对照和最小值齐全；句长来自必要比较，不必机械切短。",
+      "expression_comparison": "A-SPEC",
+      "fact_basis": "../real-paper/facts/zinc.json"
+    },
+    {
+      "sentence_id": "Z1.3",
+      "original": "This trend supports a change in the water hydrogen-bond environment, although it does not directly quantify water activity or hydrogen-evolution rates.",
+      "action": "保留",
+      "reason": "将氢键环境与水活度/析氢测量区分，限制紧贴相应推断，不能为了流畅删除。",
+      "expression_comparison": "A-SPEC",
+      "fact_basis": "../real-paper/facts/zinc.json"
+    },
+    {
+      "sentence_id": "Z2.1",
+      "original": "Anion-specific Raman fits provided complementary information on ion association.",
+      "action": "合并",
+      "reason": "只宣布Raman提供信息，下一句才给结果；可与下一句合并为直接描述拟合所得量。",
+      "expression_comparison": "A-SPEC",
+      "fact_basis": "../real-paper/facts/zinc.json"
+    },
+    {
+      "sentence_id": "Z2.2",
+      "original": "The OTf⁻ SO₃ band in SE yielded an assigned contact ion pair (CIP) fraction of approximately 36.9%, whereas the acetate band in DE gave CIP and aggregate (AGG) fractions of approximately 64.5% and 12.4%, respectively.",
+      "action": "保留内容",
+      "reason": "两类阴离子及对应比例清楚；与前句合并时仍保留归属和不同统计对象。",
+      "expression_comparison": "A-SPEC",
+      "fact_basis": "../real-paper/facts/zinc.json"
+    },
+    {
+      "sentence_id": "Z2.3",
+      "original": "These fractions concern different anions and spectral bands and cannot be subtracted to quantify an overall CIP increase.",
+      "action": "保留",
+      "reason": "不同谱带分母不可混算，是关键比较边界，不是空泛的谨慎话术。",
+      "expression_comparison": "A-SPEC",
+      "fact_basis": "../real-paper/facts/zinc.json"
+    },
+    {
+      "sentence_id": "Z2.4",
+      "original": "Spectral complexity made accurate acetate fractions difficult to obtain for HDE.",
+      "action": "保留",
+      "reason": "明确HDE谱学定量缺口，不能用MD占比填成Raman实测。",
+      "expression_comparison": "A-SPEC",
+      "fact_basis": "../real-paper/facts/zinc.json"
+    },
+    {
+      "sentence_id": "Z2.5",
+      "original": "Zn K-edge XANES edge shifts and changes in R-space EXAFS further supported rearrangement of the local Zn environment, although these features alone do not specify a unique coordination geometry.",
+      "action": "收紧",
+      "reason": "XANES edge重复；可用Shifts in the Zn K-edge XANES spectra，并明确EXAFS的变换域。几何不唯一的限制保留。",
+      "expression_comparison": "N-IF",
+      "fact_basis": "../real-paper/facts/zinc.json"
+    },
+    {
+      "sentence_id": "Z3.1",
+      "original": "Molecular dynamics (MD) simulations provided a structural interpretation of these observations.",
+      "action": "合并",
+      "reason": "通用的structural interpretation没有具体信息，可让MD直接引出下一句的粒子分布趋势。",
+      "expression_comparison": "N-MD",
+      "fact_basis": "../real-paper/facts/zinc.json"
+    },
+    {
+      "sentence_id": "Z3.2",
+      "original": "The solvent-separated ion-pair fraction decreased from 72.57% in SE to 50.41% in DE and 41.82% in HDE.",
+      "action": "保留内容",
+      "reason": "三体系间的下降方向及具体值清楚；并入MD句后仍标明模型身份。",
+      "expression_comparison": "N-MD",
+      "fact_basis": "../real-paper/facts/zinc.json"
+    },
+    {
+      "sentence_id": "Z3.3",
+      "original": "Aggregation followed a different trend: the AGG fraction increased from 3.96% in SE to 33.07% in DE, then declined to 25.45% in HDE, while the CIP fraction increased from 16.52% in DE to 32.73% in HDE.",
+      "action": "拆分",
+      "reason": "同句同时解释AGG非单调变化和CIP变化，按两个物种拆句，保留所有数字与对象。",
+      "expression_comparison": "N-MD",
+      "fact_basis": "../real-paper/facts/zinc.json"
+    },
+    {
+      "sentence_id": "Z3.4",
+      "original": "HDE thus combined fewer solvent-separated pairs with more CIPs and fewer aggregates than DE.",
+      "action": "保留",
+      "reason": "已将原先模糊的重新分布写成HDE相对DE的具体差异，是清楚的局部综合。",
+      "expression_comparison": "N-MD",
+      "fact_basis": "../real-paper/facts/zinc.json"
+    },
+    {
+      "sentence_id": "Z3.5",
+      "original": "These model populations are distinct from Raman peak fractions.",
+      "action": "可合并",
+      "reason": "模型与Raman口径不同需保留；可随MD结果首次出现说明，不必在后面再作泛化提醒。",
+      "expression_comparison": "N-MD",
+      "fact_basis": "../real-paper/facts/zinc.json"
+    },
+    {
+      "sentence_id": "Z3.6",
+      "original": "The reported mean DMF coordination number of 0.19 also indicates DMF participation in the simulated Zn²⁺ solvation shell.",
+      "action": "保留",
+      "reason": "0.19明确为平均配位数，模型中参与配位的表述有界，不应改成19%。",
+      "expression_comparison": "N-MD",
+      "fact_basis": "../real-paper/facts/zinc.json"
+    },
+    {
+      "sentence_id": "Z3.7",
+      "original": "Together, the results support altered water interactions and Zn coordination as plausible contributors to improved reversibility, without uniquely establishing a mechanism of side-reaction suppression.",
+      "action": "可收紧",
+      "reason": "贡献与唯一机制分开得当；可与相邻限定统筹压缩，不能改成已经证明抑制副反应的唯一原因。",
+      "expression_comparison": "N-MD",
+      "fact_basis": "../real-paper/facts/zinc.json"
+    },
+    {
+      "sentence_id": "Z3.8",
+      "original": "Because salt concentrations also changed, the comparisons do not isolate the DMF contribution.",
+      "action": "保留",
+      "reason": "盐浓度共同变化直接限制DMF单因果归属，必须可见。",
+      "expression_comparison": "N-MD",
+      "fact_basis": "../real-paper/facts/zinc.json"
+    },
+    {
+      "sentence_id": "Z3.9",
+      "original": "The reported limitation under simultaneously very high current density and areal capacity further restricts extrapolation of this explanation.",
+      "action": "保留内容",
+      "reason": "同时很高电流密度和面容量的边界会改变外推；不得省去同时成立或补造阈值。",
+      "expression_comparison": "N-MD",
+      "fact_basis": "../real-paper/facts/zinc.json"
+    },
+    {
+      "sentence_id": "S1.1",
+      "original": "Pan et al. reported contact retention in micron-sized Si electrodes using an elastic electrolyte comprising an AM/DMAM copolymer and an NMA–LiFSI deep-eutectic mixture.",
+      "action": "保留",
+      "reason": "来源身份、材料和研究对象明确；这是已发表事实练习，第三人称不应作为风格错误。",
+      "expression_comparison": "A-IMG",
+      "fact_basis": "../real-paper/facts/solidstate.json"
+    },
+    {
+      "sentence_id": "S1.2",
+      "original": "Calibrated thin-film sensors measured built-in pressures of 546 kPa in coin cells and 52 kPa in pouch cells; operation without external loading therefore involved finite mechanical pressure.",
+      "action": "保留",
+      "reason": "压力值对应器件构型，明确无外加压力并非零压力，信息有用。",
+      "expression_comparison": "A-IMG",
+      "fact_basis": "../real-paper/facts/solidstate.json"
+    },
+    {
+      "sentence_id": "S1.3",
+      "original": "These measurements did not track pressure continuously during cycling.",
+      "action": "可合并",
+      "reason": "连续监测与独立测压不同，若压缩应并入测量范围说明，而不能写成全程恒压已实测。",
+      "expression_comparison": "A-IMG",
+      "fact_basis": "../real-paper/facts/solidstate.json"
+    },
+    {
+      "sentence_id": "S1.4",
+      "original": "After 20 cycles, ex situ X-ray computed tomography (XR-CT) of recovered electrodes showed retained Si–electrolyte contact in the elastic system cycled at 546 kPa, whereas the Li₆PS₅Cl system cycled under 10 MPa exhibited pronounced cracks and voids.",
+      "action": "保留",
+      "reason": "虽较长，但单一平行比较包含20圈、非原位、两体系和两种压力，理解关系清楚。",
+      "expression_comparison": "A-IMG",
+      "fact_basis": "../real-paper/facts/solidstate.json"
+    },
+    {
+      "sentence_id": "S1.5",
+      "original": "The authors attributed bright streaks in the elastic sample to imaging artifacts.",
+      "action": "保留",
+      "reason": "将亮条纹作为作者判定的伪影，而非独立认证，避免形貌误读。",
+      "expression_comparison": "A-IMG",
+      "fact_basis": "../real-paper/facts/solidstate.json"
+    },
+    {
+      "sentence_id": "S1.6",
+      "original": "The pressure mismatch, unspecified terminal states of charge and absence of contact-area or porosity statistics restrict this comparison to qualitative structural evidence at the sampled states.",
+      "action": "保留",
+      "reason": "条件与定量缺口对应这次结构比较，属于结论所需限定。可与本段已有条件去重，但不能隐去。",
+      "expression_comparison": "A-IMG",
+      "fact_basis": "../real-paper/facts/solidstate.json"
+    },
+    {
+      "sentence_id": "S2.1",
+      "original": "Finite-element calculations support a mechanical interpretation of this contrast.",
+      "action": "合并",
+      "reason": "只说支持mechanical interpretation，具体预测在下一句；与下一句合并更直接。",
+      "expression_comparison": "N-MD",
+      "fact_basis": "../real-paper/facts/solidstate.json"
+    },
+    {
+      "sentence_id": "S2.2",
+      "original": "With randomly distributed Si spheres and linear-elastic behavior assumed during lithiation-induced expansion, the model predicted lower, more uniform von Mises stresses in the elastic electrolyte, compared with stress concentrations in Li₆PS₅Cl.",
+      "action": "保留内容",
+      "reason": "模型假设、应力量、比较方向均有科学作用；并句时保留随机球、线弹性和膨胀情景。",
+      "expression_comparison": "N-MD",
+      "fact_basis": "../real-paper/facts/solidstate.json"
+    },
+    {
+      "sentence_id": "S2.3",
+      "original": "This redistribution is consistent with reduced mechanical disruption and improved contact preservation.",
+      "action": "保留",
+      "reason": "从模拟应力过渡到接触解释，consistent with保持合理证据强度。",
+      "expression_comparison": "N-MD",
+      "fact_basis": "../real-paper/facts/solidstate.json"
+    },
+    {
+      "sentence_id": "S2.4",
+      "original": "The proposed energy dissipation through rupture of noncovalent bonds remains an interpretation that XR-CT did not directly verify.",
+      "action": "保留",
+      "reason": "非共价键断裂不是XR-CT直接可见结果，限制具有针对性。",
+      "expression_comparison": "N-MD",
+      "fact_basis": "../real-paper/facts/solidstate.json"
+    },
+    {
+      "sentence_id": "S2.5",
+      "original": "Differences in electrolyte formulation, electrode preparation and counter electrode (Li versus Li–In) further prevent the experimental comparison from isolating elasticity as the sole cause of improved structural integrity.",
+      "action": "保留",
+      "reason": "配方、工艺及对电极差异妨碍唯一弹性因果归属，不能当作语言冗余删除。",
+      "expression_comparison": "N-MD",
+      "fact_basis": "../real-paper/facts/solidstate.json"
+    },
+    {
+      "sentence_id": "S3.1",
+      "original": "The electrochemical results place this interpretation within specific cell configurations.",
+      "action": "替换并去重",
+      "reason": "place this interpretation within specific cell configurations过于抽象；可前置S3.5中具体的接触—循环稳定性关系。",
+      "expression_comparison": "N-IF",
+      "fact_basis": "../real-paper/facts/solidstate.json"
+    },
+    {
+      "sentence_id": "S3.2",
+      "original": "At 25 °C without additional pressure, Li||Si coin cells showed a reported capacity retention of 90.8% after 300 cycles in tests using 0.2 and 0.4 C.",
+      "action": "收紧",
+      "reason": "showed a reported capacity retention套叠；直接写reported capacity retention was即可，保留温度、倍率和圈数。",
+      "expression_comparison": "N-IF",
+      "fact_basis": "../real-paper/facts/solidstate.json"
+    },
+    {
+      "sentence_id": "S3.3",
+      "original": "Separately, Si||LFP coin cells delivered 151.4 mAh g⁻¹ at 0.5 C, normalized to LFP mass, and showed a reported capacity retention of 98.3% after 100 cycles.",
+      "action": "收紧",
+      "reason": "与上一句同类冗余，可统一为reported retention；LFP质量基准及独立全电池构型不能省略。",
+      "expression_comparison": "N-IF",
+      "fact_basis": "../real-paper/facts/solidstate.json"
+    },
+    {
+      "sentence_id": "S3.4",
+      "original": "Their Si electrodes underwent one lithiation/delithiation cycle before full-cell assembly.",
+      "action": "保留",
+      "reason": "全电池装配前预循环关系影响性能理解，指代清楚。",
+      "expression_comparison": "N-IF",
+      "fact_basis": "../real-paper/facts/solidstate.json"
+    },
+    {
+      "sentence_id": "S3.5",
+      "original": "These results are consistent with contact preservation contributing to cycling stability under the reported conditions.",
+      "action": "合并去重",
+      "reason": "实质关系有用；若移到段首，就删除此处重复表达，不能仅新增一条更漂亮的首句。",
+      "expression_comparison": "N-IF",
+      "fact_basis": "../real-paper/facts/solidstate.json"
+    },
+    {
+      "sentence_id": "S3.6",
+      "original": "However, the 20-cycle images cannot establish uninterrupted contact throughout the longer cycling tests.",
+      "action": "保留",
+      "reason": "20圈结构证据与长循环性能之间的时间外推限制应保留。",
+      "expression_comparison": "N-IF",
+      "fact_basis": "../real-paper/facts/solidstate.json"
+    }
+  ],
+  "limitations": [
+    "No author manuscript supplied.",
+    "Expression-comparison references support functional comparison, not the exercise scientific facts or every editorial judgment.",
+    "Two newly read style references do not define universal journal standards.",
+    "Original blind scores are unchanged."
+  ]
+}
