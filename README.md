@@ -1,80 +1,270 @@
-# Battery Paper Skill
+<p align="center">
+  <img src="assets/readme-hero.png" alt="Battery Paper Skill — From evidence to manuscript" width="100%">
+</p>
 
-面向电池论文的图文逻辑、近期原文映射、中英文写作与可追溯审校技能。
+<div align="center">
 
-从作者已有图、数据和稿件出发，保留已确认的结构和好句，根据实际材料、体系和测试选择写作路径。适用于电池材料、界面、电解液、固态体系、电极工程、器件与计算；不预设某一种导电剂、配方、固定六图或机制。
+**从图与数据出发，构建有证据、有逻辑、可追溯的电池论文。**
 
-## 核心功能
+[![Corpus: 20 original papers](https://img.shields.io/badge/Corpus-20_original_papers-0F766E?style=flat-square)](references/literature-corpus.md)
+[![Review: 3 levels](https://img.shields.io/badge/Review-3_levels-1E3A5F?style=flat-square)](references/review-protocol.md)
+[![Writing: Chinese and English](https://img.shields.io/badge/Writing-CN_%2F_EN-526477?style=flat-square)](references/english-workflow.md)
 
-- 从核心问题、有限主张与证据关系安排图段顺序，再组织句子；反查论证跳步和跨章节主张一致性。
-- 句子—段落—文章三级闭环：逐句核据、每段写完立即对照实际核读的同功能论文段落并修改、全文完成后再审主线与章节衔接，修改后回填映射。
-- 表征描述对标真实原始研究，区分直接观察、峰归属/拟合、模型与解释；学习证据组织方式，保留本研究条件和边界。
-- 按作用分配正文、图注、方法与SI，保留改变结论的限制，减少重复测试罗列。
-- 新稿默认按整篇累计至少60篇滚动近五年相关原始研究，按图和表达任务定向核读。
-- 原文英文→中文含义→本稿表达的多对多映射，区分表达示范与正式引用。
-- 机理解释M、技术描述/证据T、衔接组织L分类（方法与结果分子类），说明每句用途、前后关系及改写操作。
-- 中文审阅和英文重构，保护材料状态、物理量、条件、比较方向及判断强度。
-- 最后一次学术自然化后回填报表，最终句表与正文逐字一致。
-- 项目接续、确认/候选版本、作者取舍和锁定范围；局部修改不重跑全流程。
+[安装与使用](#安装与使用) · [写作流程](#写作流程) · [论文语料库](#论文语料库) · [验证记录](#验证记录)
 
-默认交付：**报表包→简短逻辑总结→干净正文**。图注任务另附图注并分别计数。
+</div>
 
-已整理[20篇高水平原始研究语料](references/literature-corpus.md)：Nature 4篇、Nature Energy 3篇、AM 4篇、AEM 3篇、Nature Communications 6篇。每篇有实际相关正文定位，其中6篇另有篇级组织通览；全文独立归档，Skill按任务选读论文卡。[扩库与结构验证范围](docs/corpus-expansion.md)单独记录。
+---
 
-## 安装到Codex
+**Battery Paper Skill** 是面向电池论文的 Agent Skill，覆盖论证规划、逐图写作、表征描述、中英重构和全文审查。从作者提供的图、数据和已有稿件出发，按任务选读真实论文原文，保留已经确认的结构和表达。
 
-仓库根目录就是完整Skill。将它放在Codex的技能目录下，文件夹名为battery-paper-skill。
+适用于电池材料、界面、电解液、固态体系、电极工程、器件与计算。仓库以 `SKILL.md` 为入口；不同智能体的安装方法与支持范围见下文。
 
-PowerShell示例（已设置CODEX_HOME时使用该目录，否则使用用户目录下.codex）：
+## 核心能力
 
-~~~powershell
-$skillBase = if ($env:CODEX_HOME) { Join-Path $env:CODEX_HOME 'skills' } else { Join-Path $env:USERPROFILE '.codex/skills' }
-git clone https://github.com/1234jian-fu/battery-paper-skill.git (Join-Path $skillBase 'battery-paper-skill')
+| 工作环节 | 关注重点 | 交付内容 |
+| :--- | :--- | :--- |
+| **论证规划** | 科学问题、有限主张、关键证据与适用边界 | 图间关系、图内逻辑、段落顺序 |
+| **表征写作** | 直接观察、峰归属与拟合、模型和解释 | 条件明确、判断强度匹配证据的描述 |
+| **原文对照** | 真实论文的表达方式与段落组织 | 来源定位、中文含义、本稿表达与改写说明 |
+| **中英重构** | 材料状态、物理量、比较方向与限定 | 连贯正文、必要中文释义、独立图注 |
+| **三级审查** | 逐句核据、每段即时复核、完成稿宏观审查 | 实质修改、复查记录、更新后的逐句映射 |
+| **项目接续** | 确认稿、候选稿、作者取舍与锁定范围 | 可接续的项目记录与一致的最终交付 |
+
+## 安装与使用
+
+### 跨智能体快速安装
+
+已安装 Node.js **22.20 或更高版本**时，可使用 Vercel 的 [Skills CLI](https://github.com/vercel-labs/skills)：
+
+~~~bash
+npx skills add 1234jian-fu/battery-paper-skill --skill battery-paper-skill
 ~~~
 
-克隆目标已存在时，先检查其内容，避免覆盖本地修改。自动发现行为由宿主环境决定，也可在对话中显式指明SKILL.md路径。
+交互选择目标智能体，默认安装到当前项目；加 `-g` 可安装到用户范围。也可以用 `-a` 指定智能体，例如：
 
-## 使用
+~~~bash
+# Codex
+npx skills add 1234jian-fu/battery-paper-skill --skill battery-paper-skill -a codex
 
-在对话中调用：
+# Claude Code
+npx skills add 1234jian-fu/battery-paper-skill --skill battery-paper-skill -a claude-code
+~~~
+
+这是可选的第三方安装工具。无需 Node.js 的手动安装方法及其他平台命令见 [完整安装指南](docs/installation.md)。
+
+### 按智能体安装
+
+下表中的目录是存放 `battery-paper-skill/` 的父目录；安装时保留仓库内的相对路径。
+
+| 智能体 | 项目级目录 | 用户级目录 | 详细方法 |
+| :--- | :--- | :--- | :--- |
+| **Codex** | `.agents/skills/` | `~/.agents/skills/` | [安装与旧路径兼容](docs/installation.md#codex) |
+| **Claude Code** | `.claude/skills/` | `~/.claude/skills/` | [安装与调用](docs/installation.md#claude-code) |
+| **Cursor** | `.cursor/skills/` | `~/.cursor/skills/` | [安装与发现](docs/installation.md#cursor) |
+| **Gemini CLI** | `.gemini/skills/` | `~/.gemini/skills/` | [原生命令安装](docs/installation.md#gemini-cli) |
+| **GitHub Copilot CLI** | `.github/skills/` | `~/.copilot/skills/` | [安装与重载](docs/installation.md#github-copilot) |
+| **OpenCode** | `.opencode/skills/` | `~/.config/opencode/skills/` | [安装与权限](docs/installation.md#opencode) |
+
+安装说明依据各平台官方文档核对。当前本机已安装 Codex 版本；其他平台为文档与目录兼容性核对，**未逐平台完成真实写作验收**。已有 Codex 安装器使用的 `~/.codex/skills/` 路径另在指南中说明。
+
+### 开始写作
+
+准备当前稿、图与图注、必要的数据或方法说明，告诉智能体本次处理范围和需要保留的内容：
 
 ~~~text
-使用 $battery-paper-skill。
+使用 battery-paper-skill。
 先读取我的当前稿和图，保留已确认结构，一幅图一幅图写。
-先给图间/图内逻辑及逐句原文映射，再给正文和图注。
+先给图间、图内逻辑及逐句来源映射，再给正文和图注。
+每段写完后对照实际核读的同功能论文段落，修改后再继续。
 ~~~
 
-也可以只要求“检查这一段”“翻译这部分”“修改图注”或“按确认稿合稿”。只有实际进行新稿/实质重构时才建立完整近期基底；单句纠错不要求重读60篇。
+Codex 中可用 `$battery-paper-skill` 显式调用；其他平台的调用入口见 [安装指南](docs/installation.md)。
 
-## 目录
+<details>
+<summary><strong>更多示例：表征表达、局部英文修改与全文复审</strong></summary>
+
+**表征表达**
 
 ~~~text
-SKILL.md                        按任务选择指南、写作主线、证据底线与交付
-agents/openai.yaml              显示名称与默认提示
-references/
-  argument-design.md            写前规划：科学问题、主张证据、图段顺序与正文取舍
-  review-protocol.md            写后审查：句子、每段即时对照、完成稿宏观复审
-  characterization-writing.md   表征专业表达与证据层级
-  literature-corpus.md          真实论文按任务索引、阅读层级和使用方式
-  corpus/                       每篇来源的版本、原文定位、组织动作与证据边界
-  workflow.md                   完整执行交接（S01–S12）和各部分职责
-  field-routing.md              电池体系与研究部件路由
-  battery-language-library.md   常见测试的语言动作和证据边界
-  recent-corpus-policy.md       60篇资格、日期、去重和核读状态
-  context-and-mappings.md       项目记录与接续
-  output-contract.md            九项逐句报表与最终交付
-  english-workflow.md           英文重构与保义
-  skill-integration.md          规则借鉴、可选调用及自建功能
-scripts/paper_workbench.py       标准库辅助检查
-tests/test_paper_workbench.py   可搬运的合成测试
-evals/real-paper/              历史两案三组写作对照与匿名模型评审记录
-evals/style-audit/             历史34句表达审读及改写示范
-docs/                           schema、验证范围与设计说明
+使用 battery-paper-skill 检查这段表征描述。
+对照真实原始研究，区分直接观察、峰归属、模型与解释。
+保留测试条件和证据边界，指出并修改过强的机理判断。
 ~~~
 
-## 辅助命令
+**局部英文修改**
 
-Python仅使用标准库，不安装额外依赖。以下命令从Skill根目录（SKILL.md所在目录）执行；在其他目录调用时，使用加引号的脚本绝对路径。PROJECT为已存在的论文项目目录，AS_OF为客户端日期或作者指定的截止日，格式YYYY-MM-DD。
+~~~text
+使用 battery-paper-skill 修改这一段英文，只处理当前段落。
+保留全部数据、条件、比较方向和判断强度，只输出修改后的正文。
+~~~
+
+**完成稿宏观复审**
+
+~~~text
+使用 battery-paper-skill 审查这份完整稿件。
+先从实际正文反提主线与章节关系，再对照已核读高水平论文的组织方式。
+检查摘要、引言、结果和结论是否一致；提出结构调整后再修改正文。
+~~~
+
+</details>
+
+> **按任务范围执行。** 新稿或实质重构默认按整篇累计至少 **60 篇滚动近五年相关原始研究**；单句纠错、局部翻译等任务只处理当前范围。通用语料库不自动替代项目专属文献基底。
+
+## 写作流程
+
+先确定科学问题和证据关系，再组织文字；写作、审查与来源映射相互衔接。
+
+![写作流程：作者材料 → 论证规划 → 写作与原文对照 → 审查与修改 → 正文及来源映射交付](assets/writing-workflow.png)
+
+<details>
+<summary><strong>查看中文流程与修改回路</strong></summary>
+
+~~~mermaid
+flowchart LR
+    A["作者材料<br/>图 · 数据 · 当前稿"] --> B["论证规划<br/>问题 · 主张 · 证据"]
+    B --> C["原文对照<br/>相关来源 · 定位 · 边界"]
+    C --> D["逐段写作<br/>逐句核据 · 段后复核"]
+    D --> E["完成稿审查<br/>主线 · 章节 · 一致性"]
+    E --> F["最终交付<br/>映射 · 总结 · 正文"]
+    E -. "实质修改与复查" .-> D
+
+    classDef input fill:#F1F5F9,stroke:#94A3B8,color:#172B4D
+    classDef process fill:#EFF6FF,stroke:#54769C,color:#172B4D
+    classDef review fill:#ECFDF5,stroke:#0F766E,color:#115E59
+    class A input
+    class B,C,D process
+    class E,F review
+~~~
+
+</details>
+
+### 句子 → 段落 → 文章
+
+三级审查分别解决事实准确、段内论证和全文结构的问题。**段落复核在每段写完后立即进行**，全文审查在当前完整稿形成后进行。
+
+![三级审查：句子检查事实与条件，段落检查证据与连贯，文章检查结构与一致性；修改后复查并更新来源映射](assets/review-levels.png)
+
+| 层级 | 审查问题 | 修改闭环 |
+| :--- | :--- | :--- |
+| **句子** | 事实、条件、比较方向和判断强度是否准确？来源是否可定位？ | 修正表达，核对命题与证据 |
+| **段落** | 主信息是否明确？证据顺序是否合理？与真实同功能段落相比缺什么？ | 对照原文与上下文，实际修改本段，再复查 |
+| **文章** | 科学问题是否贯穿全文？图段是否递进？各章节的主张是否一致？ | 反提全文提纲，对照论文组织方式，调整结构并复审 |
+
+<details>
+<summary><strong>查看三级审查的复查路径</strong></summary>
+
+~~~mermaid
+flowchart LR
+    S["句级核据"] --> P["每段即时对照与修改"] --> M["完成稿宏观复审"]
+    M --> R["更新正文与逐句映射"]
+    P -. "复查受影响句子" .-> S
+    R -. "复查受影响段落" .-> P
+
+    classDef level fill:#F8FAFC,stroke:#54769C,color:#172B4D
+    classDef final fill:#ECFDF5,stroke:#0F766E,color:#115E59
+    class S,P,M level
+    class R final
+~~~
+
+</details>
+
+默认交付顺序为 **报表包 → 简短逻辑总结 → 干净正文**。图注任务另附图注并分别计数。若只需要正文，可直接指定；相关核查仍按任务范围执行。
+
+逐句映射区分机理解释 **M**、技术描述与证据 **T**、衔接组织 **L**，记录原文英文、中文含义、本稿表达及改写边界。最终句表与实际交付正文保持一致。详见 [交付约定](references/output-contract.md)。
+
+## 论文语料库
+
+**20 篇真实原始研究 · 5 种期刊 · 按写作任务选读**
+
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <a href="https://www.nature.com/"><img src="assets/nature-card.svg" alt="Nature" width="190"></a><br>
+      <strong>Nature</strong><br>4 篇
+    </td>
+    <td align="center" width="33%">
+      <a href="https://www.nature.com/nenergy/"><img src="assets/nature-energy-card.svg" alt="Nature Energy" width="190"></a><br>
+      <strong>Nature Energy</strong><br>3 篇
+    </td>
+    <td align="center" width="33%">
+      <a href="https://www.nature.com/ncomms/"><img src="assets/nature-communications-card.svg" alt="Nature Communications" width="190"></a><br>
+      <strong>Nature Communications</strong><br>6 篇
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="https://advanced.onlinelibrary.wiley.com/journal/15214095"><img src="assets/advanced-materials.jpg" alt="Advanced Materials" width="160"></a><br>
+      <strong>Advanced Materials</strong><br>4 篇
+    </td>
+    <td align="center">
+      <a href="https://advanced.onlinelibrary.wiley.com/journal/16146840"><img src="assets/advanced-energy-materials.jpg" alt="Advanced Energy Materials" width="160"></a><br>
+      <strong>Advanced Energy Materials</strong><br>3 篇
+    </td>
+    <td align="center">
+      <strong>20 篇来源</strong><br><br>
+      逐篇定位 · 组织分析<br>表达示范 · 证据边界
+    </td>
+  </tr>
+</table>
+
+<sub>期刊标识用于说明语料来源，不代表合作或背书。[视觉资源来源](assets/README.md)。</sub>
+
+每篇卡片记录论文身份、版本、来源入口、实际阅读位置、可借鉴的写作动作和不可迁移的事实边界。**20 篇均有相关正文阅读记录，其中 6 篇另有主文组织通览**；具体核读范围逐篇声明。
+
+[浏览语料索引 →](references/literature-corpus.md) · [查看逐篇阅读卡 →](references/corpus/) · [查看扩库与验证范围 →](docs/corpus-expansion.md)
+
+全文 PDF 与相关资料独立归档到本地资料库。仓库提供索引和阅读卡，不包含论文全文、论文原图或用户实验数据；表达示范来源不自动进入本稿的正式参考文献。首页封面与流程配图均为 AI 生成的概念插画。
+
+## 结构与扩展
+
+入口保持简洁，专业规则和论文卡按当前任务选读。完整执行流程单独维护，便于逐图写作与项目接续。
+
+| 入口 | 用途 |
+| :--- | :--- |
+| [SKILL.md](SKILL.md) | 任务选择、写作主线、证据底线与交付 |
+| [论证设计](references/argument-design.md) | 写前规划：科学问题、主张证据、图段顺序 |
+| [审查协议](references/review-protocol.md) | 写后复核：句子、每段即时对照、全文宏观审查 |
+| [表征表达](references/characterization-writing.md) | 测试条件、信号解释与证据层级 |
+| [英文重构](references/english-workflow.md) | 信息组织、表达自然度与保义 |
+| [执行流程](references/workflow.md) | 完整 S01–S12 与交接职责 |
+
+<details>
+<summary><strong>展开完整目录</strong></summary>
+
+~~~text
+battery-paper-skill/
+├── SKILL.md                         技能入口
+├── agents/openai.yaml               显示名称与默认提示
+├── assets/                          README 视觉资源与来源说明
+├── references/
+│   ├── argument-design.md           写前论证规划
+│   ├── review-protocol.md           句子—段落—文章审查
+│   ├── characterization-writing.md  表征表达与证据层级
+│   ├── english-workflow.md          英文重构与保义
+│   ├── literature-corpus.md         20 篇真实论文索引
+│   ├── corpus/                      逐篇阅读卡
+│   ├── workflow.md                  S01–S12 完整流程
+│   ├── field-routing.md             电池体系与研究部件
+│   ├── battery-language-library.md  常见测试语言动作
+│   ├── recent-corpus-policy.md      项目文献基底与资格检查
+│   ├── context-and-mappings.md      项目记录与接续
+│   ├── output-contract.md           逐句映射与交付约定
+│   └── skill-integration.md         规则分工与可选集成
+├── scripts/paper_workbench.py       本地辅助检查
+├── tests/                           合成测试
+├── evals/                           写作对照与表达审读记录
+└── docs/                            安装、设计、数据格式与验证范围
+~~~
+
+</details>
+
+<details>
+<summary><strong>展开辅助命令与运行说明</strong></summary>
+
+辅助脚本只使用 Python 标准库。下列命令从 Skill 根目录执行；其他目录下请使用加引号的脚本绝对路径。
+
+`PROJECT` 为已存在的论文项目目录，`AS_OF` 为客户端日期或作者指定截止日，格式为 `YYYY-MM-DD`。其余大写项替换为实际名称、领域、关键词或文件路径。
 
 ~~~text
 python scripts/paper_workbench.py init --project-dir PROJECT --name NAME --domain DOMAIN
@@ -87,31 +277,53 @@ python scripts/paper_workbench.py delivery-check --project-dir PROJECT --file DE
 python -X utf8 -m unittest discover -s tests -p "test_*.py" -v
 ~~~
 
-所有辅助命令均不联网；sources仅筛选本项目已有sources.json，不搜索、下载论文或自动建立60篇文献库。实际检索和核读由当前环境可用工具完成。
+所有辅助命令均不联网。`sources` 仅筛选项目已有的 `sources.json`，不搜索、下载论文或自动建立文献库；实际检索和核读依赖当前环境可用工具。
 
-初始化只补缺，不覆盖已有记录。无明确作者变更依据的旧政策会被报告为needs_policy_update，不静默改成新政策；作者自定数量或时窗须记录明确决定，脚本分别报告默认与实际有效政策。按对应命令--help查看参数；完整示例见[helper schema](docs/helper-schema-and-tests.md)。
+初始化只补缺，不覆盖已有记录。缺少明确作者变更依据的旧政策会报告为 `needs_policy_update`；自定数量或时窗须记录作者决定，脚本分别报告默认与实际有效政策。
 
-## 依赖与边界
+完整参数与示例见 [辅助工具说明](docs/helper-schema-and-tests.md)，也可使用各命令的 `--help`。
 
-Skill内置领域规则与流程。Nature、ARS、SciPilot、humanizer等技能可用时按任务调用，不要求全部安装；缺失时记录范围并使用内置适用规则。实际调用、借鉴规则和新组织分开报告。
+</details>
 
-本仓库提供[高水平论文语料索引](references/literature-corpus.md)及逐篇阅读卡，记录真实来源、版本、核读范围和可借鉴动作；**不捆绑论文全文、原图或用户实验数据**。通用中英结构示意仍明确为自拟，不是文献原句。通用库不自动成为某篇新稿合格的60篇专属基底，项目仍须检查相关性、日期及当前表达任务。脚本测试夹具均为synthetic，不代表真实研究。
+## 验证记录
 
-下载文献时先检查可用空间，在作者指定位置或空间充足的本地资料库保存全文与SI；项目账本只记录路径和来源，不把大文件塞入Skill安装目录。获取、格式验证和实际阅读分别记录。
+| 记录 | 已完成范围 | 解释边界 |
+| :--- | :--- | :--- |
+| [辅助脚本测试](docs/helper-test-summary.json) | 59 项测试通过 | 合成测试，检查工具行为 |
+| [真实论文写作对照](evals/real-paper/README.md) | 2 个案例 × 3 组，共 6 份有效正文；两位独立模型评审盲评 | 局部开发案例，不代表完整稿件或未见样本表现 |
+| [英文表达审读](evals/style-audit/README.md) | 34 句复核与改写示范 | 非盲编辑审读，未替换原对照分数 |
+| [语料与结构核查](docs/corpus-expansion.md) | 20 篇来源记录、阅读卡与规则分工复查 | 来源数量不等于写作质量试验次数 |
 
-记录完整性、数字守恒或句表一致性检查不能证明科学正确、实际阅读或语义保留。语言风格、科学贡献与期刊接收分别判断，不承诺顶刊录用或AI检测结果。
+<details>
+<summary><strong>展开评测方法与适用范围</strong></summary>
 
-## 设计与验证
+历史写作对照核读两篇论文的相关主文、方法、图注与实图，比较无技能、上游原版和优化版。最初 6 次文件读取运行因环境策略失败被排除；6 份有效输出采用显式文本注入，不代表验证了自动触发或按需读取文件。
 
-入口、专业规则、论文卡和历史评测分别维护。普通任务从入口选择相关指南及少量来源；需要完整交接时才查S01–S12，不要求每次读取所有文件。论证设计与写后审查分开，确保段落即时复核和完成稿宏观对照都有明确入口。
+三组均保留关键事实与证据边界。优化版在固态案例的论证连接上表现较好；锌案例接近评分上限，并存在局部可读性分歧。每组每案仅运行一次，尚无未见样本泛化、完整真实稿件端到端或多轮自动触发验证。
 
-见[设计与规则分工](references/skill-integration.md)、[验证范围](docs/validation.md)和[辅助测试结果](docs/helper-test-summary.json)及[逻辑审查与修复](docs/logic-audit.md)。
+另根据 Nature 与 Advanced Materials 原始研究完成非盲表达审读，强化信息落点、主题连接与限定去重。这些记录不证明稳定达到目标期刊发表水准。
 
-本轮补齐句子—段落—文章三级审查及表征写作指南，并完成[真实论文局部写作对照](evals/real-paper/README.md)：
-实际核读两篇论文的相关主文、方法、图注与实图，比较无技能、上游原版和优化版，取得6份有效正文及两位独立模型评审的盲评记录。
-最初6次文件读取运行因环境策略失败，已排除；有效比较采用显式文本注入，不代表已验证自动触发或按需读文件。
+更多记录：[验证范围](docs/validation.md) · [逻辑审查与修复](docs/logic-audit.md) · [设计与规则分工](references/skill-integration.md)。
 
-三组均保留关键事实与证据边界，优化版在固态案例的论证连接上表现较好，锌案例则接近评分上限并存在局部可读性分歧。
-这是两个开发案例、每组每案一次的局部验证，不保证显著质量提升；尚无未见样本泛化、完整真实稿件端到端或多轮自动触发验证。
+</details>
 
-另已补读Nature正刊和Advanced Materials原始研究，完成两段试写的[34句表达复核与改写示范](evals/style-audit/README.md)。英文规则据此强化信息落点、主题连接及限定去重；这是非盲编辑审读，未替换原对照分数，也不等于已证明稳定达到目标期刊发表水准。
+## 使用边界
+
+- **证据优先。** 保留本研究的材料状态、测试条件和适用限制；记录完整、数字守恒或句表一致不能替代科学判断。
+- **阅读范围透明。** 获取、格式验证和实际阅读分别记录。文献全文及 SI 保存到作者指定或空间充足的资料库，项目只记录路径与来源。
+- **按需集成。** Nature、ARS、SciPilot、humanizer 等技能可用时按任务调用，不要求全部安装；缺失时使用内置适用规则并说明范围。
+- **评价分开。** 语言风格、科学贡献和期刊接收分别判断；不承诺顶刊录用或 AI 检测结果。通用结构示意为自拟，测试夹具为合成材料。
+
+## 致谢与参考
+
+README 的安装入口与文档组织参考 [Anthropic Skills](https://github.com/anthropics/skills) 和 [Vercel Skills](https://github.com/vercel-labs/skills)，安装细节以 [各平台官方文档](docs/installation.md#官方来源) 为准。相关项目和期刊名称归各自权利人所有。
+
+---
+
+<div align="center">
+
+**让每一句有依据，让每一段有任务，让整篇论文有主线。**
+
+[技能入口](SKILL.md) · [语料索引](references/literature-corpus.md) · [审查协议](references/review-protocol.md)
+
+</div>
