@@ -1,0 +1,801 @@
+{
+  "skill_name": "battery-paper-skill",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "在现有电池论文项目中初始化接续记录；重跑时保留已确认稿与旧的 50 篇政策，仅补齐缺失 issues.md。",
+      "expected_output": "首次记录为空且默认政策 60/60/5；重跑不覆盖任何字节，旧政策明确标记待更新；补齐只新建 issues.md。",
+      "files": [],
+      "assertions": [
+        "首次记录为空且默认政策 60/60/5；重跑不覆盖任何字节，旧政策明确标记待更新；补齐只新建 issues.md。"
+      ],
+      "script_checks": [
+        {
+          "description": "Synthetic black-box CLI contract: initialization",
+          "cmd": [
+            "evals/run_contract_checks.py",
+            "--case",
+            "initialization",
+            "--json"
+          ],
+          "expect_exit": 0,
+          "assert": [
+            {
+              "path": "first.exit",
+              "op": "eq",
+              "value": 0
+            },
+            {
+              "path": "initial_policy",
+              "op": "eq",
+              "value": {
+                "minimum": 60,
+                "target": 60,
+                "recent_years": 5
+              }
+            },
+            {
+              "path": "initial_evidence_count",
+              "op": "eq",
+              "value": 0
+            },
+            {
+              "path": "initial_source_count",
+              "op": "eq",
+              "value": 0
+            },
+            {
+              "path": "second.exit",
+              "op": "eq",
+              "value": 0
+            },
+            {
+              "path": "second.data.created",
+              "op": "eq",
+              "value": []
+            },
+            {
+              "path": "second.data.project_name",
+              "op": "eq",
+              "value": "SYNTHETIC ONLY"
+            },
+            {
+              "path": "second.data.needs_policy_update",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "path": "second_preserves_all",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "path": "repair.exit",
+              "op": "eq",
+              "value": 0
+            },
+            {
+              "path": "repair.data.created",
+              "op": "eq",
+              "value": [
+                "issues.md"
+              ]
+            },
+            {
+              "path": "repair_preserves_existing",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "请核对这份新电池稿件的共享语料是否达到 60 篇；已有 59 篇唯一合格研究，随后补 1 篇，但图 2 的表达任务尚未映射。",
+      "expected_output": "59 篇差 1 篇；60 篇计数达标，但仅覆盖图 1 的记录不使图 2 自动完成。",
+      "files": [
+        "evals/fixtures/source-template.json"
+      ],
+      "assertions": [
+        "59 篇差 1 篇；60 篇计数达标，但仅覆盖图 1 的记录不使图 2 自动完成。"
+      ],
+      "script_checks": [
+        {
+          "description": "Synthetic black-box CLI contract: threshold",
+          "cmd": [
+            "evals/run_contract_checks.py",
+            "--case",
+            "threshold",
+            "--json"
+          ],
+          "expect_exit": 0,
+          "assert": [
+            {
+              "path": "at_59.exit",
+              "op": "eq",
+              "value": 0
+            },
+            {
+              "path": "at_59.data.qualified_read_baseline",
+              "op": "eq",
+              "value": 59
+            },
+            {
+              "path": "at_59.data.gap_to_minimum",
+              "op": "eq",
+              "value": 1
+            },
+            {
+              "path": "at_59.data.status",
+              "op": "eq",
+              "value": "baseline_incomplete"
+            },
+            {
+              "path": "at_60.exit",
+              "op": "eq",
+              "value": 0
+            },
+            {
+              "path": "at_60.data.records_discovered",
+              "op": "eq",
+              "value": 60
+            },
+            {
+              "path": "at_60.data.unique_identified_works",
+              "op": "eq",
+              "value": 60
+            },
+            {
+              "path": "at_60.data.qualified_read_baseline",
+              "op": "eq",
+              "value": 60
+            },
+            {
+              "path": "at_60.data.gap_to_minimum",
+              "op": "eq",
+              "value": 0
+            },
+            {
+              "path": "at_60.data.status",
+              "op": "eq",
+              "value": "target_met_by_record"
+            },
+            {
+              "path": "at_60.data.figure_mapping.status",
+              "op": "eq",
+              "value": "incomplete"
+            },
+            {
+              "path": "at_60.data.figure_mapping.missing",
+              "op": "eq",
+              "value": [
+                "SYNTHETIC-F2"
+              ]
+            },
+            {
+              "path": "all_read_only_commands_unchanged",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "以 2026-10-30 为截止日审核近五年记录，检查边界、只有年/月的日期和正式首次在线日期优先规则；另核对闰日回推。",
+      "expected_output": "滚动窗口是 2021-10-30 至 2026-10-30；9 条中恰有边界两条和完整 2025 年共 3 条合格，缺口 57；2024-02-29 回推五年为 2019-02-28。",
+      "files": [
+        "evals/fixtures/source-template.json"
+      ],
+      "assertions": [
+        "滚动窗口是 2021-10-30 至 2026-10-30；9 条中恰有边界两条和完整 2025 年共 3 条合格，缺口 57；2024-02-29 回推五年为 2019-02-28。"
+      ],
+      "script_checks": [
+        {
+          "description": "Synthetic black-box CLI contract: dates",
+          "cmd": [
+            "evals/run_contract_checks.py",
+            "--case",
+            "dates",
+            "--json"
+          ],
+          "expect_exit": 0,
+          "assert": [
+            {
+              "path": "current.exit",
+              "op": "eq",
+              "value": 0
+            },
+            {
+              "path": "current.data.window",
+              "op": "eq",
+              "value": {
+                "from": "2021-10-30",
+                "through": "2026-10-30"
+              }
+            },
+            {
+              "path": "current.data.records_discovered",
+              "op": "eq",
+              "value": 9
+            },
+            {
+              "path": "current.data.qualified_read_baseline",
+              "op": "eq",
+              "value": 3
+            },
+            {
+              "path": "current.data.gap_to_minimum",
+              "op": "eq",
+              "value": 57
+            },
+            {
+              "path": "current.data.records.2.recency.status",
+              "op": "eq",
+              "value": "outside_window"
+            },
+            {
+              "path": "current.data.records.3.recency.status",
+              "op": "eq",
+              "value": "future_publication"
+            },
+            {
+              "path": "current.data.records.4.recency.status",
+              "op": "eq",
+              "value": "needs_date_verification"
+            },
+            {
+              "path": "current.data.records.6.recency.status",
+              "op": "eq",
+              "value": "needs_date_verification"
+            },
+            {
+              "path": "current.data.records.7.recency.publication_date",
+              "op": "eq",
+              "value": "2020-01-01"
+            },
+            {
+              "path": "current.data.records.7.qualified_record",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "path": "current.data.records.8.recency.publication_date",
+              "op": "eq",
+              "value": "not-a-date"
+            },
+            {
+              "path": "current.data.records.8.qualified_record",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "path": "recent.exit",
+              "op": "eq",
+              "value": 0
+            },
+            {
+              "path": "recent.data.matches",
+              "op": "eq",
+              "value": 3
+            },
+            {
+              "path": "legacy.exit",
+              "op": "eq",
+              "value": 0
+            },
+            {
+              "path": "legacy.data.matches",
+              "op": "eq",
+              "value": 9
+            },
+            {
+              "path": "leap.exit",
+              "op": "eq",
+              "value": 0
+            },
+            {
+              "path": "leap.data.window",
+              "op": "eq",
+              "value": {
+                "from": "2019-02-28",
+                "through": "2024-02-29"
+              }
+            },
+            {
+              "path": "all_read_only_commands_unchanged",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "来源有 30 篇论文的 DOI/无 DOI 别名共 60 条；请去重并阻止重复来源 ID、综述、只读摘要、空定位和错误字段类型虚增已核读数量。",
+      "expected_output": "60 条别名仅算 30 篇，倒序结果一致；重复来源 ID 报结构错误；5 条混合质量记录只有 1 条合格。",
+      "files": [
+        "evals/fixtures/source-template.json"
+      ],
+      "assertions": [
+        "60 条别名仅算 30 篇，倒序结果一致；重复来源 ID 报结构错误；5 条混合质量记录只有 1 条合格。"
+      ],
+      "script_checks": [
+        {
+          "description": "Synthetic black-box CLI contract: identities",
+          "cmd": [
+            "evals/run_contract_checks.py",
+            "--case",
+            "identities",
+            "--json"
+          ],
+          "expect_exit": 0,
+          "assert": [
+            {
+              "path": "aliases.exit",
+              "op": "eq",
+              "value": 0
+            },
+            {
+              "path": "aliases.data.records_discovered",
+              "op": "eq",
+              "value": 60
+            },
+            {
+              "path": "aliases.data.unique_identified_works",
+              "op": "eq",
+              "value": 30
+            },
+            {
+              "path": "aliases.data.duplicate_identity_records",
+              "op": "eq",
+              "value": 30
+            },
+            {
+              "path": "aliases.data.qualified_read_baseline",
+              "op": "eq",
+              "value": 30
+            },
+            {
+              "path": "aliases.data.gap_to_minimum",
+              "op": "eq",
+              "value": 30
+            },
+            {
+              "path": "aliases.data.status",
+              "op": "eq",
+              "value": "baseline_incomplete"
+            },
+            {
+              "path": "reversed_aliases.exit",
+              "op": "eq",
+              "value": 0
+            },
+            {
+              "path": "reversed_aliases.data.qualified_read_baseline",
+              "op": "eq",
+              "value": 30
+            },
+            {
+              "path": "duplicate_ids.exit",
+              "op": "eq",
+              "value": 1
+            },
+            {
+              "path": "duplicate_ids.data.status",
+              "op": "eq",
+              "value": "structure_errors"
+            },
+            {
+              "path": "duplicate_ids.data.record_structure_ok",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "path": "invalid.exit",
+              "op": "eq",
+              "value": 1
+            },
+            {
+              "path": "invalid.data.records_discovered",
+              "op": "eq",
+              "value": 5
+            },
+            {
+              "path": "invalid.data.qualified_read_baseline",
+              "op": "eq",
+              "value": 1
+            },
+            {
+              "path": "invalid.data.gap_to_minimum",
+              "op": "eq",
+              "value": 59
+            },
+            {
+              "path": "invalid.data.status",
+              "op": "eq",
+              "value": "structure_errors"
+            },
+            {
+              "path": "all_read_only_commands_unchanged",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "这份电池稿件已有 60 篇合格来源，项目中写了最低 80 篇。核对没有作者依据与明确记录作者授权这两种情况，保持原文件。",
+      "expected_output": "没有授权记录时使用默认 60 并提示政策待更新；有明确授权记录时采用 80，缺口恰为 20。",
+      "files": [
+        "evals/fixtures/source-template.json"
+      ],
+      "assertions": [
+        "没有授权记录时使用默认 60 并提示政策待更新；有明确授权记录时采用 80，缺口恰为 20。"
+      ],
+      "script_checks": [
+        {
+          "description": "Synthetic black-box CLI contract: policies",
+          "cmd": [
+            "evals/run_contract_checks.py",
+            "--case",
+            "policies",
+            "--json"
+          ],
+          "expect_exit": 0,
+          "assert": [
+            {
+              "path": "unapproved.exit",
+              "op": "eq",
+              "value": 0
+            },
+            {
+              "path": "unapproved.data.effective_policy.minimum",
+              "op": "eq",
+              "value": 60
+            },
+            {
+              "path": "unapproved.data.status",
+              "op": "eq",
+              "value": "needs_policy_update"
+            },
+            {
+              "path": "unapproved.data.recorded_policy.minimum",
+              "op": "eq",
+              "value": 80
+            },
+            {
+              "path": "unapproved.data.policy_override_applied",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "path": "approved.exit",
+              "op": "eq",
+              "value": 0
+            },
+            {
+              "path": "approved.data.effective_policy.minimum",
+              "op": "eq",
+              "value": 80
+            },
+            {
+              "path": "approved.data.default_policy.minimum",
+              "op": "eq",
+              "value": 60
+            },
+            {
+              "path": "approved.data.qualified_read_baseline",
+              "op": "eq",
+              "value": 60
+            },
+            {
+              "path": "approved.data.gap_to_minimum",
+              "op": "eq",
+              "value": 20
+            },
+            {
+              "path": "approved.data.gap_to_target",
+              "op": "eq",
+              "value": 20
+            },
+            {
+              "path": "approved.data.status",
+              "op": "eq",
+              "value": "baseline_incomplete"
+            },
+            {
+              "path": "approved.data.effective_policy_source",
+              "op": "eq",
+              "value": "authorized_user_override"
+            },
+            {
+              "path": "all_read_only_commands_unchanged",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "检查最终交付 JSON 的逐句表：句子数组打乱，但 order 正确；逐字保留首尾空格与换行，并核对多对多来源、证据引用。",
+      "expected_output": "3 句/2 段正例通过，首段长度 14；少一个首空格、互换顺序或引用不存在的证据/来源都失败，实际文件不变。",
+      "files": [
+        "evals/fixtures/source-template.json",
+        "evals/fixtures/delivery.json"
+      ],
+      "assertions": [
+        "3 句/2 段正例通过，首段长度 14；少一个首空格、互换顺序或引用不存在的证据/来源都失败，实际文件不变。"
+      ],
+      "script_checks": [
+        {
+          "description": "Synthetic black-box CLI contract: delivery",
+          "cmd": [
+            "evals/run_contract_checks.py",
+            "--case",
+            "delivery",
+            "--json"
+          ],
+          "expect_exit": 0,
+          "assert": [
+            {
+              "path": "good.exit",
+              "op": "eq",
+              "value": 0
+            },
+            {
+              "path": "good.data.ok",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "path": "good.data.sentence_count",
+              "op": "eq",
+              "value": 3
+            },
+            {
+              "path": "good.data.paragraph_count",
+              "op": "eq",
+              "value": 2
+            },
+            {
+              "path": "good.data.comparisons.0.exact_match",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "path": "good.data.comparisons.0.rebuilt_characters",
+              "op": "eq",
+              "value": 14
+            },
+            {
+              "path": "good.data.comparisons.0.paragraph_characters",
+              "op": "eq",
+              "value": 14
+            },
+            {
+              "path": "good.data.comparisons.1.rebuilt_characters",
+              "op": "eq",
+              "value": 5
+            },
+            {
+              "path": "lost_space.exit",
+              "op": "eq",
+              "value": 1
+            },
+            {
+              "path": "lost_space.data.ok",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "path": "lost_space.data.comparisons.0.first_difference_index_zero_based",
+              "op": "eq",
+              "value": 0
+            },
+            {
+              "path": "lost_space.data.comparisons.0.paragraph_characters",
+              "op": "eq",
+              "value": 13
+            },
+            {
+              "path": "changed_order.exit",
+              "op": "eq",
+              "value": 1
+            },
+            {
+              "path": "changed_order.data.comparisons.0.exact_match",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "path": "missing_evidence.exit",
+              "op": "eq",
+              "value": 1
+            },
+            {
+              "path": "missing_evidence.data.ok",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "path": "missing_source.exit",
+              "op": "eq",
+              "value": 1
+            },
+            {
+              "path": "missing_source.data.ok",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "path": "all_read_only_commands_unchanged",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "请分别统计标记内的正文和图注，正文为“电池 alpha-beta 12.”与“Li+ 好。”两段；图注为“图 1. Test.”，忽略标记外文字。",
+      "expected_output": "正文去空白字符 20、汉字 3、英文词 2、段落 2；图注分别 8、1、1、1；不完整或重复标记退出 2。",
+      "files": [
+        "evals/fixtures/count.txt"
+      ],
+      "assertions": [
+        "正文去空白字符 20、汉字 3、英文词 2、段落 2；图注分别 8、1、1、1；不完整或重复标记退出 2。"
+      ],
+      "script_checks": [
+        {
+          "description": "Synthetic black-box CLI contract: count",
+          "cmd": [
+            "evals/run_contract_checks.py",
+            "--case",
+            "count",
+            "--json"
+          ],
+          "expect_exit": 0,
+          "assert": [
+            {
+              "path": "prose.exit",
+              "op": "eq",
+              "value": 0
+            },
+            {
+              "path": "prose.data.selection",
+              "op": "eq",
+              "value": "marker-delimited"
+            },
+            {
+              "path": "prose.data.characters_without_whitespace",
+              "op": "eq",
+              "value": 20
+            },
+            {
+              "path": "prose.data.han_characters",
+              "op": "eq",
+              "value": 3
+            },
+            {
+              "path": "prose.data.english_lexical_words",
+              "op": "eq",
+              "value": 2
+            },
+            {
+              "path": "prose.data.paragraphs",
+              "op": "eq",
+              "value": 2
+            },
+            {
+              "path": "caption.exit",
+              "op": "eq",
+              "value": 0
+            },
+            {
+              "path": "caption.data.characters_without_whitespace",
+              "op": "eq",
+              "value": 8
+            },
+            {
+              "path": "caption.data.han_characters",
+              "op": "eq",
+              "value": 1
+            },
+            {
+              "path": "caption.data.english_lexical_words",
+              "op": "eq",
+              "value": 1
+            },
+            {
+              "path": "caption.data.paragraphs",
+              "op": "eq",
+              "value": 1
+            },
+            {
+              "path": "one_marker.exit",
+              "op": "eq",
+              "value": 2
+            },
+            {
+              "path": "repeated_markers.exit",
+              "op": "eq",
+              "value": 2
+            },
+            {
+              "path": "all_read_only_commands_unchanged",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "仅检查电池稿件记录，不修改稿件。运行 status、check、corpus、sources、count 和 delivery-check，确认前后目录与文件字节一致。",
+      "expected_output": "6 个命令均正常返回，命令前后的所有文件内容和目录集合保持一致。",
+      "files": [
+        "evals/fixtures/source-template.json",
+        "evals/fixtures/delivery.json"
+      ],
+      "assertions": [
+        "6 个命令均正常返回，命令前后的所有文件内容和目录集合保持一致。"
+      ],
+      "script_checks": [
+        {
+          "description": "Synthetic black-box CLI contract: readonly",
+          "cmd": [
+            "evals/run_contract_checks.py",
+            "--case",
+            "readonly",
+            "--json"
+          ],
+          "expect_exit": 0,
+          "assert": [
+            {
+              "path": "command_count",
+              "op": "eq",
+              "value": 6
+            },
+            {
+              "path": "exit_codes",
+              "op": "eq",
+              "value": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "path": "read_only_commands",
+              "op": "eq",
+              "value": 6
+            },
+            {
+              "path": "all_read_only_commands_unchanged",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "path": "entire_tree_unchanged",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

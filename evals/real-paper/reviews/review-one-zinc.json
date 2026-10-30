@@ -1,0 +1,78 @@
+{
+  "reviewer": "R1",
+  "samples": [
+    {
+      "case": "zinc",
+      "label": "A",
+      "scores": {
+        "factual_accuracy": 4,
+        "characterization_precision": 4,
+        "paragraph_logic": 4,
+        "claim_calibration": 4,
+        "readability": 4
+      },
+      "dimension_reasons": {
+        "factual_accuracy": "三种配方、molality、DMF相对水质量、FTIR趋势、Raman的36.9%/64.5%/12.4%和所选MD数值均符合事实包；‘average coordination number of 0.19’及末句同时高电流/高面容量边界准确。未选用CE和全部MD分类数据不构成错误。无需修改。",
+        "characterization_precision": "‘FTIR deconvolution’区分拟合与直接测量；‘different anions and bands’明确Raman比例的不同对象；HDE比例未被补造；XANES/EXAFS只支持局部环境变化；‘These model statistics are distinct from Raman peak fractions’保持模型与谱学统计的区别。无需修改。",
+        "paragraph_logic": "首段从配方推进至水氢键环境，第二段以阴离子Raman和Zn局部X射线信息补充配位变化，第三段用MD解释关联物种重分配后回到可逆性。‘The modeled change therefore involves redistribution among associated species’合理承接SSIP下降及DE到HDE的AGG下降，未将这些变化简化成聚集越多越好。无需修改。",
+        "claim_calibration": "‘plausible contribution’与‘without establishing a unique causal pathway’将可逆性联系限定为解释；‘changes in salt concentration’提醒不能把HDE效果单独归因于DMF；最后保留实际工况边界。限定均针对正文中的具体推断，没有阻断主张。无需修改。",
+        "readability": "约329词、3段，符合长度及段落要求。每段围绕一个递进任务，定量信息后紧接解释，‘Raman spectra provided complementary evidence’和‘MD results help interpret’使方法间衔接清楚。没有影响阅读的术语堆积或重复。无需修改。"
+      },
+      "issues": [],
+      "strengths": [
+        "用明确的盐浓度变化限制DMF单因素归因。",
+        "Raman、X射线和MD承担不同证据角色，拟合量、局部结构信息及模拟统计没有混同。",
+        "选择部分MD数字仍能形成完整解释，并保留高电流与高面容量同时施加时的边界。"
+      ]
+    },
+    {
+      "case": "zinc",
+      "label": "B",
+      "scores": {
+        "factual_accuracy": 4,
+        "characterization_precision": 4,
+        "paragraph_logic": 4,
+        "claim_calibration": 4,
+        "readability": 4
+      },
+      "dimension_reasons": {
+        "factual_accuracy": "配方及DMF质量参照正确；采用的1042.3、1448.3和1473.1 cm⁻¹峰位及各自Raman比例均与事实包一致。SSIP和AGG三配方数值及0.19平均配位数准确，未虚构X射线键长或HDE拟合比例。无需修改。",
+        "characterization_precision": "‘assignment-dependent fractions describe different anions’准确界定Raman拟合量；HDE的‘precise CIP/AGG fractions remain unresolved’保留定量上限。X射线仅支持局部环境重排，MD被标明为‘structural interpretation’，且明确其群体比例不同于Raman峰比例。无需修改。",
+        "paragraph_logic": "首句直接提出可逆性与水环境/溶剂化之间的解释问题，随后依次用FTIR、阴离子Raman、Zn局部谱学及MD回答。‘Aggregation thus varies nonmonotonically’将三组AGG数字转成有用结论，收束段再返回可逆性及工况限制，推进完整。无需修改。",
+        "claim_calibration": "‘plausible contributor’保留机制解释的合理程度，未将关联写成唯一因果；‘do not independently establish suppression of all side reactions’限定互补表征的证明能力，末句准确指出同时高电流/高面容量限制。没有因未额外讨论盐浓度混杂而自动扣分的理由，因为正文未作DMF唯一因果归因。无需修改。",
+        "readability": "约340词、3段，符合任务要求。DMF首次给出全名，首句与结尾围绕同一科学问题；数值和峰位虽较多，但按两种阴离子归类，读者可以跟踪对象。无需修改。"
+      },
+      "issues": [],
+      "strengths": [
+        "以需要解释的Zn镀/剥离可逆性开篇，迅速建立表征的目的。",
+        "各Raman峰位与阴离子对象、拟合组分配对清楚。",
+        "将AGG的非单调变化直接概括为结构解释，同时避免将它当作Raman的数值验证。"
+      ]
+    },
+    {
+      "case": "zinc",
+      "label": "C",
+      "scores": {
+        "factual_accuracy": 4,
+        "characterization_precision": 4,
+        "paragraph_logic": 4,
+        "claim_calibration": 4,
+        "readability": 4
+      },
+      "dimension_reasons": {
+        "factual_accuracy": "配方、molality与DMF相对水质量正确，FTIR和OTf⁻ Raman振动区及所用峰位/比例符合事实包；三种配方的SSIP和AGG数据、0.19平均DMF配位数均准确。末句没有把工况边界改为单一高电流或单一高面容量。无需修改。",
+        "characterization_precision": "‘anion-specific evidence’及‘depend on spectral assignments’清楚说明Raman的对象与拟合性质；‘prevent reliable extraction’保留HDE定量限制。X射线不被解释成唯一配位几何，MD明确属于‘simulated Zn²⁺ solvation shell’，‘need not agree numerically’正确区分模型与Raman的统计口径。无需修改。",
+        "paragraph_logic": "三段分别推进水环境、阴离子配位、Zn局部环境与模拟解释。‘Thus, HDE does not simply maximize aggregation’从完整AGG序列提炼结构差异，支持最终的溶剂化重排解释，没有用性能好坏替代结构论证。无需修改。",
+        "claim_calibration": "‘changes in salt composition and concentration’把HDE–SE比较的归因边界落到具体配方差异；最终以‘plausible contributor’描述可逆性联系，并限定全部副反应抑制及苛刻工况外推。X射线处‘following DMF incorporation’在已说明同时存在配方变化的上下文中描述样品变化，没有宣称独立证实DMF唯一因果。无需修改。",
+        "readability": "约348词、3段，满足要求。各方法的主题明确，数量、趋势和解释紧邻呈现；‘HDE does not simply maximize aggregation’是直接的数据概括，不形成新的冗余机制段。正文在精度与信息密度之间保持良好平衡。无需修改。"
+      },
+      "issues": [],
+      "strengths": [
+        "对配方差异、不同阴离子拟合口径和模型统计口径分别作具体限定。",
+        "通过AGG先升后降明确排除单纯最大化聚集程度的解释。",
+        "结尾将互补证据整合为有界的溶剂化解释，并保留适用工况。"
+      ]
+    }
+  ],
+  "comparison": "A、B、C并列。五个维度在本量表的整数精度下均达到4分，未发现需列为major或minor的实际问题。B在首句最早提出需要解释的可逆性问题；A篇幅最短，将X射线放在Raman之后、单独用一段展开MD；C更明确指出HDE不只是最大化聚集，并显式交代配方混杂。这些是有效组织和取材的不同选择，不足以构成质量等级差异。A只给出部分MD分数、B未专门增加盐浓度归因句、各文未写CE，均未改变其实际结论，不据此扣分。先按统一事实和正文完成独立判断，再阅读source-organization-notes.txt核对；组织笔记未提示需要改变上述判断的具体错误，也未用与原文结构的相似度排名。"
+}

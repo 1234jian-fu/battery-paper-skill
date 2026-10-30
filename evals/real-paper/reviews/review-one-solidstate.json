@@ -1,0 +1,98 @@
+{
+  "reviewer": "R1",
+  "samples": [
+    {
+      "case": "solidstate",
+      "label": "A",
+      "scores": {
+        "factual_accuracy": 4,
+        "characterization_precision": 4,
+        "paragraph_logic": 3,
+        "claim_calibration": 4,
+        "readability": 4
+      },
+      "dimension_reasons": {
+        "factual_accuracy": "546 kPa与扣式、52 kPa与软包对应正确；‘After 20 cycles, ex situ’及硫化物10 MPa均保留。300圈/90.8%/99.3%属于Li对电极扣式体系，100圈/98.3%属于Si/LFP扣式全电池，11.7 mAh属于软包，未拼接构型或臆定保持率分母。LFP质量归一与Si装配前一次嵌锂/脱锂清楚。无需事实修改。",
+        "characterization_precision": "‘reconstructions and cross-sections showed retained Si–electrolyte contact’准确描述XR-CT对象，取样、Ar封装与作者对亮条纹的归属没有混成独立诊断。‘Models ... assuming linear elasticity, predicted’明确有限元性质，未补造孔隙率、分辨率或应力数值。无需修改。",
+        "paragraph_logic": "前两段从压力及循环后结构转入力学解释，任务清楚。第三段以‘provide complementary evidence across distinct cell configurations’进入性能，随后主要逐项列指标，末句转向低压软包及其耐久性；相较前两段，功能结果如何回应接触保持这一中心解释说得较隐含。最小修改是在第三段首句直接写明这些循环结果与接触保持有助于稳定性这一解释一致，再保留现有分构型数值。",
+        "claim_calibration": "‘qualitative contact retention within the observed regions’把XR-CT结论限定到实际观察范围；有限元未被写成非共价键断裂的直接验证，配方、压力和对电极差异也阻止单因果归因。软包仅宣称低内建压力下运行，没有移植长循环结论。限定与对应主张相邻且具体。无需修改。",
+        "readability": "约360词、3段，符合要求。XR-CT和有限元的描述以观察、解释和条件顺序展开；第三段虽然综合论点可更明确，但各构型的数字、单位和归一对象易于区分，语言本身流畅。无需额外语言修改。"
+      },
+      "issues": [
+        {
+          "severity": "minor",
+          "text_anchor": "Electrochemical results at 25 °C provide complementary evidence across distinct cell configurations.",
+          "reason": "此句只说明性能属于补充证据，未明确其补充的是哪一机制解释；随后到结尾主要是构型与数值，全文由接触形貌和应力走向循环功能的最后一步稍显隐含。不是因包含三种构型或遗漏某项可选事实扣分。",
+          "fix": "将该句改为：The cycling results at 25 °C are consistent with contact preservation contributing to stability, with performance assessed separately for each cell configuration. 其余数值及限定保留。"
+        }
+      ],
+      "strengths": [
+        "压力测量、循环压力和循环后取样清楚区分，保留硫化物10 MPa这一关键例外。",
+        "对实际观察、模型应力与分子耗能解释作了准确分层。",
+        "三种器件性能分开报告，质量归一、预循环及保持率分母边界均交代清楚。"
+      ]
+    },
+    {
+      "case": "solidstate",
+      "label": "B",
+      "scores": {
+        "factual_accuracy": 4,
+        "characterization_precision": 4,
+        "paragraph_logic": 4,
+        "claim_calibration": 4,
+        "readability": 4
+      },
+      "dimension_reasons": {
+        "factual_accuracy": "内建压力的构型对应、无外加载仍有机械压力、20圈后的非原位XR-CT及546 kPa对10 MPa比较准确。300圈/90.8%与100圈/98.3%分别属于Li||Si和Si||LFP，151.4 mAh g⁻¹的倍率与LFP质量归一正确，全电池预循环被保留。未采用软包容量和平均CE是合理取材，不影响所写结论。无需修改。",
+        "characterization_precision": "‘ex situ ... of recovered electrodes’与‘at the sampled states’准确界定成像状态；应力结果明确来自随机Si球和线弹性假设的有限元计算。亮条纹归属有作者主体，非共价键断裂没有被说成XR-CT直接测得。无需修改。",
+        "paragraph_logic": "第一段给出有限压力下的循环后接触差异；第二段以应力重分布解释接触保存；第三段以‘place this interpretation within specific cell configurations’引入功能结果，随后明确写出‘contact preservation contributing to cycling stability’，并连接20圈表征与更长循环测试的时间差。三段各自有主张而不是仪器/指标清单。无需修改。",
+        "claim_calibration": "非等压、终止状态未说明及缺乏定量只用来限制结构对照；配方与对电极差异用于限制弹性单因果归因；最后一句只指出20圈图像不能证明长循环全程接触。这些边界分别对应比较、机制和时间外推，同时保留明确的接触观察及其合理贡献。无需修改。",
+        "readability": "约332词、3段，满足长度要求。‘This redistribution is consistent with...’和‘These results are consistent with...’分别承接模型与功能结果，读者容易跟踪证据角色。选择两种循环构型使终段集中回应接触保持与稳定性，没有为覆盖全部输入扩展到不必要的演示结果。无需修改。"
+      },
+      "issues": [],
+      "strengths": [
+        "在结构、力学解释和循环功能之间形成清楚的连续论证。",
+        "用具体条件限定结论，未把任何一种证据夸大成唯一机制验证。",
+        "对可选性能作有目的的选择，并明确20圈结构观察与长期循环之间的证据距离。"
+      ]
+    },
+    {
+      "case": "solidstate",
+      "label": "C",
+      "scores": {
+        "factual_accuracy": 4,
+        "characterization_precision": 4,
+        "paragraph_logic": 4,
+        "claim_calibration": 3,
+        "readability": 3
+      },
+      "dimension_reasons": {
+        "factual_accuracy": "546/52 kPa、20圈后XR-CT、硫化物10 MPa、随机球及线弹性有限元、各构型的90.8%/98.3%/11.7 mAh均正确。151.4 mAh g⁻¹按LFP质量归一，Si预循环一次已保留。没有将压力写成零、将300圈移给软包或补造图像定量。无需事实修改。",
+        "characterization_precision": "‘ex situ XR-CT reconstructions and cross-sections’明确对象与状态，‘identified by the authors as imaging artifacts’保留归属主体。有限元、实测应力和分子过程清楚区分，未把图像当成非共价键断裂的直接观察。所有必要证据层级准确；可压缩重复限定，但不需要更改专业内容。",
+        "paragraph_logic": "由循环后接触差异进入模型内应力缓解，再以分构型性能回应机械顺应性的贡献，主线清楚。‘The combined observations therefore support a contribution from mechanical compliance’和第三段的‘consistent with this interpretation’使论据与论点相连；虽然语气可更紧凑，不属于单纯罗列表征。无需结构重排。",
+        "claim_calibration": "结论整体有界，匹配压力、单因果和20圈不能覆盖300圈等限制都必要。不过第二段在已写‘Finite-element simulations’后再用‘rather than measured operando stresses’对立澄清，末句又加入正文没有提出过的‘larger, more heavily loaded cells’外推边界，整体稍偏防御。最小修改是保留线弹性和非共价键未直接观察的实质限制，删除显然由‘simulations’已说明的实测否定以及末尾未展开的放大外推分句。",
+        "readability": "约366词、3段，符合要求且语法通顺。第二段连续使用‘However ... rather than’、‘remains ... rather than’、‘Moreover’、‘without isolating’，第三段又以‘without’和‘while ... cannot ... or justify’收束；读者须连续处理多次否定才回到明确的正面结果。可将线弹性假设并入首句，压缩模型非实测的重复澄清，并删去未展开的放大外推分句，保留具体边界。"
+      },
+      "issues": [
+        {
+          "severity": "minor",
+          "text_anchor": "However, the linear-elastic model describes calculated stress redistribution rather than measured operando stresses.",
+          "reason": "前一句已经明确由Finite-element simulations得到应力结果，后文还会区分分子机制是否被直接观察。此处有用的新信息是线弹性假设，另起转折再次否定实测使限定密度高于必要程度。",
+          "fix": "把assuming linear elasticity并入有限元段首句，并删除该独立转折句；保留下一句对非共价键断裂未被XR-CT直接观察的限定。"
+        },
+        {
+          "severity": "minor",
+          "text_anchor": "or justify extrapolation to larger, more heavily loaded cells",
+          "reason": "正文已经把结论限定为reported conditions，且没有提出较大或较高负载电芯的性能主张。此处追加一般性放大限制，使本来具体的20圈与300圈时间边界转向尚未展开的新问题，削弱收束的集中程度。该句并非事实错误。",
+          "fix": "删除此并列分句，末句在continuous contact preservation over 300 cycles处结束即可。"
+        }
+      ],
+      "strengths": [
+        "实际压力与非等压比较说明充分，且没有把更高外压自动当作单变量对照。",
+        "明确将力学顺应性表述为贡献而非唯一原因。",
+        "三种构型性能分别归属，正文也主动区分20圈的结构端点与长循环表现。"
+      ]
+    }
+  ],
+  "comparison": "B整体略优，A与C各有轻微取舍，不强行给两者一个稳定的总次序。三稿事实与表征精度均达到4分，没有重要错误。B在较少篇幅内完成结构—力学解释—循环功能的连接，限制也都紧贴实际主张；A的第三段更偏分构型性能报告，补一句性能与接触解释的明确联系即可；C的主线完整，但模型已明示后再次否定实测、以及追加未展开的较大/较高负载电芯外推，增加了防御性表达。这里评价的是可定位的论证连接和限定冗余，不以与来源段序的相似度、可选事实覆盖数量或本案例标签与其他案例的关系排名。先根据正文与facts.json完成判断，再用source-organization-notes.txt核对；未将组织笔记提及但正文未采用的100 μm标尺、润湿、LED或其他可选数据视为遗漏错误。"
+}

@@ -1,0 +1,6 @@
+IGNORED 123
+<PROSE>电池 alpha-beta 12.
+
+Li+ 好。</PROSE>
+IGNORED
+<CAPTION>图 1. Test.</CAPTION>

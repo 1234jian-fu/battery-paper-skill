@@ -1,0 +1,82 @@
+[
+  {
+    "query": "我有一篇锂金属电池论文的图 3，帮我从润湿与 EIS 数据组织结果段，给逐句证据和原文来源映射。",
+    "should_trigger": true
+  },
+  {
+    "query": "接着上次那篇钠离子电池稿件写图 4，保留已确认的结构和材料命名，缺失数据先标明。",
+    "should_trigger": true
+  },
+  {
+    "query": "这篇固态电池英文讨论逻辑散，请依据我的图表实质重构，并分别列出自有证据和表达示范出处。",
+    "should_trigger": true
+  },
+  {
+    "query": "为锌离子电池新稿建立近五年的近期原始研究表达基底，要求至少 60 篇唯一研究，摘要记录不算已读正文。",
+    "should_trigger": true
+  },
+  {
+    "query": "把这段电池材料论文中文摘要改成适合投稿的英文，保留数值、限定和机理边界，不新增实验事实。",
+    "should_trigger": true
+  },
+  {
+    "query": "请写这篇锂硫电池稿的图注，逐个核对电极角色、倍率基准与循环状态。",
+    "should_trigger": true
+  },
+  {
+    "query": "审核我的电池界面论文是否把接触角误写成离子电导率证据，只报告问题，不覆盖原稿。",
+    "should_trigger": true
+  },
+  {
+    "query": "这是电池材料 DFT 计算的图和作者方法记录，帮我组织结果与讨论，区分理想模型和实验样品。",
+    "should_trigger": true
+  },
+  {
+    "query": "电池论文只需把这一句里提升 20% 的 by/to 改准确，不要重建 60 篇文献库。",
+    "should_trigger": true
+  },
+  {
+    "query": "请检查这份电池稿件的逐句交付 JSON 与干净正文是否一致，并分别报告正文和图注的字数。",
+    "should_trigger": true
+  },
+  {
+    "query": "帮我把电池循环数据 CSV 画成可编辑 Origin 图，保留原始点和误差棒，不撰写论文。",
+    "should_trigger": false
+  },
+  {
+    "query": "我只想下载安装 battery-paper-skill 并检查脚本安全性，不需要写电池论文。",
+    "should_trigger": false
+  },
+  {
+    "query": "下载这 10 篇电池论文的开放获取 PDF，整理到本地目录，不精读也不写稿。",
+    "should_trigger": false
+  },
+  {
+    "query": "帮我把这篇电池论文完整翻译为逐段中英对照读本，保留公式和图片。",
+    "should_trigger": false
+  },
+  {
+    "query": "用这篇钠离子电池论文做 15 页中文组会 PPT，复用原图并写演讲备注。",
+    "should_trigger": false
+  },
+  {
+    "query": "电池论文审稿人质疑重复数，帮我写逐条审稿回复和返修信，暂不改正文。",
+    "should_trigger": false
+  },
+  {
+    "query": "请给我设计一套锂电池材料分子动力学模拟流程，选势函数和温度控制参数。",
+    "should_trigger": false
+  },
+  {
+    "query": "我只有一组电池寿命数据，计算 Weibull 参数、置信区间并检查统计假设，不写论文段落。",
+    "should_trigger": false
+  },
+  {
+    "query": "这篇肿瘤免疫论文请按图组织结果段，给逐句证据映射，研究不涉及电池。",
+    "should_trigger": false
+  },
+  {
+    "query": "帮我检验这份开题报告参考文献的 DOI、作者顺序、卷期和页码，报告包含多篇电池论文。",
+    "should_trigger": false
+  }
+]

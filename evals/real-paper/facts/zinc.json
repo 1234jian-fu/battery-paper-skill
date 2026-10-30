@@ -1,0 +1,31 @@
+{
+  "case_id": "zinc-characterization",
+  "material_type": "Verified facts from a published original research article; not new user experiments",
+  "source": {
+    "title": "Electrolyte design for reversible zinc metal chemistry",
+    "authors_short": "Bao Zhang, Jia Yao et al.",
+    "journal": "Nature Communications",
+    "publication_date": "2025-01-02",
+    "doi": "10.1038/s41467-024-55657-1",
+    "publisher_url": "https://www.nature.com/articles/s41467-024-55657-1",
+    "repository_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11695615/",
+    "xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11695615/fullTextXML",
+    "license": "CC BY-NC-ND 4.0; this packet restates factual measurements independently and does not supply article prose for rewriting",
+    "verified_scope": "Main-text characterization subsection and Fig. 3 caption read; official full-size Fig. 3 visually inspected. Relevant main-text electrolyte definitions and CE paragraph read. Supplementary raw data and simulations were not reproduced."
+  },
+  "task_context": "依据下列已发表结果做写作能力对照，关注水环境与Zn2+溶剂化结构表征；不冒充自己的新实验或已完成全文验证。",
+  "facts": [
+    {"id":"Z1","kind":"published_methods","location":"Results: Reversibility of Zn metal anode, first paragraph","content":"SE为4 m ZnOTf2；DE为4 m ZnOTf2 + 1 m ZnOAc2；HDE为2.8 m ZnOTf2 + 0.7 m ZnOAc2 + 30 wt% DMF。m为原文使用的molality标记，不是M。Methods说明有机溶剂质量比相对于水质量。"},
+    {"id":"Z2","kind":"published_electrochemical_result","location":"Fig. 2a and Results: Reversibility of Zn metal anode","content":"在Zn镀/剥离1 mA cm−2、1 mAh cm−2条件下，SE平均CE为99.3%；DE为99.8%；HDE跨1000圈平均CE为99.95%，稳定值约99.97%。这些是不同统计口径，99.95%不是容量保持率。这里只用作表征问题的上下文，不需重写整段性能。"},
+    {"id":"Z3","kind":"spectral_observation_and_fit","location":"Fig. 3a,d; characterization subsection paragraph 1","content":"FTIR比较三种液态电解液的O–H伸缩区。原文讨论3200–3600 cm−1，绘图横轴覆盖更宽范围。对谱带分峰后，DE及HDE的强氢键组分相对SE下降，HDE最低；本输入不提供可信精确组分百分数，也不提供直接水活度数值。"},
+    {"id":"Z4","kind":"author_interpretation","location":"characterization subsection paragraph 1","content":"作者把上述变化联系到Zn2+溶剂化与DMF对水氢键环境的改变。这是对谱学和其他信息的解释，FTIR本身不直接测量HER速率、离子电导或水活度。"},
+    {"id":"Z5","kind":"spectral_assignment_and_fit","location":"Fig. 3b,d; characterization subsection paragraph 2","content":"OTf−的SO3伸缩区为1000–1080 cm−1；作者据Raman分峰区分SSIP、CIP与AGG。SE中1042.3 cm−1处归属OTf−相关CIP的比例约36.9%。这些是有归属假设的谱峰拟合量。"},
+    {"id":"Z6","kind":"spectral_assignment_and_fit","location":"Fig. 3c,d; characterization subsection paragraph 2","content":"对DE的乙酸根对称C=O伸缩相关谱带，作者报告CIP组分约64.5%（1448.3 cm−1），AGG组分约12.4%（1473.1 cm−1）。这与Z5是不同阴离子/谱带的分析，不能直接相减得到同一总体CIP比例的增幅。"},
+    {"id":"Z7","kind":"reported_quantification_limit","location":"characterization subsection paragraph 2; Fig. 3c","content":"HDE中OAc−相关谱峰更复杂，原文明确说明其准确比例难以获得；可保留相对DE发生变化的定性表述，不能为HDE补出精确乙酸根CIP/AGG百分数。"},
+    {"id":"Z8","kind":"complementary_spectroscopy","location":"Fig. 3e,f; characterization subsection paragraph 3","content":"Zn K-edge XANES和R空间EXAFS比较单盐、DE及HDE；原文以边位变化和EXAFS特征变化讨论加入DMF后的局部溶剂化重排。本材料包没有定量Zn–O键长或完整配位数拟合结果，不能由此补出精确结构或新物相。"},
+    {"id":"Z9","kind":"simulation_result","location":"Fig. 3g; characterization subsection paragraph 4","content":"MD结构分类的SSIP/CIP/AGG：SE为72.57%/23.47%/3.96%；DE为50.41%/16.52%/33.07%；HDE为41.82%/32.73%/25.45%。这些是MD分类统计，不是Raman峰面积，更不能强求数值逐一相等。"},
+    {"id":"Z10","kind":"simulation_result","location":"characterization subsection paragraph 4, referring to Fig. S24","content":"主文报告MD中HDE的Zn2+溶剂化壳包含DMF，DMF配位数为0.19。0.19是平均配位数，不是19%的Zn离子配位、体积分数或直接实验读数；补充图未在本次核读。"},
+    {"id":"Z11","kind":"support_scope","location":"Fig. 3 and corresponding main-text subsection","content":"FTIR、阴离子相关Raman、Zn局部X射线谱和MD分别从水环境、阴离子配位、局部Zn环境和模型结构提供互补信息。可以组织关于溶剂化重排的有限解释，不能仅凭任一峰或理想MD快照唯一证明抑制全部副反应、形成普遍稳定SEI或整电池实用化。"},
+    {"id":"Z12","kind":"reported_limit","location":"Results: Reversibility of Zn metal anode, paragraph 2","content":"作者明确指出该策略不适用于同时具有很高电流密度和很高面容量的苛刻工况；该主文段没有给出精确阈值，不能写成在任意电流和面容量下均有效。"}
+  ]
+}

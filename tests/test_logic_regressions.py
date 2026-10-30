@@ -315,6 +315,103 @@ class LogicRegressionTest(unittest.TestCase):
         self.assertIsNone(last)
         self.assertEqual((precision, token), ("unknown", "invalid"))
 
+    def test_falsy_malformed_first_online_dates_do_not_use_newer_issue_date(self):
+        self.save_sources([synthetic_source(index, first_online_date=value)
+                           for index, value in enumerate((False, 0, [], {}), 1)])
+        code, payload = self.corpus()
+        self.assertEqual(code, 0, payload)
+        self.assertEqual(payload["qualified_read_baseline"], 0)
+        self.assertTrue(all(row["recency"]["status"] == "date_unknown" for row in payload["records"]))
+
+    def test_empty_optional_online_dates_allow_publication_date_fallback(self):
+        for value in (None, ""):
+            with self.subTest(value=value):
+                first, last, precision, token = WORKBENCH.publication_interval(
+                    {"first_online_date": value, "publication_date": "2025-01-01"})
+                self.assertEqual((first.isoformat(), last.isoformat(), precision, token),
+                                 ("2025-01-01", "2025-01-01", "day", "2025-01-01"))
+
+    def test_non_web_date_locators_do_not_qualify_as_source_verification(self):
+        locators = ("verified by me", "example.invalid/synthetic", "file:///synthetic.pdf",
+                    "javascript:synthetic", "https:///missing-host", "https://example.invalid:bad/path",
+                    "https://example.invalid:99999/path", "https://example.invalid/bad path")
+        self.save_sources([synthetic_source(index, date_source_url=url)
+                           for index, url in enumerate(locators, 1)])
+        code, payload = self.corpus()
+        self.assertEqual(code, 0, payload)
+        self.assertEqual(payload["qualified_read_baseline"], 0)
+        self.assertTrue(all("publication_date_not_source_verified" in row["reasons"]
+                            for row in payload["records"]))
+
+    def test_web_date_locator_check_only_validates_syntax(self):
+        for url in ("https://example.invalid/synthetic", "http://example.invalid:8080/synthetic",
+                    "https://example.invalid/synthetic%20path?version=1#date"):
+            self.assertTrue(WORKBENCH.http_source_url(url))
+        for value in (None, False, [], {}, "https://[invalid-host/path"):
+            self.assertFalse(WORKBENCH.http_source_url(value))
+
+    def test_long_transitive_alias_chain_does_not_hit_recursion_limit(self):
+        records = []
+        for number in range(1200, 0, -1):
+            records.extend([
+                {"doi": f"10.99999/synthetic-{number:04}", "unique_work_id": f"SYNTHETIC-{number:04}"},
+                {"doi": f"10.99999/synthetic-{number - 1:04}", "unique_work_id": f"SYNTHETIC-{number:04}"},
+            ])
+        identities = WORKBENCH.canonical_work_identities(records)
+        self.assertEqual(len(identities), 2400)
+        self.assertEqual(len(set(identities)), 1)
+
+    def make_symlink(self, link, target, directory=False):
+        try:
+            link.symlink_to(target, target_is_directory=directory)
+        except (OSError, NotImplementedError) as exc:
+            self.skipTest(f"Platform cannot create a synthetic symlink: {type(exc).__name__}")
+
+    def test_init_rejects_context_link_outside_explicit_project_before_writing(self):
+        project = self.root / "synthetic_linked_project"
+        outside = self.root / "synthetic_other_project"
+        project.mkdir()
+        outside.mkdir()
+        self.make_symlink(project / ".paper-writing", outside, directory=True)
+        code, payload = self.cli("init", "--project-dir", project, "--name", "SYNTHETIC")
+        self.assertEqual(code, 2, payload)
+        self.assertIn("within explicit --project-dir", payload["error"])
+        self.assertEqual(list(outside.iterdir()), [])
+
+    def test_context_record_link_cannot_silently_read_another_project(self):
+        outside = self.root / "synthetic_external_project.json"
+        outside.write_text('{"project_name": "SYNTHETIC EXTERNAL"}', encoding="utf-8")
+        record = self.context / "project.json"
+        record.unlink()
+        self.make_symlink(record, outside)
+        code, payload = self.cli("status", "--project-dir", self.project)
+        self.assertEqual(code, 2, payload)
+        self.assertIn("within explicit --project-dir", payload["error"])
+        self.assertNotIn("SYNTHETIC EXTERNAL", str(payload))
+
+    def test_context_link_inside_explicit_project_remains_supported(self):
+        project = self.root / "synthetic_internal_link_project"
+        target = project / "synthetic_records"
+        target.mkdir(parents=True)
+        self.make_symlink(project / ".paper-writing", target, directory=True)
+        code, payload = self.cli("init", "--project-dir", project, "--name", "SYNTHETIC")
+        self.assertEqual(code, 0, payload)
+        self.assertTrue((target / "project.json").is_file())
+
+    def test_check_rejects_directories_with_required_markdown_file_names(self):
+        for name in ("decisions.md", "issues.md"):
+            with self.subTest(record=name):
+                record = self.context / name
+                original_bytes = record.read_bytes()
+                record.unlink()
+                record.mkdir()
+                code, payload = self.cli("check", "--project-dir", self.project)
+                self.assertEqual(code, 1, payload)
+                self.assertFalse(payload["ok"])
+                self.assertTrue(any(name in error for error in payload["errors"]))
+                record.rmdir()
+                record.write_bytes(original_bytes)
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

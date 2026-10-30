@@ -1,0 +1,33 @@
+{
+  "sentences": [
+    {
+      "sentence_id": "SYNTHETIC-S2",
+      "paragraph_id": "SYNTHETIC-P1",
+      "order": 2,
+      "text": "Beta.\n",
+      "evidence_ids": ["SYNTHETIC-E1", "SYNTHETIC-E2"],
+      "source_ids": ["SYNTHETIC-SRC-001", "SYNTHETIC-SRC-002"]
+    },
+    {
+      "sentence_id": "SYNTHETIC-S1",
+      "paragraph_id": "SYNTHETIC-P1",
+      "order": 1,
+      "text": " Alpha. ",
+      "evidence_ids": ["SYNTHETIC-E1"],
+      "source_ids": ["SYNTHETIC-SRC-001"]
+    },
+    {
+      "sentence_id": "SYNTHETIC-S3",
+      "paragraph_id": "SYNTHETIC-P2",
+      "order": 1,
+      "text": "合成观察。",
+      "evidence_ids": ["SYNTHETIC-E2"],
+      "source_ids": [],
+      "basis": "own_observation"
+    }
+  ],
+  "paragraphs": [
+    {"paragraph_id": "SYNTHETIC-P1", "text": " Alpha. Beta.\n"},
+    {"paragraph_id": "SYNTHETIC-P2", "text": "合成观察。"}
+  ]
+}

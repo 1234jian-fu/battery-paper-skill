@@ -1,0 +1,252 @@
+{
+  "method": "inline-attachment comparison",
+  "model": "gpt-6-astra",
+  "effort": "ultra",
+  "hash_conventions": {
+    "final_sha256": "UTF-8 final text with LF newlines and leading/trailing whitespace stripped, matching the runner; not raw file bytes.",
+    "input_sha256": "Raw factual input file bytes.",
+    "task_prompt_sha256": "UTF-8 task prompt text."
+  },
+  "snapshot_id": "sentence-paragraph-paper-v2-final",
+  "same_argv_except_workdir_and_response_path": true,
+  "same_case_input_and_task_prompt": true,
+  "runs": [
+    {
+      "run_id": "zinc__none__r1",
+      "task_id": "zinc",
+      "group": "none",
+      "status": "complete_execution_audited",
+      "input_sha256": "6d642ceda75e8a4156de725880e86dd1bfbd04fa6cb7a48c2dc1b9d2f604c25f",
+      "task_prompt_sha256": "24acaa9db01b25103e3cbea10849517c674be02d1155275b4724931c7bc202d4",
+      "full_prompt_sha256": "03e237398274ec02e10e7682ce34977fd0312143ad8b15f498f21f3eb99b8e76",
+      "skill_tree_sha256": null,
+      "attachment_files": 0,
+      "provisionally_valid": true,
+      "invalid_reasons": [],
+      "english_word_count_approx": 328,
+      "paragraph_count_approx": 3,
+      "final_sha256": "a91071eeb9950d107c844794d65e744d9da9f69b1c73794580d25555b2c09e68"
+    },
+    {
+      "run_id": "zinc__upstream__r1",
+      "task_id": "zinc",
+      "group": "upstream",
+      "status": "complete_execution_audited",
+      "input_sha256": "6d642ceda75e8a4156de725880e86dd1bfbd04fa6cb7a48c2dc1b9d2f604c25f",
+      "task_prompt_sha256": "24acaa9db01b25103e3cbea10849517c674be02d1155275b4724931c7bc202d4",
+      "full_prompt_sha256": "d23d2208bffb2e6233ea4cbff7cda141b3bdc71db824192c255a53f34da5e5a7",
+      "skill_tree_sha256": "9dd0506cce3132a1449ef9321ee208b29117a3cd999f789a9fef78491d792f8a",
+      "attachment_files": 9,
+      "provisionally_valid": true,
+      "invalid_reasons": [],
+      "english_word_count_approx": 321,
+      "paragraph_count_approx": 3,
+      "final_sha256": "f0eb646b5edd53659d578e74bc3169642169ce13cf79b38e9a235d334a0aefac"
+    },
+    {
+      "run_id": "zinc__optimized__r1",
+      "task_id": "zinc",
+      "group": "optimized",
+      "status": "complete_execution_audited",
+      "input_sha256": "6d642ceda75e8a4156de725880e86dd1bfbd04fa6cb7a48c2dc1b9d2f604c25f",
+      "task_prompt_sha256": "24acaa9db01b25103e3cbea10849517c674be02d1155275b4724931c7bc202d4",
+      "full_prompt_sha256": "1c0080257c484c5f58e7d73f0f26669c578471f1e97358a8eab1ebe65a14c9ca",
+      "skill_tree_sha256": "1fd960407be48fa8c115134c0f73e393d8aa77268201864bcdeca915d4c5fa8e",
+      "attachment_files": 11,
+      "provisionally_valid": true,
+      "invalid_reasons": [],
+      "english_word_count_approx": 313,
+      "paragraph_count_approx": 3,
+      "final_sha256": "6854beeab849ea1d6234fcf7802b6703476a171f4fa05e27d94086a50af8a475"
+    },
+    {
+      "run_id": "solidstate__none__r1",
+      "task_id": "solidstate",
+      "group": "none",
+      "status": "complete_execution_audited",
+      "input_sha256": "4a10c549e3ebea99b31f413c317fb2945b0e922ec17a0cddfaf76a7b767346f3",
+      "task_prompt_sha256": "cb2a8da272c3a497c6f685cd1c9b2d603b7b5a1c35208a9b2135640e4ec080c1",
+      "full_prompt_sha256": "8b94e6ed2f814ccb457b0bf7019663e7e19b538c26617f6fe848e5752229289c",
+      "skill_tree_sha256": null,
+      "attachment_files": 0,
+      "provisionally_valid": true,
+      "invalid_reasons": [],
+      "english_word_count_approx": 357,
+      "paragraph_count_approx": 3,
+      "final_sha256": "d1fbc607f3524bccaf149ec2db7c7b641a77a0e8710cd59d8549e5165b6862c9"
+    },
+    {
+      "run_id": "solidstate__upstream__r1",
+      "task_id": "solidstate",
+      "group": "upstream",
+      "status": "complete_execution_audited",
+      "input_sha256": "4a10c549e3ebea99b31f413c317fb2945b0e922ec17a0cddfaf76a7b767346f3",
+      "task_prompt_sha256": "cb2a8da272c3a497c6f685cd1c9b2d603b7b5a1c35208a9b2135640e4ec080c1",
+      "full_prompt_sha256": "fefa359a1549b44c8afaf5ff4d3776e64907b4c035fa2e2b9be2cd3132efa597",
+      "skill_tree_sha256": "9dd0506cce3132a1449ef9321ee208b29117a3cd999f789a9fef78491d792f8a",
+      "attachment_files": 9,
+      "provisionally_valid": true,
+      "invalid_reasons": [],
+      "english_word_count_approx": 355,
+      "paragraph_count_approx": 3,
+      "final_sha256": "8d1e26cd3e9a27b61127438d45e1c621586c17b783be6ac2a553ee6981c238c8"
+    },
+    {
+      "run_id": "solidstate__optimized__r1",
+      "task_id": "solidstate",
+      "group": "optimized",
+      "status": "complete_execution_audited",
+      "input_sha256": "4a10c549e3ebea99b31f413c317fb2945b0e922ec17a0cddfaf76a7b767346f3",
+      "task_prompt_sha256": "cb2a8da272c3a497c6f685cd1c9b2d603b7b5a1c35208a9b2135640e4ec080c1",
+      "full_prompt_sha256": "f26a74baa6bbe3074019a46bb68330b43721ab7af224897013f153a92c4f009a",
+      "skill_tree_sha256": "1fd960407be48fa8c115134c0f73e393d8aa77268201864bcdeca915d4c5fa8e",
+      "attachment_files": 11,
+      "provisionally_valid": true,
+      "invalid_reasons": [],
+      "english_word_count_approx": 329,
+      "paragraph_count_approx": 3,
+      "final_sha256": "7212a67ca5ea088d85ba55da8f6f112c1558261f4f2fef7973ea83064b90460e"
+    }
+  ],
+  "scores": [
+    {
+      "case": "zinc",
+      "group": "none",
+      "anonymous_label": "C",
+      "R1": {
+        "factual_accuracy": 4,
+        "characterization_precision": 4,
+        "paragraph_logic": 4,
+        "claim_calibration": 4,
+        "readability": 4
+      },
+      "R2": {
+        "factual_accuracy": 4,
+        "characterization_precision": 4,
+        "paragraph_logic": 4,
+        "claim_calibration": 4,
+        "readability": 4
+      },
+      "R1_total": 20,
+      "R2_total": 20,
+      "whitespace_words": 348,
+      "paragraphs": 3
+    },
+    {
+      "case": "zinc",
+      "group": "upstream",
+      "anonymous_label": "B",
+      "R1": {
+        "factual_accuracy": 4,
+        "characterization_precision": 4,
+        "paragraph_logic": 4,
+        "claim_calibration": 4,
+        "readability": 4
+      },
+      "R2": {
+        "factual_accuracy": 4,
+        "characterization_precision": 4,
+        "paragraph_logic": 4,
+        "claim_calibration": 4,
+        "readability": 4
+      },
+      "R1_total": 20,
+      "R2_total": 20,
+      "whitespace_words": 340,
+      "paragraphs": 3
+    },
+    {
+      "case": "zinc",
+      "group": "optimized",
+      "anonymous_label": "A",
+      "R1": {
+        "factual_accuracy": 4,
+        "characterization_precision": 4,
+        "paragraph_logic": 4,
+        "claim_calibration": 4,
+        "readability": 4
+      },
+      "R2": {
+        "factual_accuracy": 4,
+        "characterization_precision": 4,
+        "paragraph_logic": 4,
+        "claim_calibration": 4,
+        "readability": 3
+      },
+      "R1_total": 20,
+      "R2_total": 19,
+      "whitespace_words": 329,
+      "paragraphs": 3
+    },
+    {
+      "case": "solidstate",
+      "group": "none",
+      "anonymous_label": "C",
+      "R1": {
+        "factual_accuracy": 4,
+        "characterization_precision": 4,
+        "paragraph_logic": 4,
+        "claim_calibration": 3,
+        "readability": 3
+      },
+      "R2": {
+        "factual_accuracy": 4,
+        "characterization_precision": 4,
+        "paragraph_logic": 4,
+        "claim_calibration": 4,
+        "readability": 3
+      },
+      "R1_total": 18,
+      "R2_total": 19,
+      "whitespace_words": 366,
+      "paragraphs": 3
+    },
+    {
+      "case": "solidstate",
+      "group": "upstream",
+      "anonymous_label": "A",
+      "R1": {
+        "factual_accuracy": 4,
+        "characterization_precision": 4,
+        "paragraph_logic": 3,
+        "claim_calibration": 4,
+        "readability": 4
+      },
+      "R2": {
+        "factual_accuracy": 4,
+        "characterization_precision": 4,
+        "paragraph_logic": 3,
+        "claim_calibration": 4,
+        "readability": 4
+      },
+      "R1_total": 19,
+      "R2_total": 19,
+      "whitespace_words": 360,
+      "paragraphs": 3
+    },
+    {
+      "case": "solidstate",
+      "group": "optimized",
+      "anonymous_label": "B",
+      "R1": {
+        "factual_accuracy": 4,
+        "characterization_precision": 4,
+        "paragraph_logic": 4,
+        "claim_calibration": 4,
+        "readability": 4
+      },
+      "R2": {
+        "factual_accuracy": 4,
+        "characterization_precision": 4,
+        "paragraph_logic": 4,
+        "claim_calibration": 4,
+        "readability": 4
+      },
+      "R1_total": 20,
+      "R2_total": 20,
+      "whitespace_words": 332,
+      "paragraphs": 3
+    }
+  ],
+  "scope": "Two development cases, one generation per arm per case, two model blind reviewers; no unseen-paper generalization or whole-manuscript validation."
+}

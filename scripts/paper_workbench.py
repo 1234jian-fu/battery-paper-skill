@@ -40,11 +40,32 @@ def read_json(path):
 def context_dir(project_dir):
     # Always require an explicit project; the current directory has no special identity.
     project = Path(project_dir).expanduser().resolve()
-    return project, project / ".paper-writing"
+    context = project / ".paper-writing"
+    # Follow existing links before any read/write, including Windows junctions.
+    # A linked context must not silently read another project's records or create
+    # files outside the project explicitly selected by the author.
+    for target in (context, *(context / name for name in REQUIRED_FILES), context / "drafts"):
+        try:
+            target.resolve().relative_to(project)
+        except (ValueError, RuntimeError):
+            raise ValueError("Project context paths must stay within explicit --project-dir") from None
+    return project, context
 
 
 def nonempty_string(value):
     return isinstance(value, str) and bool(value.strip())
+
+
+def http_source_url(value):
+    """Validate a recorded web locator's syntax, never its content or authority."""
+    if not nonempty_string(value) or re.search(r"\s", value.strip()):
+        return False
+    try:
+        parts = urlsplit(value.strip())
+        parts.port  # Access also rejects a malformed/out-of-range recorded port.
+        return parts.scheme in {"http", "https"} and bool(parts.hostname)
+    except ValueError:
+        return False
 
 
 def policy_audit(project):
@@ -101,8 +122,11 @@ def window_for(as_of, years=5):
 
 
 def publication_interval(item):
-    raw = item.get("first_online_date") or item.get("publication_date") or item.get("year")
-    token = str(raw or "").strip()
+    # An explicitly supplied but malformed first-online date must not be hidden
+    # by a later issue date. Only absent/blank optional fields permit fallback.
+    raw = next((item[key] for key in ("first_online_date", "publication_date", "year")
+                if key in item and item[key] is not None and item[key] != ""), "")
+    token = str(raw).strip()
     try:
         if re.fullmatch(r"\d{4}", token):
             year = int(token)
@@ -147,9 +171,14 @@ def canonical_work_identities(records):
 
     def find(token):
         parents.setdefault(token, token)
-        if parents[token] != token:
-            parents[token] = find(parents[token])
-        return parents[token]
+        root = token
+        while parents[root] != root:
+            root = parents[root]
+        while parents[token] != token:
+            parent = parents[token]
+            parents[token] = root
+            token = parent
+        return root
 
     for item in records:
         tokens = []
@@ -189,7 +218,7 @@ def source_qualification(item, first, last):
         reasons.append("not_a_separate_formal_primary_work")
     if recent["status"] != "within_window":
         reasons.append(recent["status"])
-    if not recent["date_verified"] or not nonempty_string(item.get("date_source_url")):
+    if not recent["date_verified"] or not http_source_url(item.get("date_source_url")):
         reasons.append("publication_date_not_source_verified")
     if item.get("date_basis") not in {"publisher_first_online", "publisher_formal_publication"}:
         reasons.append("formal_first_publication_basis_missing")
@@ -459,8 +488,8 @@ def check_context(args):
     errors, warnings, objects = [], [], {}
     for name in REQUIRED_FILES:
         target = context / name
-        if not target.exists():
-            errors.append(f"Missing {name}")
+        if not target.is_file():
+            errors.append(f"Missing or non-file record {name}")
             continue
         if name.endswith(".json"):
             try:

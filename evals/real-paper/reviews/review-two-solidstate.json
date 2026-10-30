@@ -1,0 +1,92 @@
+{
+  "reviewer": "R2",
+  "samples": [
+    {
+      "case": "solidstate",
+      "label": "A",
+      "scores": {
+        "factual_accuracy": 4,
+        "characterization_precision": 4,
+        "paragraph_logic": 3,
+        "claim_calibration": 4,
+        "readability": 4
+      },
+      "dimension_reasons": {
+        "factual_accuracy": "546/52 kPa分别对应扣式/软包，XR-CT明确为20圈后，弹性与硫化物分别为546 kPa和10 MPa；300圈/90.8%、100圈/98.3%及软包11.7 mAh各属正确构型。151.4和140 mAh g⁻¹明确按LFP质量归一，Si预循环及保持率基准未指明也交代准确；无需修改。",
+        "characterization_precision": "“ex situ”“removed from their casings”限定取样成像状态；亮条纹明确为作者的伪影归属；无孔隙定量时只支持“qualitative contact retention”。有限元写明随机Si球、线弹性和von Mises应力，未把计算当实测，也没有让XR-CT或应力场直接证明非共价键耗能；无需修改。",
+        "paragraph_logic": "前两段形成结构观察→力学解释的清晰推进。第三段虽以“complementary evidence”引入，但随后依次报告三种构型性能、预循环和数据边界，没有一句明确说明这些循环结果怎样与前两段的接触保持解释相互支持，连接稍显概括。宜在“Electrochemical results...”主题句中直接点明循环稳定性与接触保持的一致性。",
+        "claim_calibration": "对20圈图像仅作观测区域内的定性结论；“prevent attribution ... solely to elasticity”准确保留压力、配方、制备和对电极差异；软包只支持低内建压力下运行，不升级为长期耐久性。各限制贴近相应主张，没有唯一因果或商业普适化；无需修改。",
+        "readability": "尽管数据多，句子按结构观察、机械解释和器件性能分组，构型名称及“Separately”“At 52 kPa”可清楚引导读者。计量基准、取样和压力信息具体，不混入无关仪器参数；无需做语言层面的实质修改。"
+      },
+      "issues": [
+        {
+          "severity": "minor",
+          "text_anchor": "Electrochemical results at 25 °C provide complementary evidence across distinct cell configurations.",
+          "reason": "“complementary evidence”未明确说明互补于哪一项解释；其后整段主要列出构型和性能，削弱了与前两段接触保持—应力缓解主线的连接。不是遗漏可选数据，而是已经选入的性能数据需要一个明确的论证任务。",
+          "fix": "将主题句改为：“Electrochemical cycling at 25 °C is consistent with contact preservation contributing to stability, with performance reported separately for each cell configuration.”"
+        }
+      ],
+      "strengths": [
+        "以准确的实际压力和20圈后取样状态约束XR-CT比较。",
+        "将有限元解释与非共价键耗能机制的证据边界区分清楚。",
+        "三种构型的性能、质量基准和长期数据范围交代完整。"
+      ]
+    },
+    {
+      "case": "solidstate",
+      "label": "B",
+      "scores": {
+        "factual_accuracy": 4,
+        "characterization_precision": 4,
+        "paragraph_logic": 4,
+        "claim_calibration": 4,
+        "readability": 4
+      },
+      "dimension_reasons": {
+        "factual_accuracy": "内建压力546/52 kPa的构型对应正确；20圈后XR-CT、弹性样品546 kPa和硫化物10 MPa均准确。半电池300圈/90.8%与全电池100圈/98.3%没有混合，151.4 mAh g⁻¹采用LFP质量基准并保留Si的一次嵌锂/脱锂。未采用软包容量或平均CE属合理选择，不构成错误；无需修改。",
+        "characterization_precision": "用“ex situ”“recovered electrodes”“sampled states”限定成像性质；“authors attributed”准确处理伪影归属。有限元明确为带线弹性假设的模型和计算应力；非共价键耗能被界定为XR-CT未直接验证的解释。结构量与模型量的证据层级清楚；无需修改。",
+        "paragraph_logic": "首句即提出接触保持；第一段交代实际压力和循环后结构，第二段解释应力分布及对照差异，第三段把分构型循环结果联系到“contact preservation contributing to cycling stability”。结尾再限定20圈图像不能证明长期全过程接触，形成完整且紧密的观察—解释—性能推进；无需修改。",
+        "claim_calibration": "“consistent with”与“contributing”没有把接触保持写成排他因果；压力不匹配及其他对照差异均保留；“20-cycle images cannot establish uninterrupted contact throughout the longer cycling tests”准确约束跨时间推断。没有把无外加压力说成零压力，也没有推断全电池未经预循环；无需修改。",
+        "readability": "短语“finite mechanical pressure”“qualitative structural evidence at the sampled states”精确概括主要边界，性能段避免无关数字堆叠，限定语各自承担不同作用。三段任务明确，句间过渡流畅，适合作为局部结果讨论；无需修改。"
+      },
+      "issues": [],
+      "strengths": [
+        "把有限压力下的接触保持设为清楚的中心问题。",
+        "将循环稳定性与结构/模型解释明确连接，同时保留20圈成像的时间边界。",
+        "可选事实选择克制，未因省略软包性能破坏已经提出的论证。"
+      ]
+    },
+    {
+      "case": "solidstate",
+      "label": "C",
+      "scores": {
+        "factual_accuracy": 4,
+        "characterization_precision": 4,
+        "paragraph_logic": 4,
+        "claim_calibration": 4,
+        "readability": 3
+      },
+      "dimension_reasons": {
+        "factual_accuracy": "封装压力、20圈XR-CT、硫化物10 MPa及线弹性模型均准确；扣式半电池300圈/90.8%、扣式全电池100圈/98.3%、软包11.7 mAh分开叙述。全电池的LFP质量基准和Si对Li预循环保留，没有补造保持率分母、孔隙率或终止SOC；无需修改。",
+        "characterization_precision": "“ex situ”“sampled endpoint”把XR-CT限定为循环后取样；伪影归属注明为作者判断。有限元写成“simulations”和“calculated stress redistribution”，明确区别原位实测；非共价键断裂并未被当成成像观察。观测、模型和机制解释区分准确；无需修改。",
+        "paragraph_logic": "实际压力与20圈结构比较建立问题，有限元随后提供力学解释；“combined observations ... support a contribution from mechanical compliance”明确整合证据，第三段再通过分构型性能讨论可行性。结尾指出20圈终点与300圈连续接触证据之间的距离，段落推进完整；无需修改。",
+        "claim_calibration": "“does not constitute a matched-pressure comparison”和“without isolating elasticity as the sole cause”具体约束比较与因果；软包结果未被扩展为长期性能，大型及更高负载器件也未被宣称已验证。虽然限定句较密集，但其针对不同证据上限，未实质否定已有观察；无需改变结论强度。",
+        "readability": "第二段相继使用“However ... rather than”“remains ... rather than”“Moreover”和“without isolating”，连续切换到否定式边界，使机械解释带有审核清单的节奏。可将线弹性假设并入首句，再用一句说明模型和XR-CT对分子耗能的证据上限，减少重复的正反对照句式。"
+      },
+      "issues": [
+        {
+          "severity": "minor",
+          "text_anchor": "However, the linear-elastic model describes calculated stress redistribution rather than measured operando stresses. The proposed dissipation ... remains ... rather than ...",
+          "reason": "上一句已明确是“Finite-element simulations”，紧接着再次对照计算与实测，再用相同“rather than”结构否定直接观察，造成局部重复和机械感。限定本身正确，问题是表达组织而非科学校准。",
+          "fix": "在首句补入“assuming linear elasticity”，删去再次区分计算与实测的独立句；保留并简化为：“The simulations and XR-CT are consistent with stress accommodation but do not directly resolve dissipation through noncovalent bond rupture.”"
+        }
+      ],
+      "strengths": [
+        "明示硫化物样品承受更高压力，同时避免把对照误写成同压。",
+        "通过机械顺应性贡献整合结构和模拟证据，未把弹性设为唯一原因。",
+        "把半电池、全电池和软包结果放回各自构型，并守住20圈成像与长期循环的时间边界。"
+      ]
+    }
+  ],
+  "comparison": "B在段落连接与表达效率上略优；A与C可并列，弱项不同。A采用的性能事实完整准确，但最后一段需要更明确地连接到接触保持与循环稳定性；C整合证据更直接，但有限元段连续的否定式限定稍显重复。三篇均准确守住压力、取样时间、模型性质和分构型性能边界，未发现重大问题。评分先依据正文、事实包及统一量表形成，再用来源组织笔记核对；未因未选入可选事实扣分，也未以原文语序、期刊声望或限制条目数量加分。"
+}

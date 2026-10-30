@@ -1,0 +1,85 @@
+{
+  "reviewer": "R2",
+  "samples": [
+    {
+      "case": "zinc",
+      "label": "A",
+      "scores": {
+        "factual_accuracy": 4,
+        "characterization_precision": 4,
+        "paragraph_logic": 4,
+        "claim_calibration": 4,
+        "readability": 3
+      },
+      "dimension_reasons": {
+        "factual_accuracy": "配方、molality及DMF相对水质量均正确；36.9%、64.5%/12.4%、MD的72.57%→50.41%→41.82%及DE至HDE的33.07%→25.45%均与事实包一致。“average coordination number of 0.19”也未误写为比例。未采用SE的AGG数值或CE数据不构成遗漏错误；无需修改。",
+        "characterization_precision": "“FTIR deconvolution”清楚对应O–H拟合组分；“different anions and bands”阻止跨阴离子Raman比例直接相减；HDE比例未强行量化，XANES/EXAFS未虚构几何或键长，且明确区分“model statistics”与“Raman peak fractions”。测量对象与证据上限清楚；无需修改。",
+        "paragraph_logic": "第一段限定配方并解释水环境，第二段依次组织阴离子Raman和局部Zn的X射线证据，第三段用MD解释并收束到可逆性；“provided complementary evidence”及“help interpret these spectral changes”形成明确推进。虽未以性能问题开篇，作为局部结果讨论仍有完整主线；无需调整段落结构。",
+        "claim_calibration": "“plausible contribution”与“without establishing a unique causal pathway”保持机制解释的适当强度；盐浓度变化阻止将HDE效应独归DMF，结尾准确保留“very high current density and very high areal capacity”同时出现的工况限制。未将FTIR写成HER或水活度测量；无需修改。",
+        "readability": "总体流畅，三段各有任务，限定语均有具体对象。不过“The modeled change therefore involves redistribution among associated species”较抽象，较少帮助读者把SSIP降低与AGG降低连接起来。可用一句直接指出HDE中较低SSIP并不意味着更高AGG的判断替换。"
+      },
+      "issues": [
+        {
+          "severity": "minor",
+          "text_anchor": "The modeled change therefore involves redistribution among associated species.",
+          "reason": "在列出SSIP和AGG的变化后，“redistribution among associated species”仍较笼统，弱化了这组数据最有用的解释，即HDE相对DE同时具有较低SSIP和较低AGG，而非简单增加聚集。问题限于表述效率，不是事实或机制错误。",
+          "fix": "替换为：“Thus, the lower SSIP fraction in HDE than in DE does not imply a higher AGG fraction.”"
+        }
+      ],
+      "strengths": [
+        "配方和水质量基准交代明确，同时避免把多变量配方比较归因于单一DMF作用。",
+        "按实验观察到模型解释推进，Raman分母与MD分母保持分离。",
+        "可逆性解释和高负荷工况限制衔接自然，没有扩大至普适性能。"
+      ]
+    },
+    {
+      "case": "zinc",
+      "label": "B",
+      "scores": {
+        "factual_accuracy": 4,
+        "characterization_precision": 4,
+        "paragraph_logic": 4,
+        "claim_calibration": 4,
+        "readability": 4
+      },
+      "dimension_reasons": {
+        "factual_accuracy": "SE/DE/HDE配方与DMF质量基准正确；Raman的36.9%、64.5%、12.4%及相应峰位与事实包一致；MD的SSIP与AGG三配方序列完整准确，0.19明确为平均配位数。没有误用未提供的定量结构或工况阈值；无需修改。",
+        "characterization_precision": "“liquid-electrolyte FTIR”明确样品，“assignment-dependent fractions”明确Raman拟合及归属条件，“different anions”解释共同分母不存在；X射线只支持局部环境重排，MD作为“structural interpretation”并与峰面积分开。各证据层级自然且准确；无需修改。",
+        "paragraph_logic": "开头用“improved Zn plating/stripping reversibility”建立待解释问题，随后水氢键→阴离子配位→局部Zn环境与MD逐层推进。“Aggregation thus varies nonmonotonically”从MD数字中提炼趋势，结尾回到有限的可逆性解释及工况限制，主线紧密；无需修改。",
+        "claim_calibration": "“plausible contributor”没有把相关谱学变化写成唯一机制；“do not independently establish suppression of all side reactions”与事实包给出的证据上限相符，且没有否定已观察到的结构变化。结尾准确保留两个苛刻工况须同时出现的边界，也未将变化独归DMF；无需修改。",
+        "readability": "DMF及CIP/AGG均在使用时定义，Raman数字按阴离子组织，MD数字之后紧接“nonmonotonically”的简洁解释。主题句、方法角色与结论连续，没有逐项仪器清单或重复性能宣称；无需修改。"
+      },
+      "issues": [],
+      "strengths": [
+        "首句直接建立可逆性需要结构解释的论证目的。",
+        "Raman拟合量与MD结构分类的差别解释简洁、可定位。",
+        "非单调聚集趋势是从数字到物理解释的有效过渡，末句工况边界准确。"
+      ]
+    },
+    {
+      "case": "zinc",
+      "label": "C",
+      "scores": {
+        "factual_accuracy": 4,
+        "characterization_precision": 4,
+        "paragraph_logic": 4,
+        "claim_calibration": 4,
+        "readability": 4
+      },
+      "dimension_reasons": {
+        "factual_accuracy": "采用的配方、molality、水质量基准、FTIR区间、Raman区间/峰位/比例和MD三配方序列均正确；“mean DMF coordination number of 0.19”准确限定为模拟平均配位数。未补造HDE峰比例、键长或高负荷阈值；无需修改。",
+        "characterization_precision": "“smaller relative contribution”正确表述FTIR分峰结果，“anion-specific”及“spectral assignments”限定Raman数量含义；XANES/EXAFS只到“modified local Zn environment”，MD的“simulated”与“need not agree numerically”维持实验拟合和模型统计的层级区别；无需修改。",
+        "paragraph_logic": "水环境、阴离子配位、局部Zn环境和MD各自承担不同问题；第三段用“Thus, HDE does not simply maximize aggregation”明确解释AGG非单调变化，再回到“plausible contributor to improved Zn reversibility”。各段推进并非只列举仪器，数据选择服务主线；无需修改。",
+        "claim_calibration": "第一段明确盐组成和浓度同时变化，不能把HDE–SE差异单独归于DMF；最终结论限于有根据的溶剂化重排解释，并保留无法独立证明全部副反应受抑制及同时高电流/高面容量的限制。观察与解释边界具体，没有普适化；无需修改。",
+        "readability": "“anion-specific evidence”和“HDE does not simply maximize aggregation”将专业差别化为清楚的读者判断；不同数量的说明紧邻相关数值，结尾从结构解释自然转到适用工况。信息密度较高但句间关系清楚，符合局部结果讨论；无需修改。"
+      },
+      "issues": [],
+      "strengths": [
+        "对HDE与SE配方比较中的多变量因素交代充分。",
+        "明确指出HDE并不最大化聚集，避免将改善可逆性简化成聚集越多越好。",
+        "将谱学观察、模型解释和适用工况三类边界分别落在相应句子中。"
+      ]
+    }
+  ],
+  "comparison": "B与C并列，A仅在一处MD趋势总结的表达效率上略弱。三篇的事实准确性、表征层级和主要结论边界均达到高水平，差异不来自是否覆盖更多可选事实。B开篇最直接说明表征要解释的可逆性问题；C对配方混杂及非单调聚集的说明更充分；A实验与MD的分段清楚，但“redistribution among associated species”可以更直接。已先依据正文、事实包及量表独立判断，再阅读来源组织笔记核对；笔记未揭示额外事实错误，也未按原文相似度或术语数量加分。"
+}

@@ -1,0 +1,31 @@
+{
+  "status": "complete_execution_audited",
+  "scope": "Single targeted follow-up after development feedback; not a new blind comparison or generalization evidence.",
+  "snapshot_id": "post-review-v3",
+  "mode": "inline",
+  "model": "gpt-6-astra",
+  "effort": "ultra",
+  "run_id": "zinc__optimized__r1",
+  "same_input_sha256": true,
+  "same_task_prompt_sha256": true,
+  "same_argv_except_workdir_and_response_path": true,
+  "changed_attachments": [
+    "references/characterization-writing.md"
+  ],
+  "original_six_run_manifest_sha256_before": "26a6fa2d4097b6edd7ff5cd4672b044e544a5ae6aa1b47f0cd7d9c24d53dd35f",
+  "quality_scoring_performed": false,
+  "english_word_count_approx": 337,
+  "paragraph_count_approx": 3,
+  "final_sha256": "a40604cff365ee0a9b965199eb078337477cd72f548a2d223d8715b1bf327bd3",
+  "duration_seconds": 194.22237749991473,
+  "visible_tool_items": 0,
+  "stderr_tool_errors": 0,
+  "original_six_run_manifest_sha256_after": "26a6fa2d4097b6edd7ff5cd4672b044e544a5ae6aa1b47f0cd7d9c24d53dd35f",
+  "original_six_manifest_and_finals_unchanged": true,
+  "final_sha256_convention": "UTF-8 final text with LF newlines and leading/trailing whitespace stripped, matching the runner; not raw file bytes.",
+  "root_targeted_read": {
+    "scoring": "No new score; non-blind qualitative check by the main agent after feedback.",
+    "finding": "The new prose explicitly states that HDE has fewer solvent-separated pairs, more CIPs and fewer aggregates than DE; the source packet supports the quantities and direction.",
+    "limits": "One stochastic follow-up cannot attribute an effect to the added rule or establish stable improvement. Original six outputs and blind scores remain unchanged."
+  }
+}

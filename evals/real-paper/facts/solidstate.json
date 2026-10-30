@@ -1,0 +1,183 @@
+{
+  "id": "solidstate-pan-2024",
+  "version": "1.0",
+  "lang": "zh-CN",
+  "purpose": "真实原始研究的事实输入包；供独立写作质量对照，不含作者英文叙述段落。",
+  "source": {
+    "title": "A solid-state lithium-ion battery with micron-sized silicon anode operating free from external pressure",
+    "authors": "Hui Pan; Lei Wang; Yu Shi; Chuanchao Sheng; Sixie Yang; Ping He; Haoshen Zhou",
+    "journal": "Nature Communications",
+    "year": "2024",
+    "volume": "15",
+    "article": "2263",
+    "doi": "10.1038/s41467-024-46472-9",
+    "published": "2024-03-13",
+    "type": "原始研究 Article",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "url": "https://www.nature.com/articles/s41467-024-46472-9",
+    "read_url": "https://www.nature.com/articles/s41467-024-46472-9?error=cookies_not_supported",
+    "checked": "2026-10-30"
+  },
+  "topic": "弹性电解质能否在仅有封装内建压力的条件下维持微米硅电极接触，以及循环后XR-CT与应力模拟如何支持该解释。",
+  "context": {
+    "electrolyte": "AM/DMAM共聚物与NMA–LiFSI深共熔混合物构成的弹性电解质；后续研究采用x=0.8配方。",
+    "pressure": "无外加压力不等于零压力；必须区分封装内建压力、循环施加压力与制备压片压力。",
+    "temperature": "方法规定电化学测试默认25°C，另有明确说明者除外。",
+    "writing_scope": "结果与讨论局部主题，重点写清表征对象、20圈后状态、真实观察、比较条件、有限元性质及性能关联。"
+  },
+  "facts": [
+    {
+      "id": "F01",
+      "kind": "measurement",
+      "text": "经标定的薄膜力敏电阻测得扣式电池内建压力546 kPa，软包电池内建压力52 kPa；扣式传感器读数为0.288 MΩ。",
+      "conditions": "未外接加压装置；扣式测量时传感器置于两片不锈钢垫片间，软包测量时置于两电极间。",
+      "limit": "该测量不能当作各电芯全循环期间的连续压力记录。所核验正文未报告压力重复测量误差。",
+      "loc": "内建压力测量小节；Fig.4a–f，尤其4c、4f",
+      "url": "https://www.nature.com/articles/s41467-024-46472-9/figures/4",
+      "checked": "正文、图注和图像均已核对"
+    },
+    {
+      "id": "F02",
+      "kind": "measurement_and_preparation",
+      "text": "加入PVP后，电解质前驱液在微米Si电极上的接触角由14.7°降为7.3°；电极经前驱液真空浸润和UV聚合制备。",
+      "conditions": "比较对象为不含PVP与含PVP的微米Si电极；方法给出每片Si电极加入50 μL前驱液、UV照射5 min。",
+      "limit": "接触角变化是润湿性证据，不能单独证明整个电极孔隙已全部填充。",
+      "loc": "电极制备小节；Fig.4g、4h；方法中的电池组装与电化学测试",
+      "url": "https://www.nature.com/articles/s41467-024-46472-9/figures/4",
+      "checked": "正文、图注、图像及方法均已核对"
+    },
+    {
+      "id": "F03",
+      "kind": "method",
+      "text": "常规Si电极负载为0.5–0.7 mg cm−2；LFP负载约6 mg cm−2。电解质添加5 wt%氟代碳酸乙烯酯。全电池所用Si电极先在Li||Si电池中嵌锂/脱锂一次，再装配Si||LFP全电池。",
+      "conditions": "电化学测试默认25°C；Si||LFP电压范围2–3.9 V；Li||Si的嵌锂下限为0.05 V，首圈为0.02 V，脱锂上限2 V。",
+      "limit": "所核验方法未逐一给出Fig.5每个样品的精确负载，也未在相关段落给出全电池N/P或电解质膜厚。预循环条件不得省略后写成未经补锂的全电池。",
+      "loc": "方法：电池组装与电化学测试",
+      "url": "https://www.nature.com/articles/s41467-024-46472-9",
+      "checked": "正文方法已核对"
+    },
+    {
+      "id": "F04",
+      "kind": "measurement",
+      "text": "Li/弹性电解质/微米Si扣式电池在0.1C的首次放电比容量为3413.6 mAh g−1，首次库仑效率为87.1%；该处定义1C=3579 mA g−1。",
+      "conditions": "25°C，无外加压力；内建压力条件参见F01。该数据是Li对电极体系，不是Si||LFP全电池。",
+      "limit": "正文该段未单独重述g所对应的称量对象；不可改写为全电池总质量归一容量。",
+      "loc": "电极制备小节末段；Fig.4i",
+      "url": "https://www.nature.com/articles/s41467-024-46472-9/figures/4",
+      "checked": "正文、图注和图像均已核对；未从曲线重新读取数值"
+    },
+    {
+      "id": "F05",
+      "kind": "measurement",
+      "text": "Li/弹性电解质/微米Si扣式电池的循环测试报告：0.2 C首次放电比容量2081.6 mAh g−1，0.4 C可逆比容量1039.7 mAh g−1；300圈后容量保持率90.8%，平均库仑效率99.3%。",
+      "conditions": "25°C，无外加压力；正文与图注说明测试使用0.2 C和0.4 C。",
+      "limit": "所核验正文未在该句明确90.8%的基准圈数；不能将2081.6 mAh g−1直接作为90.8%的分母，亦不能将300圈移植给Si||LFP全电池。",
+      "loc": "微米Si电极电化学性能小节首段；Fig.5a",
+      "url": "https://www.nature.com/articles/s41467-024-46472-9/figures/5",
+      "checked": "正文、图注和图像均已核对；原始数据表未读取"
+    },
+    {
+      "id": "F06",
+      "kind": "measurement_report",
+      "text": "正文报告，Li-In/Li6PS5Cl/微米Si扣式电池无额外压力时首圈即不能正常工作；即使施加2 MPa，其比容量也在5圈内从940.3 mAh g−1降为134 mAh g−1。",
+      "conditions": "比较对象使用Li-In对电极和硫化物复合电极；弹性电解质体系使用Li对电极，且配方与制备路线不同。",
+      "limit": "该对照不是只改变弹性模量的单变量试验；2 MPa结果来自正文对补充图20b的明确报告，未独立查看该补充图。",
+      "loc": "微米Si电极电化学性能小节首段；Fig.5a及正文引用的Supplementary Fig.20a、20b",
+      "url": "https://www.nature.com/articles/s41467-024-46472-9",
+      "checked": "主文和Fig.5a已核对；补充图未独立查看"
+    },
+    {
+      "id": "F07",
+      "kind": "characterization_method",
+      "text": "Fig.5d为20圈后微米Si电极的XR-CT三维重构和截面；仪器为Zeiss Xradia 620 Versa，标尺100 μm。弹性电解质样品在内建压力546 kPa、无额外加压的扣式电池中循环；Li6PS5Cl样品在10 MPa下循环。",
+      "conditions": "循环后的样品从电池壳取出，在Ar手套箱内用铝塑膜密封后进行XR-CT；因此这里是循环后表征，不是原位连续成像。",
+      "limit": "两组循环压力不同。已核验XR-CT正文/图注/方法未明确20圈后终止SOC或电位、该取样对应倍率、体素尺寸、孔隙分割阈值或重复样本数；100 μm是标尺而非空间分辨率。Fig.5末句笼统的无外压说明不能覆盖方法明确给出的10 MPa例外。",
+      "loc": "Fig.5d图注；方法：材料表征",
+      "url": "https://www.nature.com/articles/s41467-024-46472-9/figures/5",
+      "checked": "正文、图注、图像和方法均已核对"
+    },
+    {
+      "id": "F08",
+      "kind": "characterization_observation",
+      "text": "作者根据20圈后的XR-CT描述：弹性电解质组的Si颗粒与电解质仍保持接触；Li6PS5Cl组出现明显裂纹和孔洞，孔隙在重构中标红。作者指出弹性组图中的亮条纹属于成像伪影。",
+      "conditions": "对应Fig.5d(I)–(II)与5d(III)–(IV)；完整压力和取样条件见F07。实际查看的图像可见硫化物组红色孔隙区，未做独立孔隙定量。",
+      "limit": "没有孔隙率数值或接触面积统计，不能量化其下降百分比；图中未见明显孔隙不等于所有尺度完全没有孔隙。亮条纹的伪影归属是作者说明，不是本次独立仪器诊断。",
+      "loc": "微米Si电极电化学性能小节XR-CT段；Fig.5d",
+      "url": "https://www.nature.com/articles/s41467-024-46472-9/figures/5",
+      "checked": "正文、图注和图像均已核对；无新图像分析"
+    },
+    {
+      "id": "F09",
+      "kind": "simulation",
+      "text": "有限元模型使用随机分布的Si球和线弹性假设模拟嵌锂膨胀。作者报告，硫化物体系出现明显应力集中，而弹性电解质体系的应力更低且分布更均匀。",
+      "conditions": "Fig.5b(I)为Li6PS5Cl，5b(II)为弹性电解质；图中应力标度是Von Mises应力，单位GPa。",
+      "limit": "这是模型结果，不是直接测得的原位应力图；不从颜色估算最大应力、平均应力或降低百分比。作者以非共价键破裂耗能解释趋势，该分子过程未由本组XR-CT直接观察。",
+      "loc": "Fig.5b；微米Si电极电化学性能小节；方法：有限元模拟",
+      "url": "https://www.nature.com/articles/s41467-024-46472-9/figures/5",
+      "checked": "正文、图注、图像及模型方法均已核对"
+    },
+    {
+      "id": "F10",
+      "kind": "measurement",
+      "text": "微米Si/弹性电解质/LFP扣式全电池在0.1C和0.5 C的可逆比容量分别为162.3和151.4 mAh g−1，按LFP质量归一；100圈容量保持率为98.3%。",
+      "conditions": "25°C，无外加压力，具有封装内建压力；电压范围2–3.9 V；Si电极装配前经过一次嵌锂/脱锂，见F03。",
+      "limit": "所核验正文未单独明确98.3%的基准圈数；不能把它解释为相对0.1C的162.3 mAh g−1。该结果不是软包100圈数据。",
+      "loc": "微米Si电极电化学性能小节全电池段；Fig.5f",
+      "url": "https://www.nature.com/articles/s41467-024-46472-9/figures/5",
+      "checked": "正文、图注、图像和方法均已核对"
+    },
+    {
+      "id": "F11",
+      "kind": "measurement",
+      "text": "微米Si/弹性电解质/LFP软包电池报告放电容量11.7 mAh，对应按LFP质量归一的140 mAh g−1；Fig.5h的测试倍率为0.1 C，内建压力52 kPa。",
+      "conditions": "25°C；Si和LFP电极均为40 mm × 40 mm，电解质膜为45 mm × 45 mm；铝塑包装抽真空封装。",
+      "limit": "11.7 mAh是容量而非面容量；140 mAh g−1不是全电芯质量比容量。没有本事实对应的软包100圈保持率数据，也不能由其推出Ah级软包性能。",
+      "loc": "微米Si电极电化学性能小节软包段；Fig.5h；方法：电池组装与电化学测试",
+      "url": "https://www.nature.com/articles/s41467-024-46472-9/figures/5",
+      "checked": "正文、图注、图像和方法均已核对"
+    },
+    {
+      "id": "F12",
+      "kind": "demonstration",
+      "text": "Fig.5e展示该微米Si/弹性电解质/LFP软包为绿色LED阵列供电；切成两半以及弯折90°、180°后，图中LED仍点亮。",
+      "conditions": "对象为本研究软包示范；相应照片与图注明示切割、弯折状态。",
+      "limit": "所核验图文未给出这些状态下的容量保持率、温升、长时运行、重复次数或标准化安全测试数据；不能改写成全部工况安全。",
+      "loc": "Fig.5e图像与图注；微米Si电极电化学性能小节软包段",
+      "url": "https://www.nature.com/articles/s41467-024-46472-9/figures/5",
+      "checked": "正文、图注和图像均已核对"
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "I01",
+      "text": "作者将循环稳定性改善归因于电解质的弹性和能量耗散能力有助于维持颗粒接触、缓解电极解体。",
+      "support": ["F02", "F05", "F07", "F08", "F09"],
+      "limit": "形貌、模拟和性能构成相互支持的证据，但不同配方/对电极/压力对照未排除全部其他贡献，不能写成已经唯一证明的因果链。"
+    },
+    {
+      "id": "I02",
+      "text": "作者以孔隙和裂纹阻碍Li离子传输解释硫化物电极失效。",
+      "support": ["F06", "F08"],
+      "limit": "XR-CT直接呈现的是结构差异；这里没有对同一区域离子通量的直接成像，也没有将特定孔隙的出现时刻与失效时刻逐一对应。"
+    }
+  ],
+  "not_supported": [
+    {"id": "N01", "text": "不能说该电池在零机械压力下工作。", "reason": "存在546 kPa或52 kPa的封装内建压力。", "facts": ["F01", "F07", "F11"]},
+    {"id": "N02", "text": "不能说20圈XR-CT直接证明300圈全过程完全无孔洞，并唯一证实非共价键耗能机制。", "reason": "表征为循环后取样，空间分辨率/孔隙定量未报告；分子耗能属于解释，有限元属于模型。", "facts": ["F07", "F08", "F09"]},
+    {"id": "N03", "text": "不能把10 MPa下硫化物样品与546 kPa下弹性样品称作相同压力的单变量对照。", "reason": "压力、配方及电极体系存在差异；不能构造原文未提供的反向控制结果。", "facts": ["F06", "F07"]},
+    {"id": "N04", "text": "不能把半电池300圈/90.8%、扣式全电池100圈/98.3%和软包11.7 mAh拼成同一器件的一组指标。", "reason": "三组器件构型不同，容量归一对象和测试条件必须保留。", "facts": ["F05", "F10", "F11"]},
+    {"id": "N05", "text": "不能由LED切割弯折示范推出已通过系统性安全认证或商业电芯验证。", "reason": "本组证据只显示指定状态下仍可点亮LED。", "facts": ["F12"]}
+  ],
+  "source_issues": [
+    "Fig.5图注末句笼统称扣式和软包均无外加压力，但正文和材料表征方法明确指定XR-CT硫化物对照在10 MPa循环；具体方法限定优先保留，禁止把图注泛称覆盖该对照。",
+    "Fig.4j图上倍率电流标注包含358和1790 mA g−1，而正文相应句给出376和1880 mA g−1。本包不采用该组倍率性能数值，未自行校正。",
+    "软包压力正文在不同位置分别引用补充图16与14；本包压力依据Fig.4c的明确标注与内建压力小节，不声称已核验相关补充图。"
+  ],
+  "checked_scope": {
+    "read": ["出版社主文HTML相关结果、方法、图注、书目信息与许可", "出版社Fig.4独立图页", "出版社Fig.5独立图页"],
+    "images_seen": ["Fig.4官方PNG", "Fig.5官方PNG"],
+    "not_read": ["补充材料PDF", "Source Data XLSX", "审稿文件", "主文PDF"],
+    "no_new_data": "未重算容量保持率、未数字化曲线、未重建或量化XR-CT、未虚构对照。"
+  }
+}

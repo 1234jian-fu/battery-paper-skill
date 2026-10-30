@@ -15,6 +15,8 @@ Skill只保存方法，不自带用户研究的实验事实。每稿的工作目
 
 初始化仅新建缺失项，保留已有记录。默认corpus_policy为minimum=60,target=60,recent_years=5；旧项目不自动改写，明确报告needs_policy_update，由已授权的政策迁移同步并留下决定。作者明确改用其他数量/时窗时，另记录corpus_policy_override的authorized_by=user和非空decision_ref；脚本仅据记录采用自定政策，不验证用户授权真实性。
 
+.paper-writing、必要记录文件和drafts经解析后须在显式PROJECT内，指向项目外的符号链接或目录联接会被拒绝；项目内链接仍可用。check要求必要记录为文件，不把同名目录当成有效记录。
+
 阶段：scoped→evidence_mapped→sources_mapped→drafted→checked→author_accepted→assembled；新证据影响旧稿可标needs_recheck并保留旧接受记录。checked仅表示所记录检查范围完成，不等于实验证实、全文无误或作者接受。各小节状态独立。
 
 锁定项按部分ID、原文/正文哈希、源版本、允许范围与作者依据记录；锁定引言不应使用整个docx哈希阻止修改讨论。
@@ -37,9 +39,15 @@ read_scope可用metadata_only、secondary_record_only、abstract、relevant_body
 
 自己的观察、来源结构、文献事实和作者组织分开；方法或原稿来自作者提供/确认时可用author_provided/author_confirmed记录，不强行归为实测观察，也不等于原始数据已核验。正式引用与表达示范来源分栏。必要短摘连续、准确、定位明确，遵循来源使用限制。
 
+### 全文与补充材料的存放
+
+下载前检查作者指定位置和实际剩余空间；没有指定时，选择可用空间充足、适合长期保存的本地资料库，在独立的任务子目录下按DOI或稳定来源ID归档。位置是本机运行决定，不把某个盘符写成跨设备默认。原始文件不要放Skill安装目录或提交到技能Git仓库；项目内保留索引，来源文件可合法位于项目外，不能为此把受保护的.paper-writing目录链接到项目外。
+
+每个获取文件记录source_id、下载入口、获取日期、实际路径、格式、文件大小、SHA256、许可/访问方式及下载状态。确认响应实际是PDF/XML/HTML，而非把登录页保存成PDF；PDF失败但XML全文可用时如实记录格式。全文、SI、Source Data分别标识，下载成功不等于已经核读。通过出版社、开放仓库或作者已授权的访问渠道获取；不能绕过付费墙、登录或安全拦截。复用有效副本避免重复下载；不移动或删除作者已有原件。
+
 ## 辅助命令
 
-以下python表示已经可用的解释器。所有项目命令显式指定PROJECT，日期相关命令显式传入客户端截止日；AS_OF格式YYYY-MM-DD，不靠执行主机的日期推断。
+以下python表示已经可用的解释器，示例从Skill根目录（SKILL.md所在目录）执行。从其他目录调用时，把scripts/paper_workbench.py替换为该脚本的绝对路径并加引号；PROJECT仍指论文项目，不是Skill安装目录。所有项目命令显式指定PROJECT，日期相关命令显式传入客户端截止日；AS_OF格式YYYY-MM-DD，不靠执行主机的日期推断。
 
 ~~~text
 python scripts/paper_workbench.py init --project-dir PROJECT --name NAME --domain DOMAIN
@@ -52,6 +60,8 @@ python scripts/paper_workbench.py delivery-check --project-dir PROJECT --file DE
 ~~~
 
 count可按start-marker/end-marker限定正文；完整参数用相应命令--help查看。正文与图注分别计数，默认去空白字符数含英文/标点，另列汉字数；英文另列词数。分句程序不是科学质量评价。
+
+所有辅助命令均不联网。sources只筛选本项目已有sources.json，不能检索或下载新论文，也不会自动建立60篇基底；需要新来源时另用可用检索工具并核读原文。
 
 init不覆盖现有内容；status/check为记录结构检查；corpus按来源卡声明的核验与阅读字段统计，不能证明确实读懂、日期真实或研究相关；重复来源ID和无效结构不能被数量达标掩盖。delivery-check比较交付JSON内部的最终句表和段落及ID引用，不能验证语义，也不自动读取实际Markdown/Word交付，另存正文须再逐字核对。若旧项目政策不同，报告差异而不静默升级。
 

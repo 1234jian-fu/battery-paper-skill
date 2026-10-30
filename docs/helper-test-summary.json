@@ -1,11 +1,23 @@
 {
-  "fixture_notice": "All fixtures are SYNTHETIC; no real literature, project facts, or scientific validation.",
-  "runner": "Python standard-library unittest; no installed dependencies or network",
-  "tests_run": 50,
+  "fixture_notice": "All fixtures are SYNTHETIC; no real literature or scientific validation.",
+  "evaluated_at_utc": "2026-10-30T02:21:47.253763+00:00",
+  "upstream_commit": "239299de2d28e6ce1dc2687f9de36e3dbfa93851",
+  "revision_scope": "Tests executed on the local revision before publication; later writing-guide/documentation changes do not alter the recorded script and test hashes.",
+  "python_version": "3.14.7",
+  "runner": "Python standard-library unittest discovery, installed skill copy",
+  "tests_run": 59,
   "original_tests": 22,
-  "new_logic_regressions": 28,
+  "prior_logic_regressions": 28,
+  "new_audit_regressions": 9,
   "failures": 0,
   "errors": 0,
+  "skipped": 0,
   "successful": true,
+  "duration_seconds": 50.814,
+  "script_sha256": "d3f1c3e1232c1f57d2772949427e3291133cdfa89e7597747e160bb765b257cc",
+  "test_sha256": {
+    "test_logic_regressions.py": "edde9cdcc987b075db97bcb4adabcf4a439f0d7f5f8692410c64b9b9d7c8d109",
+    "test_paper_workbench.py": "c2c909e5fb161d4dfd6ff479540584ccc346d32d5b1e78f610de27a5f73ba111"
+  },
   "command_template": "python -B -X utf8 -m unittest discover -s tests -p test_*.py -v"
 }

@@ -1,0 +1,20 @@
+{
+  "source_id": "SYNTHETIC-SRC-000",
+  "unique_work_id": "synthetic-work-000",
+  "title": "SYNTHETIC contract fixture; not a real paper",
+  "source_type": "primary_research",
+  "bibliographic_status": "verified",
+  "publication_date": "2025-06-01",
+  "publication_date_verified": true,
+  "date_source_url": "https://example.invalid/synthetic-never-fetch",
+  "date_basis": "publisher_first_online",
+  "topical_fit": "direct",
+  "fit_reason": "Synthetic fixture only; no scientific fit is claimed",
+  "read_scope": ["relevant_body"],
+  "exact_locations": ["SYNTHETIC section 1"],
+  "chinese_meaning": "合成测试记录，不代表真实阅读",
+  "source_paragraph_move": "SYNTHETIC comparison",
+  "source_data_expression": "SYNTHETIC measurement wording",
+  "tags": ["synthetic"],
+  "linked_figure_tasks": ["SYNTHETIC-F1"]
+}

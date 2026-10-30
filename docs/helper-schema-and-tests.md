@@ -9,6 +9,9 @@ verify source-reading claims, check scientific truth, or prove faithful meaning.
 init requires an explicit existing project directory. It creates only missing
 .paper-writing/project.json, evidence.json, sources.json, decisions.md, issues.md
 and drafts/. Evidence and source items start empty. Existing files stay unchanged.
+Resolved context, required-record and drafts paths must stay within the explicit
+project; external symlinks/junctions are rejected before record access. Internal
+links remain supported. Required records must be files, not same-named directories.
 
 The default corpus_policy is minimum=60, target=60, recent_years=5. An old policy
 without an explicit author decision is preserved and flagged needs_policy_update.
@@ -74,6 +77,13 @@ Metadata, abstracts, secondary cards, old indexes and prior_read_scope alone do
 not establish current reading. No helper can verify that a user really read the
 paper. Figure-tag coverage also does not prove sentence-level mapping is complete.
 
+date_source_url must have HTTP/HTTPS syntax and a host; this is not an online
+verification of the page or its authority. Explicit malformed first_online_date
+values, including false, 0 and empty containers, remain date_unknown; only absent,
+null or empty-string values permit the documented publication-date fallback.
+All commands operate locally. sources filters existing records; it does not search
+the web, download papers or establish that the recorded papers were read.
+
 ## Delivery JSON
 
 ~~~json
@@ -122,9 +132,12 @@ Run the appropriate subcommand --help for arguments. Exit 0 means no recorded
 structural errors; exit 1 means structural errors; exit 2 means unusable input or
 arguments. A policy-migration warning does not modify files.
 
-The initial 22 tests remain unchanged. The logic audit adds 28 regression tests;
-all 50 were actually run successfully. Fixtures are synthetic and portable.
-See helper-test-summary.json and logic-audit.md for the latest scope. Reproduce:
+The initial 22 tests remain unchanged. The earlier logic audit added 28 regressions;
+the 2026-10-30 local audit added 9 more (59 tests total). All 59 passed on the
+audited local revision. See helper-test-summary.json for version and runtime data;
+logic-audit.md is the earlier audit. The separate evals/ layer contains 8 black-box
+CLI checks and 115 assertions, including independently derived numeric expectations.
+Fixtures are synthetic and portable. Reproduce:
 
 ~~~text
 python -B -X utf8 -m unittest discover -s tests -p "test_*.py" -v
