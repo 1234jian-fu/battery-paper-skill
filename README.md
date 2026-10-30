@@ -19,6 +19,8 @@
 
 默认交付：**报表包→简短逻辑总结→干净正文**。图注任务另附图注并分别计数。
 
+已整理[20篇高水平原始研究语料](references/literature-corpus.md)：Nature 4篇、Nature Energy 3篇、AM 4篇、AEM 3篇、Nature Communications 6篇。每篇有实际相关正文定位，其中6篇另有篇级组织通览；全文独立归档，Skill按任务选读论文卡。[扩库与结构验证范围](docs/corpus-expansion.md)单独记录。
+
 ## 安装到Codex
 
 仓库根目录就是完整Skill。将它放在Codex的技能目录下，文件夹名为battery-paper-skill。
@@ -47,12 +49,15 @@ git clone https://github.com/1234jian-fu/battery-paper-skill.git (Join-Path $ski
 ## 目录
 
 ~~~text
-SKILL.md                        入口、模式、S01–S12、保护与交付
+SKILL.md                        按任务选择指南、写作主线、证据底线与交付
 agents/openai.yaml              显示名称与默认提示
 references/
-  argument-design.md            科学问题、主张证据、图段顺序、正文取舍与反向审查
-  characterization-writing.md   表征专业表达、真实论文组织动作与证据边界
-  workflow.md                   执行交接和各部分职责
+  argument-design.md            写前规划：科学问题、主张证据、图段顺序与正文取舍
+  review-protocol.md            写后审查：句子、每段即时对照、完成稿宏观复审
+  characterization-writing.md   表征专业表达与证据层级
+  literature-corpus.md          真实论文按任务索引、阅读层级和使用方式
+  corpus/                       每篇来源的版本、原文定位、组织动作与证据边界
+  workflow.md                   完整执行交接（S01–S12）和各部分职责
   field-routing.md              电池体系与研究部件路由
   battery-language-library.md   常见测试的语言动作和证据边界
   recent-corpus-policy.md       60篇资格、日期、去重和核读状态
@@ -62,7 +67,8 @@ references/
   skill-integration.md          规则借鉴、可选调用及自建功能
 scripts/paper_workbench.py       标准库辅助检查
 tests/test_paper_workbench.py   可搬运的合成测试
-evals/real-paper/              两案三组真实论文局部写作对照与匿名评审记录
+evals/real-paper/              历史两案三组写作对照与匿名模型评审记录
+evals/style-audit/             历史34句表达审读及改写示范
 docs/                           schema、验证范围与设计说明
 ~~~
 
@@ -89,13 +95,15 @@ python -X utf8 -m unittest discover -s tests -p "test_*.py" -v
 
 Skill内置领域规则与流程。Nature、ARS、SciPilot、humanizer等技能可用时按任务调用，不要求全部安装；缺失时记录范围并使用内置适用规则。实际调用、借鉴规则和新组织分开报告。
 
-本仓库**没有捆绑60篇已核读论文或任何用户实验数据**。通用中英结构示意明确为自拟，不是文献原句。表征指南另列两篇真实论文的独立组织分析，注明来源和实际核读范围；不捆绑论文全文或原图。实际文献和图数据在每个项目中另行建立；脚本测试夹具均为synthetic，不代表真实研究。
+本仓库提供[高水平论文语料索引](references/literature-corpus.md)及逐篇阅读卡，记录真实来源、版本、核读范围和可借鉴动作；**不捆绑论文全文、原图或用户实验数据**。通用中英结构示意仍明确为自拟，不是文献原句。通用库不自动成为某篇新稿合格的60篇专属基底，项目仍须检查相关性、日期及当前表达任务。脚本测试夹具均为synthetic，不代表真实研究。
 
 下载文献时先检查可用空间，在作者指定位置或空间充足的本地资料库保存全文与SI；项目账本只记录路径和来源，不把大文件塞入Skill安装目录。获取、格式验证和实际阅读分别记录。
 
 记录完整性、数字守恒或句表一致性检查不能证明科学正确、实际阅读或语义保留。语言风格、科学贡献与期刊接收分别判断，不承诺顶刊录用或AI检测结果。
 
 ## 设计与验证
+
+入口、专业规则、论文卡和历史评测分别维护。普通任务从入口选择相关指南及少量来源；需要完整交接时才查S01–S12，不要求每次读取所有文件。论证设计与写后审查分开，确保段落即时复核和完成稿宏观对照都有明确入口。
 
 见[设计与规则分工](references/skill-integration.md)、[验证范围](docs/validation.md)和[辅助测试结果](docs/helper-test-summary.json)及[逻辑审查与修复](docs/logic-audit.md)。
 

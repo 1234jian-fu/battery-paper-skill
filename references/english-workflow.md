@@ -40,6 +40,6 @@
 
 修改后回查对象、数值、量纲、比较方向、证据身份与关键限定，再读完整段落检查连贯性。原句已经精准时保留。评价分别说明科学准确性、句子表达和篇章论证；事实检查满分不等于已经达到某期刊发表水准。
 
-本轮真实参照：Lu等，*Ligand-channel-enabled ultrafast Li-ion conduction*，[Nature 627, 101–107 (2024)](https://www.nature.com/articles/s41586-024-07045-4)，核读高校站点公开排版稿PDF第3–6页相关结果、Fig.2/4及第8页方法；该副本首页在线日期为占位符，未与最终版逐字比对。Yuan等，*Diagnosing the Electrostatic Shielding Mechanism for Dendrite Suppression in Aqueous Zinc Batteries*，[Advanced Materials 36, 2307708 (2024)](https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.202307708)，核读结果中的LC-TEM、Raman段落与Fig.2/3/5图注；首次在线为2023-10-25。前者帮助比较模型—观察的接续，后者帮助比较成像、谱学及其局部解释；不迁移其材料结论或因果强度。详细定位、逐句检查和适用边界见[表达审查](../evals/style-audit/README.md)。
+真实参照统一放在[语料索引](literature-corpus.md)，按句子功能选择并核读原文。已有案例中，[B03](corpus/b03.md)适合模型与观察的接续，[B04](corpus/b04.md)适合成像、谱学与局部解释；二者的实际版本和阅读限制在各卡中单独标明。此前34句的编辑判断保留在[表达审查](../evals/style-audit/README.md)，它是历史评估记录，不是新任务必须加载的写作规则。
 
-之后进入S11和末轮S12。学术humanizer只去冗余、宣传及机械表达，不删条件/限定。回填最后英文句表、证据、中文释义和词数；表中英文与最终正文逐字一致。
+之后按当前范围完成[三级审查](review-protocol.md)，再做末轮自然化。学术humanizer只去冗余、宣传及机械表达，不删条件/限定。回填最后英文句表、证据、中文释义和词数；表中英文与最终正文逐字一致。

@@ -5,6 +5,8 @@
 运行环境为 Windows、Python 3.14.7；脚本与测试哈希见
 [helper-test-summary.json](helper-test-summary.json)。
 
+后续20篇通用语料扩充、入口整理及有界复查见[扩库记录](corpus-expansion.md)。下文真实论文生成对照对应其固定快照，不随新增语料自动扩展样本或改分。
+
 ## 写作逻辑优化
 
 新增[论证设计](../references/argument-design.md)，并接入S03、S04和S11：

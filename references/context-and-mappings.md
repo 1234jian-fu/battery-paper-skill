@@ -35,6 +35,8 @@ Skill只保存方法，不自带用户研究的实验事实。每稿的工作目
 
 sources.json为对象，items是来源卡列表。计数最低字段见[近期政策](recent-corpus-policy.md)。每条有source_id；读过什么留read_scope、exact_locations、中文义、段落动作和数据表达；核验身份和日期另记。
 
+Skill内的[通用论文卡](literature-corpus.md)用于发现表达参照。选入当前项目时核对方向/任务契合、当前日期与实际版本，再写入本项目sources.json；不能将整个通用库复制后自动标成当前稿已完成核读。历史阅读可追溯复用，但继承记录与本轮阅读分开。
+
 read_scope可用metadata_only、secondary_record_only、abstract、relevant_body、full_main_text、full_main_and_SI、unknown。获取文件不等于阅读；只读旧卡标secondary_record_only，继承记录不冒称本轮亲读。可复用可追溯且仍有效的核读，不要求每图从头通读。
 
 自己的观察、来源结构、文献事实和作者组织分开；方法或原稿来自作者提供/确认时可用author_provided/author_confirmed记录，不强行归为实测观察，也不等于原始数据已核验。正式引用与表达示范来源分栏。必要短摘连续、准确、定位明确，遵循来源使用限制。
