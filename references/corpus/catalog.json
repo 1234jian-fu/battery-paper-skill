@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-10-30",
+  "updated_on": "2026-11-02",
   "target": 1000,
   "records": [
     {
@@ -2863,6 +2863,169 @@
         ],
         "pending": [],
         "read_scope": "SI DOCX核读Figs.S2、S5、S13–14、S22、S24–30与Tables S2、S4说明，目视Fig.S5；3段视频文件结构与官方MD5完整性校验通过，未观看。"
+      }
+    },
+    {
+      "id": "B55",
+      "doi": "10.1038/s41586-025-09618-3",
+      "title": "Cryogenic X-ray photoelectron spectroscopy for battery interfaces",
+      "journal": "Nature",
+      "first_online": "2025-10-22",
+      "added_on": "2026-11-02",
+      "article_type": "original_research",
+      "article_url": "https://www.nature.com/articles/s41586-025-09618-3",
+      "pdf_url": "https://web.stanford.edu/group/cui_group/papers/Cryogenic%20X-Ray%20Photoelectron%20Spectroscopy%20for%20Battery%20Interfaces.pdf",
+      "relative_pdf_path": "10.1038_s41586-025-09618-3/fulltext/article.pdf",
+      "sha256": "adfd45c98567be93b8c12b1f2aa3aad65928149f5e09370a753693abfb010585",
+      "pages": 18,
+      "bytes": 8000224,
+      "topic": "低温XPS：样品演化、同点对照、关联与方法适用边界",
+      "methods": [
+        "cryo-XPS",
+        "XPS",
+        "SEI",
+        "Spearman correlation"
+      ],
+      "read_scope": "2026-11-02：正文PDF物理页1–2摘要、引言及时间/反应效应段；pp.4–5 Fig.3–4图注、束流效应、性能关联与结尾；p.7 Methods；目视p.4 Fig.3。SI物理页3–6 Notes 1–9、pp.7–10图注及pp.11–12 Tables 1–3；未通读全部Extended Data、未重算源数据。",
+      "structure_survey": false,
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "card": "references/corpus/b55.md",
+      "source_note": "作者斯坦福课题组公开提供的正式排版PDF；出版社页面核对题名、DOI、首发日期及5件附件。非开放许可，不随Git再分发。",
+      "si": {
+        "status": "downloaded",
+        "files": [
+          {
+            "path": "10.1038_s41586-025-09618-3/si/41586_2025_9618_MOESM1_ESM.pdf",
+            "sha256": "9fb9d79638bbe809ca20c71c0774f01e06f4cf01087656064963f27056998234",
+            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-025-09618-3/MediaObjects/41586_2025_9618_MOESM1_ESM.pdf",
+            "bytes": 822841,
+            "format": "pdf",
+            "pages": 14
+          },
+          {
+            "path": "10.1038_s41586-025-09618-3/si/41586_2025_9618_MOESM2_ESM.pdf",
+            "sha256": "1e3e3b9467409c2c537ec1a8dedf742ee2f48ac2e405c0c832d485cabdd3e260",
+            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-025-09618-3/MediaObjects/41586_2025_9618_MOESM2_ESM.pdf",
+            "bytes": 2351512,
+            "format": "pdf",
+            "pages": 73
+          },
+          {
+            "path": "10.1038_s41586-025-09618-3/si/41586_2025_9618_MOESM3_ESM.xlsx",
+            "sha256": "3bfd307322606385cc64cf851ec80347a6ed24a7af6567b0aede02398cb98ec9",
+            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-025-09618-3/MediaObjects/41586_2025_9618_MOESM3_ESM.xlsx",
+            "bytes": 45182,
+            "format": "xlsx"
+          },
+          {
+            "path": "10.1038_s41586-025-09618-3/si/41586_2025_9618_MOESM4_ESM.xlsx",
+            "sha256": "533f40ec6be7255fdf5af8cd8820cb26c2c8ca9af80ca7ada85a2e433c608b7f",
+            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-025-09618-3/MediaObjects/41586_2025_9618_MOESM4_ESM.xlsx",
+            "bytes": 68753,
+            "format": "xlsx"
+          },
+          {
+            "path": "10.1038_s41586-025-09618-3/si/41586_2025_9618_MOESM5_ESM.xlsx",
+            "sha256": "1d55fc3a2d4a271dbbce1dcfd5577008a6e9b2c637346ede3bcfaa4c87e2ee80",
+            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-025-09618-3/MediaObjects/41586_2025_9618_MOESM5_ESM.xlsx",
+            "bytes": 10192,
+            "format": "xlsx"
+          }
+        ],
+        "pending": [],
+        "read_scope": "14页科学SI：Notes 1–9、Figs.1–9说明及Tables 1–3相关文字已核读；73页Peer Review File仅核对文件身份；3件XLSX仅校验ZIP结构，未重算。"
+      }
+    },
+    {
+      "id": "B56",
+      "doi": "10.1002/adma.202515865",
+      "title": "Improving Ionic Conformality Across Polymer Electrolyte|Electrode Interfaces",
+      "journal": "Advanced Materials",
+      "first_online": "2025-12-21",
+      "added_on": "2026-11-02",
+      "article_type": "original_research",
+      "article_url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.202515865",
+      "pdf_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12902593.1/PMC12902593.1.pdf",
+      "relative_pdf_path": "10.1002_adma.202515865/fulltext/article.pdf",
+      "sha256": "c7eb765582b2d1d43461a24adb262d20cd40f0264dfec11e167417d7da336a14",
+      "pages": 15,
+      "bytes": 2200953,
+      "topic": "聚合物界面：概念区分、空间取样、局部谱学结论范围",
+      "methods": [
+        "XRF",
+        "XAS",
+        "XANES",
+        "NMR diffusometry",
+        "XPS",
+        "ToF-SIMS"
+      ],
+      "read_scope": "2026-11-02：PMC正式正文摘要、§1、§2.1–2.2与§2.4–2.5、§3，§4中电池组装与XRF/XAS制样测量相关段；PDF p.10 Fig.6目视。SI Figs.S1–7、S19–20说明和Supplementary Note 1文字核读，公式在文本提取中缺失，未核验公式及误差传播；未重算实验。",
+      "structure_survey": false,
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "card": "references/corpus/b56.md",
+      "source_note": "出版社与PMC核对题名、DOI及首发日期；PMC正式排版版，CC BY-NC。官方JSON中的PDF和附件MD5均已核验；不以S3分片ETag冒充MD5。",
+      "si": {
+        "status": "downloaded",
+        "files": [
+          {
+            "path": "10.1002_adma.202515865/si/ADMA-38-e15865-s001.docx",
+            "sha256": "34b20a12c41a65ec0a05b8dbf726b5fac1d1a5b8ded61570679bb40ffc914fab",
+            "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12902593.1/ADMA-38-e15865-s001.docx",
+            "bytes": 5759999,
+            "format": "docx"
+          }
+        ],
+        "pending": [],
+        "read_scope": "1件DOCX完整保存；核读Figs.S1–7、S19–20说明和Supplementary Note 1文字；未将提取缺失的公式当作已读。"
+      }
+    },
+    {
+      "id": "B57",
+      "doi": "10.1002/adma.202501006",
+      "title": "Developing Quasi‐Solid‐State Ether‐Based Electrolytes with Trifluorotoluylation Ionic Liquids for High Voltage Lithium Metal Batteries",
+      "journal": "Advanced Materials",
+      "first_online": "2025-04-25",
+      "added_on": "2026-11-02",
+      "article_type": "original_research",
+      "article_url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.202501006",
+      "pdf_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12272000.1/PMC12272000.1.pdf",
+      "relative_pdf_path": "10.1002_adma.202501006/fulltext/article.pdf",
+      "sha256": "dd875e8f0fa67329877c6cf1387277d504df8e7cfc09ea6e1b7bed815871d109",
+      "pages": 13,
+      "bytes": 11128626,
+      "topic": "离子液体准固态电解质：双界面论证、负能量比较、计算和器件条件",
+      "methods": [
+        "DFT",
+        "MD",
+        "XPS",
+        "ToF-SIMS",
+        "cryo-TEM",
+        "finite element simulation"
+      ],
+      "read_scope": "2026-11-02：PMC正式正文摘要、§1、§2.1–2.2相关设计/吸附段、§2.4–2.6相关界面/模拟/扩展段和§3；PDF p.8 Fig.4目视。SI Experimental Procedures中的制备、表征及电化学方法，Figs.S19、S21–22说明、Tables S1–4核读；未通读全部主文/SI，未重算模型或能量密度。",
+      "structure_survey": false,
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "card": "references/corpus/b57.md",
+      "source_note": "出版社与PMC核对题名、DOI及首发日期；PMC正式排版版，CC BY-NC-ND。官方JSON中的PDF和附件MD5均已核验；不以S3分片ETag冒充MD5。",
+      "si": {
+        "status": "downloaded",
+        "files": [
+          {
+            "path": "10.1002_adma.202501006/si/ADMA-37-2501006-s001.docx",
+            "sha256": "b4e313f83e421671fbddea0e9ff81562d21f647d0a9d838ab59d5d758f2ff0bb",
+            "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12272000.1/ADMA-37-2501006-s001.docx",
+            "bytes": 18035786,
+            "format": "docx"
+          }
+        ],
+        "pending": [],
+        "read_scope": "1件DOCX完整保存；核读Experimental Procedures的制备/表征/电化学方法、Figs.S19、S21–22说明与Tables S1–4；未重算模型。"
       }
     }
   ]

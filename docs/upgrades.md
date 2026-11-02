@@ -2,6 +2,10 @@
 
 当前总量从[机器目录](../references/corpus/catalog.json)生成；维护流程见[持续升级约定](corpus-growth.md)。旧评测与旧批次报告保留当时的范围和结果，不随新版本改写。
 
+## 2026-11-02 · 第二批：测量状态与真实句段
+
+新增B55–B57（1篇Nature、2篇AM），总量56篇，今天累计新增5篇。3份正文及7件附件完整归档，相关正文和SI按实际范围核读；新增3处原文短摘及3个独立英文重述练习，针对各章节、句子、段落和跨章节审查更新指南。详见[批次报告](nature-am-corpus-upgrade-20261102-b02.md)及[真实句段对照](../references/nature-am-measurement-study.md)。
+
 ## 2026-11-02 · 新增Nature/AM原文与证据写法
 
 新增B53、B54，语料总数53篇。2篇正文及9件附件完整归档；按实际核读范围更新分部、句子、段落、表征和审查指南，加入假说判别、信号解释、跨体系性能归属及正文—SI方向冲突案例。详见[批次报告](nature-am-corpus-upgrade-20261102.md)和[真实论文写法分析](../references/nature-am-evidence-study.md)。
