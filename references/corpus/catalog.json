@@ -1584,7 +1584,7 @@
         "XGBoost",
         "SHAP"
       ],
-      "read_scope": "PDF pp.2–7：工况矩阵、寿命比较、DoD耦合、退化模型及方法；目视p.5 Fig.4。主要SI PDF两次传输截断，未核读；Source Data仅归档。未复跑机器学习或原始数据。",
+      "read_scope": "PDF pp.2–7的既有正文核读和p.5 Fig.4目视记录保留。2026-11-02重新核读SI物理页5、25、31、35–36（印刷页S4、S24、S30、S34–S35）：DoD、协议特征、HPPC/VBP、模型拆分及SHAP；未重算Source Data。",
       "structure_survey": false,
       "metadata_verified": true,
       "pdf_verified": true,
@@ -1592,8 +1592,17 @@
       "card": "references/corpus/b35.md",
       "source_note": "Stanford作者机构公开出版社正式版；正式首发为2024-12-09，不能用2025卷期替代。正式入口和Crossref未见更正提示或update-to记录。",
       "si": {
-        "status": "partial",
+        "status": "downloaded",
         "files": [
+          {
+            "path": "10.1038_s41560-024-01675-8/si/41560_2024_1675_MOESM1_ESM.pdf",
+            "sha256": "c012b9cec0bf90963e59c8e18c383ba0d1e0b8533e5de7cdc238d96c9727a0eb",
+            "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41560-024-01675-8/MediaObjects/41560_2024_1675_MOESM1_ESM.pdf",
+            "bytes": 22580431,
+            "format": "pdf",
+            "pages": 37,
+            "read_scope": "2026-11-02重新核读SI物理页5、25、31、35–36（印刷页S4、S24、S30、S34–S35）：DoD、协议特征、HPPC/VBP、模型拆分及SHAP；未重算Source Data。"
+          },
           {
             "path": "10.1038_s41560-024-01675-8/si/41560_2024_1675_MOESM2_ESM.xlsx",
             "sha256": "469e64a6cabdbc0c84390229b961e33cd0c04beabb17f5434224153ee338f5db",
@@ -1613,13 +1622,8 @@
             "bytes": 238417
           }
         ],
-        "pending": [
-          {
-            "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41560-024-01675-8/MediaObjects/41560_2024_1675_MOESM1_ESM.pdf",
-            "reason": "官方SI两次传输均截断：首次IncompleteRead，第二次unexpected EOF；保存的局部字节不能作为已获取PDF，待补完整SI并核读。"
-          }
-        ],
-        "read_scope": "主要SI PDF两次传输均截断，待补完整文件后核读；3件Source Data已归档但未重算。当前结论只使用正文所列范围。"
+        "pending": [],
+        "read_scope": "2026-11-02重新核读SI物理页5、25、31、35–36（印刷页S4、S24、S30、S34–S35）：DoD、协议特征、HPPC/VBP、模型拆分及SHAP；未重算Source Data。"
       }
     },
     {
@@ -2719,6 +2723,146 @@
         ],
         "pending": [],
         "read_scope": "SI PDF pp.2、22、31、53–54；其余SI未系统核读，ZIP源数据未分析。"
+      }
+    },
+    {
+      "id": "B53",
+      "doi": "10.1038/s41586-025-09587-7",
+      "title": "Marcus kinetics control singlet and triplet oxygen evolving from superoxide",
+      "journal": "Nature",
+      "first_online": "2025-10-03",
+      "added_on": "2026-11-02",
+      "article_type": "original_research",
+      "article_url": "https://www.nature.com/articles/s41586-025-09587-7",
+      "pdf_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12527928.1/PMC12527928.1.pdf",
+      "relative_pdf_path": "10.1038_s41586-025-09587-7/fulltext/article.pdf",
+      "sha256": "4265e2206b09dd44f6d1bd6e74dad3414a08a2b6048f90ae5e80273002ff73f9",
+      "pages": 18,
+      "bytes": 3809247,
+      "topic": "氧氧化还原：假说检验、信号与产率、模型适用边界",
+      "methods": [
+        "UV-Vis",
+        "NIR",
+        "mass spectrometry",
+        "Marcus kinetics",
+        "quenching model"
+      ],
+      "read_scope": "2026-11-02：主文物理页1–7的摘要、引言、假说、动力学/产物判别、非水与水系检验、结论及相关方法；Fig.1–4图注；目视p.3 Fig.2。Extended Data Fig.2、5–8图注（物理页12、15–18）；未通读全部18页、未复现模型。",
+      "structure_survey": true,
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "card": "references/corpus/b53.md",
+      "source_note": "出版社开放原始研究；PMC正式排版版，CC BY。题名、DOI与2025-10-03首发日期交叉核对出版社和PMC。此文研究氧物种动力学及其储能意义，不是整电池性能提升试验。",
+      "si": {
+        "status": "downloaded",
+        "files": [
+          {
+            "path": "10.1038_s41586-025-09587-7/si/41586_2025_9587_MOESM1_ESM.pdf",
+            "sha256": "d202764d4eb4fcc70e37b6667d021c6035f4430802a5bf05d7467a5c6c67a7d0",
+            "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12527928.1/41586_2025_9587_MOESM1_ESM.pdf",
+            "bytes": 2901508,
+            "format": "pdf",
+            "pages": 38
+          },
+          {
+            "path": "10.1038_s41586-025-09587-7/si/41586_2025_9587_MOESM2_ESM.xlsx",
+            "sha256": "959fdcd297d021683ac57c745f92da10ecc933417b4913225fe7786ec168e60e",
+            "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12527928.1/41586_2025_9587_MOESM2_ESM.xlsx",
+            "bytes": 13970,
+            "format": "xlsx"
+          },
+          {
+            "path": "10.1038_s41586-025-09587-7/si/41586_2025_9587_MOESM3_ESM.xlsx",
+            "sha256": "50df4571903732d9cfe339e1a3214b67c177c6177920917a38ba9836a3c1be76",
+            "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12527928.1/41586_2025_9587_MOESM3_ESM.xlsx",
+            "bytes": 85530,
+            "format": "xlsx"
+          },
+          {
+            "path": "10.1038_s41586-025-09587-7/si/41586_2025_9587_MOESM4_ESM.xlsx",
+            "sha256": "05eb8fb08e14402573858e7ca3d5a972c3142c7294ceb4f9e3a3d30e8e0e69d2",
+            "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12527928.1/41586_2025_9587_MOESM4_ESM.xlsx",
+            "bytes": 11464,
+            "format": "xlsx"
+          },
+          {
+            "path": "10.1038_s41586-025-09587-7/si/41586_2025_9587_MOESM5_ESM.xlsx",
+            "sha256": "e58f8d4792d155f7dd0380c49c84a754822760ee67087ab473e6f231a8fee109",
+            "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12527928.1/41586_2025_9587_MOESM5_ESM.xlsx",
+            "bytes": 12317,
+            "format": "xlsx"
+          }
+        ],
+        "pending": [],
+        "read_scope": "Extended Data在主PDF内，实际核读Fig.2、5–8图注；4件Source Data工作簿只校验未重算，38页Peer Review File仅核对首页身份，未当科学SI或正文计数。"
+      }
+    },
+    {
+      "id": "B54",
+      "doi": "10.1002/adma.202501659",
+      "title": "Solid Polymer Electrolyte with Compatible Cathode‐Electrolyte Interfacial Design Enabling Lithium Metal Batteries Operation at 4.8 V with Long Cycle Life",
+      "journal": "Advanced Materials",
+      "first_online": "2025-03-27",
+      "added_on": "2026-11-02",
+      "article_type": "original_research",
+      "article_url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.202501659",
+      "pdf_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12075905.1/PMC12075905.1.pdf",
+      "relative_pdf_path": "10.1002_adma.202501659/fulltext/article.pdf",
+      "sha256": "e7d5489f9d40b2eb738a6eb6210ce8126eeca262ab5ab3cd1be772ef49a5e30a",
+      "pages": 12,
+      "bytes": 2314006,
+      "topic": "聚合物电解液与正极界面：分层设计、性能条件与正文SI冲突",
+      "methods": [
+        "FTIR",
+        "EIS",
+        "DRT",
+        "GITT",
+        "XPS",
+        "DFT",
+        "in situ Raman"
+      ],
+      "read_scope": "2026-11-02：出版社/PMC正文§1–4（摘要、引言、Results and Discussion、Conclusion及Experimental Section）核读；归档PDF核对p.1身份及p.7 Fig.4和性能段，目视Fig.4；SI DOCX中Figs.S2、S5、S13–14、S22、S24–30与Tables S2、S4说明文字，目视Fig.S5；视频未观看，未复算原始数据。",
+      "structure_survey": true,
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "card": "references/corpus/b54.md",
+      "source_note": "出版社开放原始研究；PMC正式排版版，CC BY-NC。题名、DOI与2025-03-27首发日期交叉核对出版社和PMC。FTIR方向存在正文§2.1蓝移与SI Fig.S5红移的冲突；不作为无争议峰移母句。",
+      "si": {
+        "status": "downloaded",
+        "files": [
+          {
+            "path": "10.1002_adma.202501659/si/ADMA-37-2501659-s001.mp4",
+            "sha256": "b2f912d4e090080c5b003d4f1aac2a5c255689874ad514ebc15ce06f52a07c3a",
+            "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12075905.1/ADMA-37-2501659-s001.mp4",
+            "bytes": 6559754,
+            "format": "mp4"
+          },
+          {
+            "path": "10.1002_adma.202501659/si/ADMA-37-2501659-s002.docx",
+            "sha256": "7faf5eb471e924e317596252f1ac276342ec26c6913fd2ea4b4d5afd002caaa9",
+            "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12075905.1/ADMA-37-2501659-s002.docx",
+            "bytes": 6430640,
+            "format": "docx"
+          },
+          {
+            "path": "10.1002_adma.202501659/si/ADMA-37-2501659-s003.mp4",
+            "sha256": "cd4050581589d4c22671c8ba0259c7b347ad3252ef9c4be38cec736d3ca8c0c6",
+            "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12075905.1/ADMA-37-2501659-s003.mp4",
+            "bytes": 1346808,
+            "format": "mp4"
+          },
+          {
+            "path": "10.1002_adma.202501659/si/ADMA-37-2501659-s004.mp4",
+            "sha256": "2ed0a6c1ce569871f7b35270802f47f0b8670d21c615c613ad35b9f9f4761d87",
+            "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12075905.1/ADMA-37-2501659-s004.mp4",
+            "bytes": 2571507,
+            "format": "mp4"
+          }
+        ],
+        "pending": [],
+        "read_scope": "SI DOCX核读Figs.S2、S5、S13–14、S22、S24–30与Tables S2、S4说明，目视Fig.S5；3段视频文件结构与官方MD5完整性校验通过，未观看。"
       }
     }
   ]

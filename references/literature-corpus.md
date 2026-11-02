@@ -1,6 +1,6 @@
 # 真实论文语料索引
 
-当前已收录 **51 篇唯一原始研究**；持续扩库目标为 **1000 篇**。计入论文均有正式元数据、正文 PDF 校验及相关正文核读记录。来源和所读副本版本分别保留；阅读卡不等于本轮亲读原文。
+当前已收录 **53 篇唯一原始研究**；持续扩库目标为 **1000 篇**。计入论文均有正式元数据、正文 PDF 校验及相关正文核读记录。来源和所读副本版本分别保留；阅读卡不等于本轮亲读原文。
 
 ## 按任务查找
 
@@ -17,15 +17,15 @@ python scripts/corpus_catalog.py check
 ## 分页目录
 
 - [B01–B51](corpus/index-001.md)
-- [B52–B52](corpus/index-002.md)
+- [B52–B54](corpus/index-002.md)
 
 ## 期刊分布
 
 | 期刊 | 篇数 |
 |---|---:|
 | Advanced Energy Materials | 10 |
-| Advanced Materials | 6 |
-| Nature | 7 |
+| Advanced Materials | 7 |
+| Nature | 8 |
 | Nature Communications | 18 |
 | Nature Energy | 10 |
 
@@ -33,7 +33,7 @@ python scripts/corpus_catalog.py check
 
 - **句子：** 按同一测量对象和证据功能选择，学习对象、条件、观察、比较与限定的组织，用自己的数据重建。
 - **段落：** 核读同功能段及上下文，比较主信息、证据顺序和推断边界；按[审查协议](review-protocol.md)实际修改并回填映射。
-- **全文：** 已有篇级组织通览记录共 19 篇：[B05](corpus/b05.md)、[B09](corpus/b09.md)、[B14](corpus/b14.md)、[B16](corpus/b16.md)、[B17](corpus/b17.md)、[B19](corpus/b19.md)、[B21](corpus/b21.md)、[B22](corpus/b22.md)、[B23](corpus/b23.md)、[B24](corpus/b24.md)、[B25](corpus/b25.md)、[B26](corpus/b26.md)、[B27](corpus/b27.md)、[B29](corpus/b29.md)、[B30](corpus/b30.md)、[B32](corpus/b32.md)、[B33](corpus/b33.md)、[B51](corpus/b51.md)、[B52](corpus/b52.md)。当前任务仍须读足够正文；通览不等于 SI 全读或实验复现。
+- **全文：** 已有篇级组织通览记录共 21 篇：[B05](corpus/b05.md)、[B09](corpus/b09.md)、[B14](corpus/b14.md)、[B16](corpus/b16.md)、[B17](corpus/b17.md)、[B19](corpus/b19.md)、[B21](corpus/b21.md)、[B22](corpus/b22.md)、[B23](corpus/b23.md)、[B24](corpus/b24.md)、[B25](corpus/b25.md)、[B26](corpus/b26.md)、[B27](corpus/b27.md)、[B29](corpus/b29.md)、[B30](corpus/b30.md)、[B32](corpus/b32.md)、[B33](corpus/b33.md)、[B51](corpus/b51.md)、[B52](corpus/b52.md)、[B53](corpus/b53.md)、[B54](corpus/b54.md)。当前任务仍须读足够正文；通览不等于 SI 全读或实验复现。
 
 ## 存储、补充材料与维护
 
