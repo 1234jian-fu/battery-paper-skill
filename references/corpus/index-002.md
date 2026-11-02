@@ -1,4 +1,4 @@
-# 语料目录 · B52–B57
+# 语料目录 · B52–B60
 
 [返回总索引](../literature-corpus.md)
 
@@ -10,3 +10,6 @@
 | [B55 · Cryogenic X-ray photoelectron spectroscopy for battery interfaces](b55.md) | Nature / 2025-10-22 | 低温XPS：样品演化、同点对照、关联与方法适用边界；cryo-XPS / XPS / SEI / Spearman correlation | 相关正文 |
 | [B56 · Improving Ionic Conformality Across Polymer Electrolyte\|Electrode Interfaces](b56.md) | Advanced Materials / 2025-12-21 | 聚合物界面：概念区分、空间取样、局部谱学结论范围；XRF / XAS / XANES / NMR diffusometry / XPS / ToF-SIMS | 相关正文 |
 | [B57 · Developing Quasi‐Solid‐State Ether‐Based Electrolytes with Trifluorotoluylation Ionic Liquids for High Voltage Lithium Metal Batteries](b57.md) | Advanced Materials / 2025-04-25 | 离子液体准固态电解质：双界面论证、负能量比较、计算和器件条件；DFT / MD / XPS / ToF-SIMS / cryo-TEM / finite element simulation | 相关正文 |
+| [B58 · Electrolyte design for Li-ion batteries under extreme operating conditions](b58.md) | Nature / 2023-02-08 | 多目标电解液设计、跨温度协议与主张验证；Raman / NMR / EIS / XPS / MD / DFT | 局部＋篇级通览 |
+| [B59 · Measuring Zn Transference with Precision: Insights for Dendrite‐Free Zinc Metal Anodes](b59.md) | Advanced Materials / 2025-08-23 | 总电导与目标离子迁移数、测量方法与失效终点；Hittorf method / ICP-OES / XAS / MD / SEM | 局部＋篇级通览 |
+| [B60 · Synergistic Coupling of Host and Electrolyte Achieving 1270 Wh L−1 in Anode‐Free Lithium Metal Batteries](b60.md) | Advanced Materials / 2025-11-02 | 宿主与电解液组合、初始损失与长期收益、器件指标边界；SEM / XPS / NMR / MD / DFT / X-ray nano-tomography | 相关正文 |

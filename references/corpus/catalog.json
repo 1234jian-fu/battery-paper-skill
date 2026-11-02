@@ -3027,6 +3027,153 @@
         "pending": [],
         "read_scope": "1件DOCX完整保存；核读Experimental Procedures的制备/表征/电化学方法、Figs.S19、S21–22说明与Tables S1–4；未重算模型。"
       }
+    },
+    {
+      "id": "B58",
+      "doi": "10.1038/s41586-022-05627-8",
+      "title": "Electrolyte design for Li-ion batteries under extreme operating conditions",
+      "journal": "Nature",
+      "first_online": "2023-02-08",
+      "added_on": "2026-11-02",
+      "article_type": "original_research",
+      "article_url": "https://www.nature.com/articles/s41586-022-05627-8",
+      "pdf_url": "https://bpb-us-e1.wpmucdn.com/blog.umd.edu/dist/7/477/files/2023/02/15770925-c5ab-4a43-a453-4e696e3117fc.pdf",
+      "relative_pdf_path": "10.1038_s41586-022-05627-8/fulltext/article.pdf",
+      "sha256": "b89e18c779ee42d2e8fd4acbbecafe42f35e8007d03d0a4a3c0ab4923240797c",
+      "pages": 18,
+      "bytes": 18618907,
+      "topic": "多目标电解液设计、跨温度协议与主张验证",
+      "methods": [
+        "Raman",
+        "NMR",
+        "EIS",
+        "XPS",
+        "MD",
+        "DFT"
+      ],
+      "read_scope": "2026-11-02：作者校样物理页1–6摘要、引言、设计、性能、界面解释及结尾，p.8 Methods；目视p.4 Fig.3。SI pp.1–3身份与目录、p.30 Discussion 8、p.31 Discussion 9、p.34 Discussion 11、p.35 Discussion 12。未逐页精读Extended Data或全部SI，未重算实验。",
+      "structure_survey": true,
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "card": "references/corpus/b58.md",
+      "source_note": "作者马里兰大学站点公开的排版校样，首页仍有出版日期占位符，不当作最终出版版本。正式题名、DOI、日期及科学SI链接以出版社核对；正文版本差异未逐字核验。",
+      "si": {
+        "status": "partial",
+        "files": [
+          {
+            "path": "10.1038_s41586-022-05627-8/si/41586_2022_5627_MOESM1_ESM.pdf",
+            "sha256": "5359b2997120ee57e36bbc79f12c13f8a0a6f50bf0be32e5b243a4e8b89b7361",
+            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-022-05627-8/MediaObjects/41586_2022_5627_MOESM1_ESM.pdf",
+            "bytes": 4136506,
+            "format": "pdf",
+            "pages": 43
+          }
+        ],
+        "pending": [
+          {
+            "url": "https://www.nature.com/articles/s41586-022-05627-8",
+            "reason": "作者校样Methods提及MD输入tar包；当前出版社附件链接及已保存科学SI未定位到该文件，保留待补，不猜测下载URL。"
+          }
+        ],
+        "read_scope": "43页科学SI保存并核读容量匹配、低温协议、三电极阻抗和结构稳定相关段；校样Methods另提及MD输入tar包，当前出版社附件列表未定位到该包。"
+      }
+    },
+    {
+      "id": "B59",
+      "doi": "10.1002/adma.202502245",
+      "title": "Measuring Zn Transference with Precision: Insights for Dendrite‐Free Zinc Metal Anodes",
+      "journal": "Advanced Materials",
+      "first_online": "2025-08-23",
+      "added_on": "2026-11-02",
+      "article_type": "original_research",
+      "article_url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.202502245",
+      "pdf_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12631524.1/PMC12631524.1.pdf",
+      "relative_pdf_path": "10.1002_adma.202502245/fulltext/article.pdf",
+      "sha256": "8f829f9cf4efe8a2df8908d100f01d547a588b07f6964997f472e408cdcd2797",
+      "pages": 9,
+      "bytes": 3980405,
+      "topic": "总电导与目标离子迁移数、测量方法与失效终点",
+      "methods": [
+        "Hittorf method",
+        "ICP-OES",
+        "XAS",
+        "MD",
+        "SEM"
+      ],
+      "read_scope": "2026-11-02：PMC正文摘要、§1、§2.1–2.4、§3及Methods中XAS、Hittorf组装/极化/采样/ICP校准和排除条件；目视PDF p.3 Fig.2。SI Tables S1–6、Supplementary Discussion和Figs.S12–15说明；未复算实验或模拟。",
+      "structure_survey": true,
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "card": "references/corpus/b59.md",
+      "source_note": "出版社与PMC核对题名、DOI及首发日期；PMC正式排版版，CC BY。PDF及附件按官方JSON MD5核验；另保存SHA256。",
+      "si": {
+        "status": "downloaded",
+        "files": [
+          {
+            "path": "10.1002_adma.202502245/si/ADMA-37-e02245-s001.docx",
+            "sha256": "42c68a472e5936d5c55689b255f228df7d2e73963f82ce301774a16c660938c4",
+            "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12631524.1/ADMA-37-e02245-s001.docx",
+            "bytes": 11183310,
+            "format": "docx"
+          },
+          {
+            "path": "10.1002_adma.202502245/si/ADMA-37-e02245-s002.gz",
+            "sha256": "0f21b64a559cd30a6b81bc489eabd81aed971463fb8aabba859dbcf1b271e275",
+            "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12631524.1/ADMA-37-e02245-s002.gz",
+            "bytes": 21768710,
+            "format": "gz"
+          }
+        ],
+        "pending": [],
+        "read_scope": "DOCX科学SI与GZ重启文件均保存；DOCX相关表格、测量讨论、循环终点及重复试验图注核读；GZ仅解压校验与目录查看，未运行模拟。"
+      }
+    },
+    {
+      "id": "B60",
+      "doi": "10.1002/adma.202515906",
+      "title": "Synergistic Coupling of Host and Electrolyte Achieving 1270 Wh L−1 in Anode‐Free Lithium Metal Batteries",
+      "journal": "Advanced Materials",
+      "first_online": "2025-11-02",
+      "added_on": "2026-11-02",
+      "article_type": "original_research",
+      "article_url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.202515906",
+      "pdf_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12966975.1/PMC12966975.1.pdf",
+      "relative_pdf_path": "10.1002_adma.202515906/fulltext/article.pdf",
+      "sha256": "e517ff97e2da99e7abd07a95ec48271f384b71ca4985d123f64af592e1b5bda1",
+      "pages": 13,
+      "bytes": 3207109,
+      "topic": "宿主与电解液组合、初始损失与长期收益、器件指标边界",
+      "methods": [
+        "SEM",
+        "XPS",
+        "NMR",
+        "MD",
+        "DFT",
+        "X-ray nano-tomography"
+      ],
+      "read_scope": "2026-11-02：PMC正文摘要、§1、§2.1–2.6相关设计、界面、循环与器件段及§3；§2.3部分段落仅核读相关句段，不作全文逐句审读。目视PDF p.10 §2.6。SI Experimental Methods中的制备、表征、NMR定量与组装条件，Figs.S16、S24及邻近图注、Table S5；未重算能量密度或模型。",
+      "structure_survey": false,
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "card": "references/corpus/b60.md",
+      "source_note": "出版社与PMC核对题名、DOI及首发日期；PMC正式排版版，CC BY-NC。PDF及附件按官方JSON MD5核验；另保存SHA256。",
+      "si": {
+        "status": "downloaded",
+        "files": [
+          {
+            "path": "10.1002_adma.202515906/si/ADMA-38-e15906-s001.docx",
+            "sha256": "16aece1e12826d781eea2110b53e36983375e3cf7fac5a1f92a3161876826de9",
+            "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12966975.1/ADMA-38-e15906-s001.docx",
+            "bytes": 8572957,
+            "format": "docx"
+          }
+        ],
+        "pending": [],
+        "read_scope": "1件DOCX科学SI完整保存；核读方法与器件计量、Cu-BEL对照图注及Table S5；未通读所有SI。"
+      }
     }
   ]
 }
