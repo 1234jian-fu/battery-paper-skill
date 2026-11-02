@@ -25,6 +25,7 @@ metadata:
 | 英文起草、翻译或润色 | [英文重构](references/english-workflow.md)；调整句子时按需选[句子写法](references/sentence-craft.md)，已有英文不强制重译中文 |
 | 段落起草或实质修改 | [段落写法](references/paragraph-craft.md)，按当前任务选择证据推进方式，完成后立即复核 |
 | 段落复核、全文审查或合稿 | [三级审查](references/review-protocol.md)；只审实际可见和受影响内容 |
+| 事实正确但重点不突出、章节重复或修改越写越长 | [实质修订](references/editorial-revision.md)，从具体缺陷选择修改动作；不另跑全套流程 |
 | 寻找真实表达范例 | [论文语料索引](references/literature-corpus.md)按任务检索少量相关卡，再核读原文；可用 `scripts/corpus_catalog.py search`，不默认加载整库，不能将卡片摘要当作本轮亲读 |
 | 核对完整交付或近期库资格 | [输出契约](references/output-contract.md)、[近期语料政策](references/recent-corpus-policy.md) |
 
