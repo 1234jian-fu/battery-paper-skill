@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-11-02",
+  "updated_on": "2026-11-03",
   "target": 1000,
   "records": [
     {
@@ -3173,6 +3173,92 @@
         ],
         "pending": [],
         "read_scope": "1件DOCX科学SI完整保存；核读方法与器件计量、Cu-BEL对照图注及Table S5；未通读所有SI。"
+      }
+    },
+    {
+      "id": "B61",
+      "doi": "10.1038/s41467-025-63959-1",
+      "title": "Interfacial chemistry-driven reaction dynamics and resultant microstructural evolution in lithium-based all-solid-state batteries",
+      "journal": "Nature Communications",
+      "first_online": "2025-10-03",
+      "added_on": "2026-11-03",
+      "article_type": "original_research",
+      "article_url": "https://www.nature.com/articles/s41467-025-63959-1",
+      "pdf_url": "https://www.nature.com/articles/s41467-025-63959-1.pdf",
+      "relative_pdf_path": "10.1038_s41467-025-63959-1/fulltext/article.pdf",
+      "sha256": "e2e5da763e9a178652b3dca55c700ddd224e2f35df4a68de1aa66b8467d1c8eb",
+      "pages": 13,
+      "bytes": 5628144,
+      "topic": "固态正极：几何接触与电化学活性面积、GITT复合量的条件解释",
+      "methods": [
+        "FIB-SEM",
+        "GITT",
+        "TXM-XANES",
+        "DRT",
+        "in situ XRD",
+        "ToF-SIMS"
+      ],
+      "read_scope": "2026-11-03：正文物理页1–5、p.6前半相关异质性段、pp.7–11微结构/GITT/结尾及相关方法；目视p.8 Fig.4。SI pp.1、5、7–9、18、30、32–33相关文字和图注；未逐页通读全部正文及SI，未重算。",
+      "structure_survey": false,
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "card": "references/corpus/b61.md",
+      "source_note": "出版社正式开放PDF，题名、DOI与首发日期交叉核对Crossref；2026-11-03出版社页及Crossref记录未见更正/撤稿指向，不据此保证无任何后续更正。未将关联预印本重复计数。",
+      "si": {
+        "status": "downloaded",
+        "files": [
+          {
+            "path": "10.1038_s41467-025-63959-1/si/41467_2025_63959_MOESM1_ESM.pdf",
+            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-025-63959-1/MediaObjects/41467_2025_63959_MOESM1_ESM.pdf",
+            "bytes": 7773638,
+            "sha256": "86161a956c3e533102574252f37a02e2b252ffcb36b955068594ed7d8beb7298",
+            "format": "pdf",
+            "pages": 34
+          },
+          {
+            "path": "10.1038_s41467-025-63959-1/si/41467_2025_63959_MOESM2_ESM.pdf",
+            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-025-63959-1/MediaObjects/41467_2025_63959_MOESM2_ESM.pdf",
+            "bytes": 153375,
+            "sha256": "f40fdbcb14a43c22e223734f45b2ae362b92493e97d4d949f64f863c37262514",
+            "format": "pdf",
+            "pages": 1
+          },
+          {
+            "path": "10.1038_s41467-025-63959-1/si/41467_2025_63959_MOESM3_ESM.mp4",
+            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-025-63959-1/MediaObjects/41467_2025_63959_MOESM3_ESM.mp4",
+            "bytes": 1126959,
+            "sha256": "24b24fc00f9d904e9a2983192f0bd15082a6aeac6db4805eb425ae94aa0c5a19",
+            "format": "mp4",
+            "validation": "ISO BMFF顶层box边界完整；未解码或观看视频"
+          },
+          {
+            "path": "10.1038_s41467-025-63959-1/si/41467_2025_63959_MOESM4_ESM.mp4",
+            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-025-63959-1/MediaObjects/41467_2025_63959_MOESM4_ESM.mp4",
+            "bytes": 2397139,
+            "sha256": "0b7376ba7861a4d9cc50579fe767be84d4780b33c29d0c0119a1bdf5488654e2",
+            "format": "mp4",
+            "validation": "ISO BMFF顶层box边界完整；未解码或观看视频"
+          },
+          {
+            "path": "10.1038_s41467-025-63959-1/si/41467_2025_63959_MOESM5_ESM.pdf",
+            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-025-63959-1/MediaObjects/41467_2025_63959_MOESM5_ESM.pdf",
+            "bytes": 4225520,
+            "sha256": "b9409644d34cf1a39f1fe12efa691faf1c14b0ceb7ad62704d31a561e30e9907",
+            "format": "pdf",
+            "pages": 55,
+            "role": "peer_review_file"
+          },
+          {
+            "path": "10.1038_s41467-025-63959-1/si/41467_2025_63959_MOESM6_ESM.zip",
+            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-025-63959-1/MediaObjects/41467_2025_63959_MOESM6_ESM.zip",
+            "bytes": 3318814,
+            "sha256": "1c3cf4a9e3c62512e7264377a849483a5ec4a4fa46b6da5d41395b24b2c3cef2",
+            "format": "zip"
+          }
+        ],
+        "pending": [],
+        "read_scope": "出版社6件附件完整保存：34页科学SI（相关页核读）、1页视频说明（已读）、2段MP4（仅结构验证、未观看）、55页审稿文件（仅身份核对）、Source Data ZIP（仅CRC与目录检查、未重算）。另行链接的Zenodo代码未下载、不计入6件附件。"
       }
     }
   ]

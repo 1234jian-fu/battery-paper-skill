@@ -1,4 +1,4 @@
-# 语料目录 · B52–B60
+# 语料目录 · B52–B61
 
 [返回总索引](../literature-corpus.md)
 
@@ -13,3 +13,4 @@
 | [B58 · Electrolyte design for Li-ion batteries under extreme operating conditions](b58.md) | Nature / 2023-02-08 | 多目标电解液设计、跨温度协议与主张验证；Raman / NMR / EIS / XPS / MD / DFT | 局部＋篇级通览 |
 | [B59 · Measuring Zn Transference with Precision: Insights for Dendrite‐Free Zinc Metal Anodes](b59.md) | Advanced Materials / 2025-08-23 | 总电导与目标离子迁移数、测量方法与失效终点；Hittorf method / ICP-OES / XAS / MD / SEM | 局部＋篇级通览 |
 | [B60 · Synergistic Coupling of Host and Electrolyte Achieving 1270 Wh L−1 in Anode‐Free Lithium Metal Batteries](b60.md) | Advanced Materials / 2025-11-02 | 宿主与电解液组合、初始损失与长期收益、器件指标边界；SEM / XPS / NMR / MD / DFT / X-ray nano-tomography | 相关正文 |
+| [B61 · Interfacial chemistry-driven reaction dynamics and resultant microstructural evolution in lithium-based all-solid-state batteries](b61.md) | Nature Communications / 2025-10-03 | 固态正极：几何接触与电化学活性面积、GITT复合量的条件解释；FIB-SEM / GITT / TXM-XANES / DRT / in situ XRD / ToF-SIMS | 相关正文 |
