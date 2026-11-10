@@ -1,4 +1,4 @@
-# 语料目录 · B52–B61
+# 语料目录 · B52–B62
 
 [返回总索引](../literature-corpus.md)
 
@@ -14,3 +14,4 @@
 | [B59 · Measuring Zn Transference with Precision: Insights for Dendrite‐Free Zinc Metal Anodes](b59.md) | Advanced Materials / 2025-08-23 | 总电导与目标离子迁移数、测量方法与失效终点；Hittorf method / ICP-OES / XAS / MD / SEM | 局部＋篇级通览 |
 | [B60 · Synergistic Coupling of Host and Electrolyte Achieving 1270 Wh L−1 in Anode‐Free Lithium Metal Batteries](b60.md) | Advanced Materials / 2025-11-02 | 宿主与电解液组合、初始损失与长期收益、器件指标边界；SEM / XPS / NMR / MD / DFT / X-ray nano-tomography | 相关正文 |
 | [B61 · Interfacial chemistry-driven reaction dynamics and resultant microstructural evolution in lithium-based all-solid-state batteries](b61.md) | Nature Communications / 2025-10-03 | 固态正极：几何接触与电化学活性面积、GITT复合量的条件解释；FIB-SEM / GITT / TXM-XANES / DRT / in situ XRD / ToF-SIMS | 相关正文 |
+| [B62 · Strain-associated nanoscale fluctuating lithium transport within single-crystalline LiNi1/3Mn1/3Co1/3O2 cathode particles](b62.md) | Nature Communications / 2025-10-10 | 单晶正极动态输运：假说预测比较、间接定量和跨时间表征；operando STXM / BCDI / FEA / GITT / DFT / XRD | 相关正文 |

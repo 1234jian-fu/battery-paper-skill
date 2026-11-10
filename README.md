@@ -6,7 +6,7 @@
 
 **从图与数据出发，构建有证据、有逻辑、可追溯的电池论文。**
 
-[![Corpus: 60 original papers](https://img.shields.io/badge/Corpus-60_original_papers-0F766E?style=flat-square)](references/literature-corpus.md)
+[![Corpus: 61 original papers](https://img.shields.io/badge/Corpus-61_original_papers-0F766E?style=flat-square)](references/literature-corpus.md)
 [![Review: 3 levels](https://img.shields.io/badge/Review-3_levels-1E3A5F?style=flat-square)](references/review-protocol.md)
 [![Writing: Chinese and English](https://img.shields.io/badge/Writing-CN_%2F_EN-526477?style=flat-square)](references/english-workflow.md)
 
@@ -186,7 +186,7 @@ flowchart LR
 
 ## 论文语料库
 
-**60 篇已核读原始研究 · 目标 1000 篇 · 按写作任务选读**
+**61 篇已核读原始研究 · 目标 1000 篇 · 按写作任务选读**
 
 <table>
   <tr>
@@ -200,7 +200,7 @@ flowchart LR
     </td>
     <td align="center" width="33%">
       <a href="https://www.nature.com/ncomms/"><img src="assets/nature-communications-card.svg" alt="Nature Communications" width="190"></a><br>
-      <strong>Nature Communications</strong><br>19 篇
+      <strong>Nature Communications</strong><br>20 篇
     </td>
   </tr>
   <tr>
@@ -213,7 +213,7 @@ flowchart LR
       <strong>Advanced Energy Materials</strong><br>10 篇
     </td>
     <td align="center">
-      <strong>60 篇来源</strong><br><br>
+      <strong>61 篇来源</strong><br><br>
       逐篇定位 · 组织分析<br>表达示范 · 证据边界
     </td>
   </tr>
@@ -221,7 +221,7 @@ flowchart LR
 
 <sub>期刊标识用于说明语料来源，不代表合作或背书。[视觉资源来源](assets/README.md)。</sub>
 
-每篇卡片记录论文身份、版本、来源入口、实际阅读位置、可借鉴的写作动作和不可迁移的事实边界。**60 篇均有相关正文阅读记录，其中 23 篇另有主文组织通览**；具体核读范围逐篇声明。
+每篇卡片记录论文身份、版本、来源入口、实际阅读位置、可借鉴的写作动作和不可迁移的事实边界。**61 篇均有相关正文阅读记录，其中 23 篇另有主文组织通览**；具体核读范围逐篇声明。
 
 [浏览语料索引 →](references/literature-corpus.md) · [按任务检索 →](docs/corpus-catalog.md) · [查看升级记录 →](docs/upgrades.md)
 

@@ -1,6 +1,6 @@
 # 真实论文语料索引
 
-当前已收录 **60 篇唯一原始研究**；持续扩库目标为 **1000 篇**。计入论文均有正式元数据、正文 PDF 校验及相关正文核读记录。来源和所读副本版本分别保留；阅读卡不等于本轮亲读原文。
+当前已收录 **61 篇唯一原始研究**；持续扩库目标为 **1000 篇**。计入论文均有正式元数据、正文 PDF 校验及相关正文核读记录。来源和所读副本版本分别保留；阅读卡不等于本轮亲读原文。
 
 ## 按任务查找
 
@@ -17,7 +17,7 @@ python scripts/corpus_catalog.py check
 ## 分页目录
 
 - [B01–B51](corpus/index-001.md)
-- [B52–B61](corpus/index-002.md)
+- [B52–B62](corpus/index-002.md)
 
 ## 期刊分布
 
@@ -26,7 +26,7 @@ python scripts/corpus_catalog.py check
 | Advanced Energy Materials | 10 |
 | Advanced Materials | 11 |
 | Nature | 10 |
-| Nature Communications | 19 |
+| Nature Communications | 20 |
 | Nature Energy | 10 |
 
 ## 句子、段落与全文的使用范围

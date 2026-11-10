@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-11-03",
+  "updated_on": "2026-11-10",
   "target": 1000,
   "records": [
     {
@@ -3259,6 +3259,99 @@
         ],
         "pending": [],
         "read_scope": "出版社6件附件完整保存：34页科学SI（相关页核读）、1页视频说明（已读）、2段MP4（仅结构验证、未观看）、55页审稿文件（仅身份核对）、Source Data ZIP（仅CRC与目录检查、未重算）。另行链接的Zenodo代码未下载、不计入6件附件。"
+      }
+    },
+    {
+      "id": "B62",
+      "doi": "10.1038/s41467-025-64068-9",
+      "title": "Strain-associated nanoscale fluctuating lithium transport within single-crystalline LiNi1/3Mn1/3Co1/3O2 cathode particles",
+      "journal": "Nature Communications",
+      "first_online": "2025-10-10",
+      "added_on": "2026-11-10",
+      "article_type": "original_research",
+      "article_url": "https://www.nature.com/articles/s41467-025-64068-9",
+      "pdf_url": "https://www.nature.com/articles/s41467-025-64068-9.pdf",
+      "relative_pdf_path": "10.1038_s41467-025-64068-9/fulltext/article.pdf",
+      "sha256": "4a1f1fed7de811ffc1b63380a44cc60d778b489aa4a30b18982acc48b70b60d9",
+      "pages": 13,
+      "bytes": 5129841,
+      "topic": "单晶正极动态输运：假说预测比较、间接定量和跨时间表征",
+      "methods": [
+        "operando STXM",
+        "BCDI",
+        "FEA",
+        "GITT",
+        "DFT",
+        "XRD"
+      ],
+      "read_scope": "2026-11-04出版社摘要及引言相关段；2026-11-10正文PDF物理页4–7、9及p.10相关方法核读，目视p.5 Fig.3。SI pp.1–2、24–25、29、31、36、40相关文字及图注核读。未通读全部正文/SI，未复算模型。",
+      "structure_survey": false,
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "card": "references/corpus/b62.md",
+      "source_note": "出版社正式开放PDF，文件取得于2026-11-04，完成核读入库于2026-11-10。出版社首次在线日期与2026-11-10 Crossref记录一致，Crossref未列update-to；当日web页面复查发生cookie重定向错误，版本及页面依据为已保存的出版社页面，不声称当日全部更新状态已查清。",
+      "si": {
+        "status": "downloaded",
+        "files": [
+          {
+            "path": "10.1038_s41467-025-64068-9/si/41467_2025_64068_MOESM1_ESM.pdf",
+            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-025-64068-9/MediaObjects/41467_2025_64068_MOESM1_ESM.pdf",
+            "bytes": 7197336,
+            "sha256": "b82aeba8f6f49d7cf86eea0f71689beb8d0cf35479a833ee211cd4547861efc6",
+            "format": "pdf",
+            "pages": 53
+          },
+          {
+            "path": "10.1038_s41467-025-64068-9/si/41467_2025_64068_MOESM2_ESM.pdf",
+            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-025-64068-9/MediaObjects/41467_2025_64068_MOESM2_ESM.pdf",
+            "bytes": 5757,
+            "sha256": "c34edfb7294772dc3614c1040b5d46c4d56f7973ee5f10a238eac3fd71e3b6c1",
+            "format": "pdf",
+            "pages": 1
+          },
+          {
+            "path": "10.1038_s41467-025-64068-9/si/41467_2025_64068_MOESM3_ESM.mp4",
+            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-025-64068-9/MediaObjects/41467_2025_64068_MOESM3_ESM.mp4",
+            "bytes": 3753420,
+            "sha256": "56e98c37eebe13122f28600b5533219482dab5706a4401b515d8b21847eb3ed2",
+            "format": "mp4",
+            "validation": "容器box边界完整，未解码观看"
+          },
+          {
+            "path": "10.1038_s41467-025-64068-9/si/41467_2025_64068_MOESM4_ESM.mp4",
+            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-025-64068-9/MediaObjects/41467_2025_64068_MOESM4_ESM.mp4",
+            "bytes": 9847019,
+            "sha256": "5d047497f2a4dbf8e1b39d2759e327b0226b02208a8c698b714246c5ab7d8d28",
+            "format": "mp4",
+            "validation": "容器box边界完整，未解码观看"
+          },
+          {
+            "path": "10.1038_s41467-025-64068-9/si/41467_2025_64068_MOESM5_ESM.zip",
+            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-025-64068-9/MediaObjects/41467_2025_64068_MOESM5_ESM.zip",
+            "bytes": 33347,
+            "sha256": "9f2ba95d8998fdedc1c8c8931c7f413a768f2c346410e48518d64d0c9654cd49",
+            "format": "zip"
+          },
+          {
+            "path": "10.1038_s41467-025-64068-9/si/41467_2025_64068_MOESM6_ESM.pdf",
+            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-025-64068-9/MediaObjects/41467_2025_64068_MOESM6_ESM.pdf",
+            "bytes": 5152231,
+            "sha256": "3117f700b4ba84a0a8c208260152119ed19b23d1053d3a245c83537b93f2e022",
+            "format": "pdf",
+            "pages": 89,
+            "role": "peer_review_file"
+          },
+          {
+            "path": "10.1038_s41467-025-64068-9/si/41467_2025_64068_MOESM7_ESM.xlsx",
+            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-025-64068-9/MediaObjects/41467_2025_64068_MOESM7_ESM.xlsx",
+            "bytes": 1453233,
+            "sha256": "92950f44f8ebd6abe04c3a7b57b7cfab38d3e6fb3875fd4132c6accc5218ab26",
+            "format": "xlsx"
+          }
+        ],
+        "pending": [],
+        "read_scope": "7件附件保存：53页科学SI（按上述范围核读）、1页附件说明、2段MP4（容器验证，未观看）、Supplementary Data ZIP及Source Data XLSX（CRC验证，未分析）、89页审稿文件（仅核身份）。"
       }
     }
   ]
