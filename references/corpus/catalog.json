@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-11-10",
+  "updated_on": "2026-11-11",
   "target": 1000,
   "records": [
     {
@@ -25,7 +25,7 @@
         "EXAFS",
         "MD"
       ],
-      "read_scope": "此前核读官方HTML的Characterization of solvation structure and hydration structure、Fig.3及相关方法/配方/性能边界；本轮复核PDF对应pp.4–5与pp.7–8方法定位。未独立核验SI与原始数据。",
+      "read_scope": "此前核读官方HTML的Characterization of solvation structure and hydration structure、Fig.3及相关方法/配方/性能边界；本轮复核PDF对应pp.4–5与pp.7–8方法定位。未独立核验SI与原始数据。 2026-11-11追加核读正文p4、p7–8相关方法，p5 Fig.3图注及部分正文；SI pp.1、10–11、15、17、42（p42目视核表），p2–3只读图注；审稿文件仅核身份。此前未核SI的记录保留为历史范围。",
       "structure_survey": false,
       "metadata_verified": true,
       "pdf_verified": true,
@@ -34,10 +34,46 @@
       "source_note": "出版社正式版；核读来源为官方HTML/XML与Fig.3原图，PDF另行归档验证。",
       "reading_provenance": "沿用既有核读记录；此次目录迁移不表示重新通读。",
       "si": {
-        "status": "legacy_not_audited",
-        "files": [],
-        "pending": [],
-        "read_scope": "此次未复核既有 SI 获取及阅读范围，后续逐批补齐。"
+        "status": "partial",
+        "files": [
+          {
+            "path": "10.1038_s41467-024-55657-1/si/41467_2024_55657_MOESM1_ESM.pdf",
+            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-024-55657-1/MediaObjects/41467_2024_55657_MOESM1_ESM.pdf",
+            "bytes": 5979547,
+            "sha256": "7d0dce00ab3e1b7d16f654fb23d78fbc936bb5c0fe208862b67d6d07aa6389e3",
+            "format": "pdf",
+            "pages": 47,
+            "role": "supplementary_information",
+            "status": "verified_download",
+            "read_scope": "核读物理页1、10–11、15、17、42；p42表格目视复核；p2–3仅图注。"
+          },
+          {
+            "path": "10.1038_s41467-024-55657-1/si/41467_2024_55657_MOESM2_ESM.pdf",
+            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-024-55657-1/MediaObjects/41467_2024_55657_MOESM2_ESM.pdf",
+            "bytes": 4062285,
+            "sha256": "669f9f3a1d62b076bcba0b4008d5bda2d58ebf74cc43d9d849fc0f39624303bf",
+            "format": "pdf",
+            "pages": 10,
+            "role": "peer_review_file",
+            "status": "verified_download",
+            "read_scope": "仅首页身份核验，未核读审稿意见。"
+          }
+        ],
+        "pending": [
+          {
+            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-024-55657-1/MediaObjects/41467_2024_55657_MOESM3_ESM.xlsx",
+            "label": "Source Data XLSX",
+            "status": "download_incomplete",
+            "reason": "本批传输长期未完成，主动终止；0字节part不计成功。"
+          },
+          {
+            "url": "https://doi.org/10.24435/materialscloud:qz-e6",
+            "label": "Materials Cloud simulation configurations",
+            "status": "not_downloaded",
+            "reason": "正文数据声明另指向的配置资料，本批未取得或分析。"
+          }
+        ],
+        "read_scope": "2026-11-11补存47页科学SI和10页审稿文件；各文件范围见files。源数据及外部模拟配置未取得，未作原始数据分析。"
       }
     },
     {
