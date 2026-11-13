@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-11-11",
+  "updated_on": "2026-11-13",
   "target": 1000,
   "records": [
     {
@@ -57,15 +57,20 @@
             "role": "peer_review_file",
             "status": "verified_download",
             "read_scope": "仅首页身份核验，未核读审稿意见。"
+          },
+          {
+            "path": "10.1038_s41467-024-55657-1/si/41467_2024_55657_MOESM3_ESM.xlsx",
+            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-024-55657-1/MediaObjects/41467_2024_55657_MOESM3_ESM.xlsx",
+            "bytes": 71227653,
+            "sha256": "d6f72a0e2a3e5a0b6624eb1d9b13035c26cd36e7a91b816b95c801f082f74174",
+            "format": "xlsx",
+            "role": "source_data",
+            "status": "verified_download",
+            "validation": "ZIP CRC verified; 69 archive entries",
+            "read_scope": "仅格式与CRC核验；未分析单元格、未复算论文结果。"
           }
         ],
         "pending": [
-          {
-            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-024-55657-1/MediaObjects/41467_2024_55657_MOESM3_ESM.xlsx",
-            "label": "Source Data XLSX",
-            "status": "download_incomplete",
-            "reason": "本批传输长期未完成，主动终止；0字节part不计成功。"
-          },
           {
             "url": "https://doi.org/10.24435/materialscloud:qz-e6",
             "label": "Materials Cloud simulation configurations",
@@ -73,7 +78,7 @@
             "reason": "正文数据声明另指向的配置资料，本批未取得或分析。"
           }
         ],
-        "read_scope": "2026-11-11补存47页科学SI和10页审稿文件；各文件范围见files。源数据及外部模拟配置未取得，未作原始数据分析。"
+        "read_scope": "2026-11-11补存47页科学SI和10页审稿文件；各文件范围见files。源数据及外部模拟配置未取得，未作原始数据分析。 2026-11-13补齐Source Data XLSX（71,227,653字节），CRC验证通过，未进行数据分析；外部模拟配置仍待补。"
       }
     },
     {
