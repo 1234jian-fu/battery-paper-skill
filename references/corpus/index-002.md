@@ -1,4 +1,4 @@
-# 语料目录 · B52–B62
+# 语料目录 · B52–B63
 
 [返回总索引](../literature-corpus.md)
 
@@ -15,3 +15,4 @@
 | [B60 · Synergistic Coupling of Host and Electrolyte Achieving 1270 Wh L−1 in Anode‐Free Lithium Metal Batteries](b60.md) | Advanced Materials / 2025-11-02 | 宿主与电解液组合、初始损失与长期收益、器件指标边界；SEM / XPS / NMR / MD / DFT / X-ray nano-tomography | 相关正文 |
 | [B61 · Interfacial chemistry-driven reaction dynamics and resultant microstructural evolution in lithium-based all-solid-state batteries](b61.md) | Nature Communications / 2025-10-03 | 固态正极：几何接触与电化学活性面积、GITT复合量的条件解释；FIB-SEM / GITT / TXM-XANES / DRT / in situ XRD / ToF-SIMS | 相关正文 |
 | [B62 · Strain-associated nanoscale fluctuating lithium transport within single-crystalline LiNi1/3Mn1/3Co1/3O2 cathode particles](b62.md) | Nature Communications / 2025-10-10 | 单晶正极动态输运：假说预测比较、间接定量和跨时间表征；operando STXM / BCDI / FEA / GITT / DFT / XRD | 相关正文 |
+| [B63 · Electrolyte-dependent physico-chemical interfacial kinetics shape degradation pathways and lifetime in lithium-ion batteries](b63.md) | Nature Communications / 2026-11-05 | 电解液敏感界面动力学与寿命退化；electrochemical diagnostics / GC-MS / XPS / SEM-EDS / XRD / P2D modelling | 局部＋篇级通览 |
