@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-11-15",
+  "updated_on": "2026-11-16",
   "target": 1000,
   "records": [
     {
@@ -3465,6 +3465,82 @@
         ],
         "pending": [],
         "read_scope": "SI 23页核读，审稿文件56页仅p1–4核边界，Source Data ZIP仅CRC验证未分析。"
+      }
+    },
+    {
+      "id": "B64",
+      "doi": "10.1038/s41467-026-76791-y",
+      "title": "Reconciling strong coordination and anion-reinforced solvation structure enables nonflammable electrolytes for potassium-ion batteries",
+      "journal": "Nature Communications",
+      "first_online": "2026-02-01",
+      "added_on": "2026-11-16",
+      "article_type": "original_research",
+      "article_url": "https://www.nature.com/articles/s41467-026-76791-y",
+      "pdf_url": "https://www.nature.com/articles/s41467-026-76791-y.pdf",
+      "relative_pdf_path": "10.1038_s41467-026-76791-y/fulltext/article.pdf",
+      "sha256": "0c691df53b9ec6c73e8cdb07d53ac7206c5b52c55a5fefe7a249ff5a659b67b4",
+      "pages": 13,
+      "bytes": 2477217,
+      "topic": "钾离子电池不可燃电解液与溶剂化",
+      "methods": [
+        "DFT",
+        "Raman",
+        "MD",
+        "XPS",
+        "electrochemistry"
+      ],
+      "read_scope": "正文pp.1–10及方法、图注；附件说明页；审稿文件p1–4。",
+      "structure_survey": true,
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "card": "references/corpus/b64.md",
+      "source_note": "出版社正式页面和正文PDF；公开附件部分传输未完成。",
+      "reading_provenance": "独立核读正文和可验证附件，补充材料全文待补。",
+      "si": {
+        "status": "partial",
+        "files": [
+          {
+            "path": "10.1038_s41467-026-76791-y/si/41467_2026_76791_MOESM2_ESM.pdf",
+            "url": "",
+            "bytes": 116492,
+            "sha256": "60342f58cbd0cf29dba1670c14af4d0122c3f2c1b41355ce03a632bf07c26d90",
+            "format": "pdf",
+            "pages": 1,
+            "role": "attachment_description",
+            "status": "verified_download",
+            "read_scope": "仅核读附件说明页"
+          },
+          {
+            "path": "10.1038_s41467-026-76791-y/si/41467_2026_76791_MOESM4_ESM.pdf",
+            "url": "",
+            "bytes": 4954200,
+            "sha256": "81b7640a939fef54ec7eeb8ed73dd51f7c3baa237f5cdbc1fc86ca8a3b2e23ab",
+            "format": "pdf",
+            "pages": 83,
+            "role": "peer_review_file",
+            "status": "verified_download",
+            "read_scope": "仅核读审稿文件首页身份和p2–4评论边界"
+          }
+        ],
+        "pending": [
+          {
+            "label": "MOESM1 scientific SI PDF",
+            "status": "download_incomplete",
+            "reason": "本批45秒传输超时，保留部分文件不计成功"
+          },
+          {
+            "label": "MOESM3 Source Data ZIP",
+            "status": "download_incomplete",
+            "reason": "本批45秒传输超时，保留部分文件不计成功"
+          },
+          {
+            "label": "MOESM5 Source Data XLSX",
+            "status": "download_incomplete",
+            "reason": "本批45秒传输超时，保留部分文件不计成功"
+          }
+        ],
+        "read_scope": "正文核读；科学SI未完成，附件说明页和审稿文件局部核读。"
       }
     }
   ]

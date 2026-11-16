@@ -2,6 +2,10 @@
 
 当前总量从[机器目录](../references/corpus/catalog.json)生成；维护流程见[持续升级约定](corpus-growth.md)。旧评测与旧批次报告保留当时的范围和结果，不随新版本改写。
 
+## 2026-11-16 · 分子设计到器件验证
+
+新增B64（Nature Communications），累计63篇，当日新增1篇。正文13页及部分附件归档，正文pp.1–10已核读。科学SI、Source Data和XLSX传输未完成，保留具体待办。根据真实正文更新表征段落中计算、谱学、界面和电化学证据的层级衔接。详见[B64阅读卡](../references/corpus/b64.md)。
+
 ## 2026-11-15 · 模型残差与机制边界
 
 新增B63（Nature Communications），累计62篇。正文11页、23页SI、56页审稿文件和Source Data ZIP已归档。实际核读正文pp.1–10、SI p1–23，并用审稿文件p1–4核对模型与方法边界。根据真实来源补充模型残差段落规则，保留温度、电芯结构和测试窗口限定。详见[B63阅读卡](../references/corpus/b63.md)。
