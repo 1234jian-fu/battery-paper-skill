@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-11-17",
+  "updated_on": "2026-11-18",
   "target": 1000,
   "records": [
     {
@@ -3521,29 +3521,37 @@
             "role": "peer_review_file",
             "status": "verified_download",
             "read_scope": "首页身份与附件类型核对。"
+          },
+          {
+            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-026-76791-y/MediaObjects/41467_2026_76791_MOESM1_ESM.pdf",
+            "bytes": 6543107,
+            "sha256": "2a4435cb37fac809fd9e87d17fd08e308671b1e263e3f8b1a15d5422b0365446",
+            "format": "pdf",
+            "status": "verified_download",
+            "read_scope": "仅文件完整性检查，内容核读待续。",
+            "pages": 67,
+            "path": "10.1038_s41467-026-76791-y/si/41467_2026_76791_MOESM1_ESM.pdf"
+          },
+          {
+            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-026-76791-y/MediaObjects/41467_2026_76791_MOESM5_ESM.xlsx",
+            "bytes": 7854011,
+            "sha256": "d9a0abc99cb54484a633897850a4f501b2132d13f8bfac9ff3bc0736b0ae9b92",
+            "format": "xlsx",
+            "status": "verified_download",
+            "read_scope": "仅文件完整性检查，内容核读待续。",
+            "validation": "ZIP CRC passed",
+            "path": "10.1038_s41467-026-76791-y/si/41467_2026_76791_MOESM5_ESM.xlsx"
           }
         ],
         "pending": [
-          {
-            "label": "41467_2026_76791_MOESM1_ESM.pdf",
-            "status": "download_incomplete",
-            "reason": "本批45秒传输超时，保留部分文件不计成功",
-            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-026-76791-y/MediaObjects/41467_2026_76791_MOESM1_ESM.pdf"
-          },
           {
             "label": "41467_2026_76791_MOESM3_ESM.zip",
             "status": "download_incomplete",
             "reason": "本批45秒传输超时，保留部分文件不计成功",
             "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-026-76791-y/MediaObjects/41467_2026_76791_MOESM3_ESM.zip"
-          },
-          {
-            "label": "41467_2026_76791_MOESM5_ESM.xlsx",
-            "status": "download_incomplete",
-            "reason": "本批45秒传输超时，保留部分文件不计成功",
-            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-026-76791-y/MediaObjects/41467_2026_76791_MOESM5_ESM.xlsx"
           }
         ],
-        "read_scope": "附件说明及审稿文件首页身份核查。科学SI、计算数据ZIP及源数据XLSX待补。"
+        "read_scope": "附件说明及审稿文件首页身份核查。科学SI、计算数据ZIP及源数据XLSX待补。 2026-11-18科学SI和XLSX完整归档，内容待核读；计算ZIP仍未完成。"
       }
     }
   ]
