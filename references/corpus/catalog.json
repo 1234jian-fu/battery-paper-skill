@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-11-19",
+  "updated_on": "2026-11-20",
   "target": 1000,
   "records": [
     {
@@ -3404,7 +3404,7 @@
       "added_on": "2026-11-15",
       "article_type": "original_research",
       "article_url": "https://www.nature.com/articles/s41467-026-79025-3",
-      "pdf_url": "https://www.nature.com/articles/s41467-026-79025-3.pdf",
+      "pdf_url": "https://www.nature.com/articles/s41467-026-79025-3_reference.pdf",
       "relative_pdf_path": "10.1038_s41467-026-79025-3/fulltext/article.pdf",
       "sha256": "14e5dde2893643558e49881fcb429333968e30f748fbe972dbf47c47d7777572",
       "pages": 11,
@@ -3418,7 +3418,7 @@
         "XRD",
         "P2D modelling"
       ],
-      "read_scope": "正文pp.1–10及方法、图注；SI p1–5、6–12、13–23；审稿文件p1–4仅核评论边界；Source Data ZIP CRC验证未分析。",
+      "read_scope": "正文pp.1–10选段与图注，SI p1–23选段。2026-11-20追加正文p7讨论及方法起始段、SI p20–21 Notes8–9及Note10本页部分核读。",
       "structure_survey": true,
       "metadata_verified": true,
       "pdf_verified": true,
@@ -3431,40 +3431,40 @@
         "files": [
           {
             "path": "10.1038_s41467-026-79025-3/si/41467_2026_79025_MOESM1_ESM.pdf",
-            "url": "",
+            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-026-79025-3/MediaObjects/41467_2026_79025_MOESM1_ESM.pdf",
             "bytes": 2252345,
             "sha256": "2a4d374b46df0f87c228bb299178314784aea2240fa2e05d6e872ce82b7be0a9",
             "format": "pdf",
             "pages": 56,
             "role": "peer_review_file",
             "status": "verified_download",
-            "read_scope": "正文pp.1-10及方法，SI p1-5,6-12,13-23；审稿文件p1-4仅核查评论边界；源数据ZIP仅CRC验证，未分析"
+            "read_scope": "首页身份及p1–4选段。"
           },
           {
             "path": "10.1038_s41467-026-79025-3/si/41467_2026_79025_MOESM2_ESM.pdf",
-            "url": "",
+            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-026-79025-3/MediaObjects/41467_2026_79025_MOESM2_ESM.pdf",
             "bytes": 2932011,
             "sha256": "d2348a066db97e2b8ce592387b42b593a7e289638559651b09f7c7bbb775975f",
             "format": "pdf",
             "pages": 23,
             "role": "supplementary_information",
             "status": "verified_download",
-            "read_scope": "正文pp.1-10及方法，SI p1-5,6-12,13-23；审稿文件p1-4仅核查评论边界；源数据ZIP仅CRC验证，未分析"
+            "read_scope": "此前p1–23选段。2026-11-20核读p20 Note8与p21 Note9全文，Note10至本页末。公式仅文本提取，未独立复算。"
           },
           {
             "path": "10.1038_s41467-026-79025-3/si/41467_2026_79025_MOESM3_ESM.zip",
-            "url": "",
+            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-026-79025-3/MediaObjects/41467_2026_79025_MOESM3_ESM.zip",
             "bytes": 13934065,
             "sha256": "3aee498b4c3a696af59e27316bbfc73728763ec8d491379658edba6041fbee8b",
             "format": "zip",
             "pages": null,
             "role": "source_data",
             "status": "verified_download",
-            "read_scope": "正文pp.1-10及方法，SI p1-5,6-12,13-23；审稿文件p1-4仅核查评论边界；源数据ZIP仅CRC验证，未分析"
+            "read_scope": "ZIP完整性检查，未分析数据。"
           }
         ],
         "pending": [],
-        "read_scope": "SI 23页核读，审稿文件56页仅p1–4核边界，Source Data ZIP仅CRC验证未分析。"
+        "read_scope": "逐文件范围见files，2026-11-20新增核读SI p20–21。"
       }
     },
     {
