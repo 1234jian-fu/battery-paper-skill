@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-11-20",
+  "updated_on": "2026-11-21",
   "target": 1000,
   "records": [
     {
@@ -3418,14 +3418,14 @@
         "XRD",
         "P2D modelling"
       ],
-      "read_scope": "正文pp.1–10选段与图注，SI p1–23选段。2026-11-20追加正文p7讨论及方法起始段、SI p20–21 Notes8–9及Note10本页部分核读。",
+      "read_scope": "2026-11-21核读正文物理pp.1–10的摘要、引言、全部结果/讨论、方法及图注文字；未独立复算或逐图测量。SI累计明确核读p20 Note8、p21 Note9与pp.21–22 Note10；早期其余页仅选段。",
       "structure_survey": true,
       "metadata_verified": true,
       "pdf_verified": true,
       "relevant_body_read": true,
       "card": "references/corpus/b63.md",
       "source_note": "出版社正式页面与Article in Press PDF，正文和公开SI已归档。",
-      "reading_provenance": "独立核读本批候选，按正文、SI和审稿文件分别记录。",
+      "reading_provenance": "2026-11-21实际通读主文论证与方法文字，补做反向提纲；2026-11-20的Note8–9核读记录保留。",
       "si": {
         "status": "downloaded",
         "files": [
@@ -3449,7 +3449,7 @@
             "pages": 23,
             "role": "supplementary_information",
             "status": "verified_download",
-            "read_scope": "此前p1–23选段。2026-11-20核读p20 Note8与p21 Note9全文，Note10至本页末。公式仅文本提取，未独立复算。"
+            "read_scope": "2026-11-20核读p20 Note8与p21 Note9；2026-11-21核读pp.21–22 Note10全文。其余页早期仅选段；未独立复算。"
           },
           {
             "path": "10.1038_s41467-026-79025-3/si/41467_2026_79025_MOESM3_ESM.zip",
@@ -3461,10 +3461,210 @@
             "role": "source_data",
             "status": "verified_download",
             "read_scope": "ZIP完整性检查，未分析数据。"
+          },
+          {
+            "path": "10.1038_s41467-026-79025-3/si/zenodo-17074144/settings-Example 4.json",
+            "url": "https://zenodo.org/api/records/17074144/files/settings-Example%204.json/content",
+            "bytes": 1180,
+            "sha256": "f7330be4b78b20f1025fbcfcada433abd3b58596427c4c4b81b0129ddbc24cb7",
+            "format": "json",
+            "role": "external_data_code",
+            "status": "verified_download",
+            "read_scope": "仅大小及提供方MD5核验；未运行代码或分析数据。"
+          },
+          {
+            "path": "10.1038_s41467-026-79025-3/si/zenodo-17074144/OKane2023_EC_DMC_6_4.py",
+            "url": "https://zenodo.org/api/records/17074144/files/OKane2023_EC_DMC_6_4.py/content",
+            "bytes": 59830,
+            "sha256": "4f185c2eff932ebdf94c519681e0086c785015d81ddbfa123f91ccd0bba76f77",
+            "format": "py",
+            "role": "external_data_code",
+            "status": "verified_download",
+            "read_scope": "仅大小及提供方MD5核验；未运行代码或分析数据。"
+          },
+          {
+            "path": "10.1038_s41467-026-79025-3/si/zenodo-17074144/settings-Example 2.json",
+            "url": "https://zenodo.org/api/records/17074144/files/settings-Example%202.json/content",
+            "bytes": 1958,
+            "sha256": "a83f43ffdf1b8a4e381cac09f1fe0f1dc467ef67c1c2229efc2cf4c55fb58113",
+            "format": "json",
+            "role": "external_data_code",
+            "status": "verified_download",
+            "read_scope": "仅大小及提供方MD5核验；未运行代码或分析数据。"
+          },
+          {
+            "path": "10.1038_s41467-026-79025-3/si/zenodo-17074144/Step_1_installation.txt",
+            "url": "https://zenodo.org/api/records/17074144/files/Step_1_installation.txt/content",
+            "bytes": 1882,
+            "sha256": "e7433a8c3440eaf29b54bdd1ce468e7e3a9d8503ff00bd9bc459d1ee8ab7d3ad",
+            "format": "txt",
+            "role": "external_data_code",
+            "status": "verified_download",
+            "read_scope": "仅大小及提供方MD5核验；未运行代码或分析数据。"
+          },
+          {
+            "path": "10.1038_s41467-026-79025-3/si/zenodo-17074144/README_Simulation_peer_review.txt",
+            "url": "https://zenodo.org/api/records/17074144/files/README_Simulation_peer_review.txt/content",
+            "bytes": 2730,
+            "sha256": "b13783bba7e013c3978a5c6d6099bb9d4032ba22dd69dc651cb86f52f0953df5",
+            "format": "txt",
+            "role": "external_data_code",
+            "status": "verified_download",
+            "read_scope": "仅大小及提供方MD5核验；未运行代码或分析数据。"
+          },
+          {
+            "path": "10.1038_s41467-026-79025-3/si/zenodo-17074144/settings-Example 6.json",
+            "url": "https://zenodo.org/api/records/17074144/files/settings-Example%206.json/content",
+            "bytes": 1426,
+            "sha256": "e03934929a86a08c42416890970ccda60bb124ac6e5711c78f390c06c009a00e",
+            "format": "json",
+            "role": "external_data_code",
+            "status": "verified_download",
+            "read_scope": "仅大小及提供方MD5核验；未运行代码或分析数据。"
+          },
+          {
+            "path": "10.1038_s41467-026-79025-3/si/zenodo-17074144/step_4.txt",
+            "url": "https://zenodo.org/api/records/17074144/files/step_4.txt/content",
+            "bytes": 1841,
+            "sha256": "af6a0ca17fb16892a38f76e4f7c56ddae8e480739dd0a448e906b4c491d7f2be",
+            "format": "txt",
+            "role": "external_data_code",
+            "status": "verified_download",
+            "read_scope": "仅大小及提供方MD5核验；未运行代码或分析数据。"
+          },
+          {
+            "path": "10.1038_s41467-026-79025-3/si/zenodo-17074144/step_5.txt",
+            "url": "https://zenodo.org/api/records/17074144/files/step_5.txt/content",
+            "bytes": 1595,
+            "sha256": "5eecef16ad02e6474d817ecaed07cecb4deafd62821a4ff595de56a3f101a024",
+            "format": "txt",
+            "role": "external_data_code",
+            "status": "verified_download",
+            "read_scope": "仅大小及提供方MD5核验；未运行代码或分析数据。"
+          },
+          {
+            "path": "10.1038_s41467-026-79025-3/si/zenodo-17074144/step_3_parameterisation.txt",
+            "url": "https://zenodo.org/api/records/17074144/files/step_3_parameterisation.txt/content",
+            "bytes": 2060,
+            "sha256": "aa9fb54ff08d297657072726fed9a1bf0beb8d4143974d9e50d3145f2d8aac6a",
+            "format": "txt",
+            "role": "external_data_code",
+            "status": "verified_download",
+            "read_scope": "仅大小及提供方MD5核验；未运行代码或分析数据。"
+          },
+          {
+            "path": "10.1038_s41467-026-79025-3/si/zenodo-17074144/step_2_create_virtual environment.txt",
+            "url": "https://zenodo.org/api/records/17074144/files/step_2_create_virtual%20environment.txt/content",
+            "bytes": 2000,
+            "sha256": "c512b8016c0996e151b5d3a9006acb789d15a351f3560073959d4ef5249ef8ae",
+            "format": "txt",
+            "role": "external_data_code",
+            "status": "verified_download",
+            "read_scope": "仅大小及提供方MD5核验；未运行代码或分析数据。"
+          },
+          {
+            "path": "10.1038_s41467-026-79025-3/si/zenodo-17074144/settings-Example 1.json",
+            "url": "https://zenodo.org/api/records/17074144/files/settings-Example%201.json/content",
+            "bytes": 1255,
+            "sha256": "12ca3ceaa6acdcfca53b19bf5bda2bc68c63c5df12a6b531152ac8624d711b0f",
+            "format": "json",
+            "role": "external_data_code",
+            "status": "verified_download",
+            "read_scope": "仅大小及提供方MD5核验；未运行代码或分析数据。"
+          },
+          {
+            "path": "10.1038_s41467-026-79025-3/si/zenodo-17074144/verbose-ECDMC64.txt",
+            "url": "https://zenodo.org/api/records/17074144/files/verbose-ECDMC64.txt/content",
+            "bytes": 646,
+            "sha256": "6bc94d15669988f1e95238e6d91b1174f59a4da26382b21083e70579a408b37d",
+            "format": "txt",
+            "role": "external_data_code",
+            "status": "verified_download",
+            "read_scope": "仅大小及提供方MD5核验；未运行代码或分析数据。"
+          },
+          {
+            "path": "10.1038_s41467-026-79025-3/si/zenodo-17074144/settings-Example 7.json",
+            "url": "https://zenodo.org/api/records/17074144/files/settings-Example%207.json/content",
+            "bytes": 1447,
+            "sha256": "3ba125c5aa9116855496a6bdeef8c0022e1a960b33e415949f7a087a066b9ed4",
+            "format": "json",
+            "role": "external_data_code",
+            "status": "verified_download",
+            "read_scope": "仅大小及提供方MD5核验；未运行代码或分析数据。"
+          },
+          {
+            "path": "10.1038_s41467-026-79025-3/si/zenodo-17074144/README_Experiment_Degradation_Mode_Analysis_Quantification_Procedure.txt",
+            "url": "https://zenodo.org/api/records/17074144/files/README_Experiment_Degradation_Mode_Analysis_Quantification_Procedure.txt/content",
+            "bytes": 2822,
+            "sha256": "00061cde6dc1570fbea1e7a9b5d9052e22ebc143a10b26168388707edd8c6b92",
+            "format": "txt",
+            "role": "external_data_code",
+            "status": "verified_download",
+            "read_scope": "仅大小及提供方MD5核验；未运行代码或分析数据。"
+          },
+          {
+            "path": "10.1038_s41467-026-79025-3/si/zenodo-17074144/verbose-ECDMC.txt",
+            "url": "https://zenodo.org/api/records/17074144/files/verbose-ECDMC.txt/content",
+            "bytes": 646,
+            "sha256": "0346a36ae5e7fcfe7c0e16ea0160f4ec9c43497a0593629fb4b4b9b03ea4f130",
+            "format": "txt",
+            "role": "external_data_code",
+            "status": "verified_download",
+            "read_scope": "仅大小及提供方MD5核验；未运行代码或分析数据。"
+          },
+          {
+            "path": "10.1038_s41467-026-79025-3/si/zenodo-17074144/step_6.txt",
+            "url": "https://zenodo.org/api/records/17074144/files/step_6.txt/content",
+            "bytes": 2324,
+            "sha256": "5b6c6cafc58c697735e8da3feaaf29e347c95e4a052dc0a4a35e7c0a271c6f82",
+            "format": "txt",
+            "role": "external_data_code",
+            "status": "verified_download",
+            "read_scope": "仅大小及提供方MD5核验；未运行代码或分析数据。"
+          },
+          {
+            "path": "10.1038_s41467-026-79025-3/si/zenodo-17074144/settings-Example 5.json",
+            "url": "https://zenodo.org/api/records/17074144/files/settings-Example%205.json/content",
+            "bytes": 2081,
+            "sha256": "5d2e19de92318ecafe08066d61b86ebd8850d5c72450ab34d502b3836f87aa06",
+            "format": "json",
+            "role": "external_data_code",
+            "status": "verified_download",
+            "read_scope": "仅大小及提供方MD5核验；未运行代码或分析数据。"
+          },
+          {
+            "path": "10.1038_s41467-026-79025-3/si/zenodo-17074144/settings-ECDMC64.json",
+            "url": "https://zenodo.org/api/records/17074144/files/settings-ECDMC64.json/content",
+            "bytes": 1382,
+            "sha256": "076fe40a6b6fd48526be4ccb43ee1f4e57dac4f757937a41b0678a2322ceb749",
+            "format": "json",
+            "role": "external_data_code",
+            "status": "verified_download",
+            "read_scope": "仅大小及提供方MD5核验；未运行代码或分析数据。"
+          },
+          {
+            "path": "10.1038_s41467-026-79025-3/si/zenodo-17074144/settings-Example 3.json",
+            "url": "https://zenodo.org/api/records/17074144/files/settings-Example%203.json/content",
+            "bytes": 1467,
+            "sha256": "a8ab7ffcd00989492146d245d13de32eafb4624ff0bd2e1349ad149194e0160a",
+            "format": "json",
+            "role": "external_data_code",
+            "status": "verified_download",
+            "read_scope": "仅大小及提供方MD5核验；未运行代码或分析数据。"
+          },
+          {
+            "path": "10.1038_s41467-026-79025-3/si/zenodo-17074144/OKane2023_EC_DMC_3_7.py",
+            "url": "https://zenodo.org/api/records/17074144/files/OKane2023_EC_DMC_3_7.py/content",
+            "bytes": 58022,
+            "sha256": "c099db27d20e37a201e237356a4645eeab385f4af2cea215dceb9948bfc85cc0",
+            "format": "py",
+            "role": "external_data_code",
+            "status": "verified_download",
+            "read_scope": "仅大小及提供方MD5核验；未运行代码或分析数据。"
           }
         ],
         "pending": [],
-        "read_scope": "逐文件范围见files，2026-11-20新增核读SI p20–21。"
+        "read_scope": "逐文件范围见files；新增20件Zenodo公开代码/配置/说明，仅校验下载，未运行或分析。"
       }
     },
     {
