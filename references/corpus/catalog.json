@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-11-21",
+  "updated_on": "2026-11-23",
   "target": 1000,
   "records": [
     {
@@ -3756,6 +3756,93 @@
         ],
         "pending": [],
         "read_scope": "附件说明及审稿文件首页身份核查。科学SI、计算数据ZIP及源数据XLSX待补。 2026-11-18科学SI和XLSX完整归档，内容待核读；计算ZIP仍未完成。 2026-11-19计算ZIP通过CRC。科学SI实际核读PDF p2、55–61的图注及解释文字（Fig.S1、S54–S60），图中曲线未独立复算。"
+      }
+    },
+    {
+      "id": "B65",
+      "doi": "10.1038/s41586-026-11282-0",
+      "title": "Non-halogen aqueous electrolytes for four-electron iodine conversion",
+      "journal": "Nature",
+      "first_online": "2026-11-11",
+      "added_on": "2026-11-23",
+      "article_type": "original_research",
+      "article_url": "https://www.nature.com/articles/s41586-026-11282-0",
+      "pdf_url": "https://www.nature.com/articles/s41586-026-11282-0.pdf",
+      "relative_pdf_path": "10.1038_s41586-026-11282-0/fulltext/article.pdf",
+      "sha256": "be1aa5c296f474651adb7c36dec6b692860aae90f398a7adbba568f21c39d5ea",
+      "pages": 13,
+      "bytes": 8310547,
+      "topic": "水系碘四电子转化与分工明确的阴离子对照",
+      "methods": [
+        "in situ ATR-IR",
+        "NMR",
+        "molecular dynamics",
+        "electrochemical controls"
+      ],
+      "read_scope": "主文物理pp.1–2全文文字；pp.3–6相关论证正文与Figs.2–4图注；p7配方与ATR-IR方法及p8 ATR-IR、Raman、常规表征和电池构型方法选段。SI Figs.24–27、35图注，Fig.35图像。未核读全部13页或全部SI。",
+      "structure_survey": false,
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "card": "references/corpus/b65.md",
+      "source_note": "出版社正式版本Nature 659,372–377；首页及Crossref核对首次在线2026-11-11。2026-11-23检查保存的出版页和Crossref update-to/relation，未发现更正提示；不代表永久排除后续更新。",
+      "reading_provenance": "正文、方法与必要SI分别定位；公开卡仅独立概括，未移植原图或全文。",
+      "si": {
+        "status": "downloaded",
+        "files": [
+          {
+            "path": "10.1038_s41586-026-11282-0/si/41586_2026_11282_MOESM1_ESM.docx",
+            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-026-11282-0/MediaObjects/41586_2026_11282_MOESM1_ESM.docx",
+            "bytes": 38243506,
+            "sha256": "f1e6fda0c8bb26c3f2da9e54ea5665f7cf06edb3b2cdd6f04c1785d61ea8517a",
+            "format": "docx",
+            "role": "supplementary_information",
+            "status": "verified_download",
+            "read_scope": "核读Supplementary Figs.24–27、35图注；Fig.35图像目视核对，未复算数据。DOCX段落369、374、388、404、475，页码依文档目录为28–30及37。"
+          },
+          {
+            "path": "10.1038_s41586-026-11282-0/si/41586_2026_11282_MOESM2_ESM.pdf",
+            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-026-11282-0/MediaObjects/41586_2026_11282_MOESM2_ESM.pdf",
+            "bytes": 8363567,
+            "sha256": "dd413f7a7909c5e12d2e09231e0a03800781f22d8035393107371cc6fa790109",
+            "format": "pdf",
+            "role": "peer_review_file",
+            "status": "verified_download",
+            "read_scope": "仅格式与完整性检查，未核读或分析。"
+          },
+          {
+            "path": "10.1038_s41586-026-11282-0/si/41586_2026_11282_MOESM3_ESM.xlsx",
+            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-026-11282-0/MediaObjects/41586_2026_11282_MOESM3_ESM.xlsx",
+            "bytes": 486530,
+            "sha256": "bd418fd4547f0abc8a32d1447972c33e7fd42b3a67b13a92bc1b3cc2de63bbea",
+            "format": "xlsx",
+            "role": "source_data",
+            "status": "verified_download",
+            "read_scope": "仅格式与完整性检查，未核读或分析。"
+          },
+          {
+            "path": "10.1038_s41586-026-11282-0/si/41586_2026_11282_MOESM4_ESM.xlsx",
+            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-026-11282-0/MediaObjects/41586_2026_11282_MOESM4_ESM.xlsx",
+            "bytes": 4762080,
+            "sha256": "55c099cf93119d06063accb4990284f8f0573d891cf4559a6ec3487d74f12d0b",
+            "format": "xlsx",
+            "role": "source_data",
+            "status": "verified_download",
+            "read_scope": "仅格式与完整性检查，未核读或分析。"
+          },
+          {
+            "path": "10.1038_s41586-026-11282-0/si/41586_2026_11282_MOESM5_ESM.xlsx",
+            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-026-11282-0/MediaObjects/41586_2026_11282_MOESM5_ESM.xlsx",
+            "bytes": 1748401,
+            "sha256": "c24cd283ca52a9e632c23205af20ae58580ca845918d6568e0e19d41fa10ecb0",
+            "format": "xlsx",
+            "role": "source_data",
+            "status": "verified_download",
+            "read_scope": "仅格式与完整性检查，未核读或分析。"
+          }
+        ],
+        "pending": [],
+        "read_scope": "5件公开附件归档；科学SI仅上述图注和Fig.35图像，其他附件未作内容分析。"
       }
     }
   ]

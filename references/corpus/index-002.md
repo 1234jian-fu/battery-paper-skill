@@ -1,4 +1,4 @@
-# 语料目录 · B52–B64
+# 语料目录 · B52–B65
 
 [返回总索引](../literature-corpus.md)
 
@@ -17,3 +17,4 @@
 | [B62 · Strain-associated nanoscale fluctuating lithium transport within single-crystalline LiNi1/3Mn1/3Co1/3O2 cathode particles](b62.md) | Nature Communications / 2025-10-10 | 单晶正极动态输运：假说预测比较、间接定量和跨时间表征；operando STXM / BCDI / FEA / GITT / DFT / XRD | 相关正文 |
 | [B63 · Electrolyte-dependent physico-chemical interfacial kinetics shape degradation pathways and lifetime in lithium-ion batteries](b63.md) | Nature Communications / 2026-11-05 | 电解液敏感界面动力学与寿命退化；electrochemical diagnostics / GC-MS / XPS / SEM-EDS / XRD / P2D modelling | 局部＋篇级通览 |
 | [B64 · Reconciling strong coordination and anion-reinforced solvation structure enables nonflammable electrolytes for potassium-ion batteries](b64.md) | Nature Communications / 2026-08-14 | 钾离子电池不可燃电解液与溶剂化；DFT / Raman / MD / XPS / electrochemistry | 局部＋篇级通览 |
+| [B65 · Non-halogen aqueous electrolytes for four-electron iodine conversion](b65.md) | Nature / 2026-11-11 | 水系碘四电子转化与分工明确的阴离子对照；in situ ATR-IR / NMR / molecular dynamics / electrochemical controls | 相关正文 |
