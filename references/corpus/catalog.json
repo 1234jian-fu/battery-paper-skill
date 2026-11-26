@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-11-23",
+  "updated_on": "2026-11-26",
   "target": 1000,
   "records": [
     {
@@ -3843,6 +3843,94 @@
         ],
         "pending": [],
         "read_scope": "5件公开附件归档；科学SI仅上述图注和Fig.35图像，其他附件未作内容分析。"
+      }
+    },
+    {
+      "id": "B66",
+      "doi": "10.1038/s41467-026-79291-1",
+      "title": "Low-temperature operation of Ag—C based anodeless all-solid-state pouch cells",
+      "journal": "Nature Communications",
+      "first_online": "2026-11-18",
+      "added_on": "2026-11-26",
+      "article_type": "original_research",
+      "article_url": "https://www.nature.com/articles/s41467-026-79291-1",
+      "pdf_url": "https://www.nature.com/articles/s41467-026-79291-1_reference.pdf",
+      "relative_pdf_path": "10.1038_s41467-026-79291-1/fulltext/article.pdf",
+      "sha256": "be6d43b984db5004f74d76afbf33165eb4ecff8b139e74f2f0e8be3928d9d0f0",
+      "pages": 11,
+      "bytes": 2883817,
+      "topic": "Ag–C无负极全固态软包的低温失效与首次合金活化",
+      "methods": [
+        "operando QEXAFS",
+        "XRD",
+        "CCP-SEM/EDS",
+        "temperature-history controls",
+        "DFT"
+      ],
+      "read_scope": "实际核读主文物理pp.1–10摘要、引言、结果、讨论、方法和图注文字；SI pp.8–10、15图注及pp.17–18表格文字，p10 Fig.S9目视核对。未独立复算光谱、DFT或源数据。",
+      "structure_survey": true,
+      "metadata_verified": true,
+      "pdf_verified": true,
+      "relevant_body_read": true,
+      "card": "references/corpus/b66.md",
+      "source_note": "出版社Article in Press版本；出版页和Crossref核对首次在线日期。2026-11-26 Crossref update-to/relation未列更新，检索到的出版页未见更正提示；后续仍须跟踪正式版本。",
+      "reading_provenance": "主文完整论证文字核读与SI局部核读分别记录；图像目视范围仅SI Fig.S9。",
+      "si": {
+        "status": "downloaded",
+        "files": [
+          {
+            "path": "10.1038_s41467-026-79291-1/si/41467_2026_79291_MOESM1_ESM.pdf",
+            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-026-79291-1/MediaObjects/41467_2026_79291_MOESM1_ESM.pdf",
+            "bytes": 9844729,
+            "sha256": "30df2a5522362133b1f6fc415df4e6c70ff5941412b71869626cca2aa3edb62a",
+            "format": "pdf",
+            "role": "supplementary_information",
+            "status": "verified_download",
+            "read_scope": "核读物理pp.8–10、15图注及pp.17–18表格文字；p10 Fig.S9目视复核。其余页仅定位扫描，未独立复算。"
+          },
+          {
+            "path": "10.1038_s41467-026-79291-1/si/41467_2026_79291_MOESM2_ESM.pdf",
+            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-026-79291-1/MediaObjects/41467_2026_79291_MOESM2_ESM.pdf",
+            "bytes": 67355,
+            "sha256": "8776a756fddaa7c609de4416cc9d046cb69678155c58cadfcb1d4008821e3166",
+            "format": "pdf",
+            "role": "attachment_description",
+            "status": "verified_download",
+            "read_scope": "仅文件完整性核验，未核读或分析。"
+          },
+          {
+            "path": "10.1038_s41467-026-79291-1/si/41467_2026_79291_MOESM3_ESM.zip",
+            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-026-79291-1/MediaObjects/41467_2026_79291_MOESM3_ESM.zip",
+            "bytes": 6108,
+            "sha256": "75ae1d6216928cb89ec7bcfd42921fc07176ca2cd7337cc0ae53922a6989b5c8",
+            "format": "zip",
+            "role": "supplementary_data",
+            "status": "verified_download",
+            "read_scope": "仅文件完整性核验，未核读或分析。"
+          },
+          {
+            "path": "10.1038_s41467-026-79291-1/si/41467_2026_79291_MOESM4_ESM.pdf",
+            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-026-79291-1/MediaObjects/41467_2026_79291_MOESM4_ESM.pdf",
+            "bytes": 1923939,
+            "sha256": "f2b3e00f42f87d88d93fa415c7dd0e3b0d1cbc36269149cbf70c9d62d4d295a6",
+            "format": "pdf",
+            "role": "peer_review_file",
+            "status": "verified_download",
+            "read_scope": "仅文件完整性核验，未核读或分析。"
+          },
+          {
+            "path": "10.1038_s41467-026-79291-1/si/41467_2026_79291_MOESM5_ESM.xlsx",
+            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-026-79291-1/MediaObjects/41467_2026_79291_MOESM5_ESM.xlsx",
+            "bytes": 19440719,
+            "sha256": "f1f94a2a9c8b1cbd1d87e7a14dd0ece97dcb35fdf11b94d478b4f8738ad85e3a",
+            "format": "xlsx",
+            "role": "source_data",
+            "status": "verified_download",
+            "read_scope": "仅文件完整性核验，未核读或分析。"
+          }
+        ],
+        "pending": [],
+        "read_scope": "全部5件附件已归档；科学SI局部核读，源数据和计算结构未分析。"
       }
     }
   ]

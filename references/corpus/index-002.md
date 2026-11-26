@@ -1,4 +1,4 @@
-# 语料目录 · B52–B65
+# 语料目录 · B52–B66
 
 [返回总索引](../literature-corpus.md)
 
@@ -18,3 +18,4 @@
 | [B63 · Electrolyte-dependent physico-chemical interfacial kinetics shape degradation pathways and lifetime in lithium-ion batteries](b63.md) | Nature Communications / 2026-11-05 | 电解液敏感界面动力学与寿命退化；electrochemical diagnostics / GC-MS / XPS / SEM-EDS / XRD / P2D modelling | 局部＋篇级通览 |
 | [B64 · Reconciling strong coordination and anion-reinforced solvation structure enables nonflammable electrolytes for potassium-ion batteries](b64.md) | Nature Communications / 2026-08-14 | 钾离子电池不可燃电解液与溶剂化；DFT / Raman / MD / XPS / electrochemistry | 局部＋篇级通览 |
 | [B65 · Non-halogen aqueous electrolytes for four-electron iodine conversion](b65.md) | Nature / 2026-11-11 | 水系碘四电子转化与分工明确的阴离子对照；in situ ATR-IR / NMR / molecular dynamics / electrochemical controls | 相关正文 |
+| [B66 · Low-temperature operation of Ag—C based anodeless all-solid-state pouch cells](b66.md) | Nature Communications / 2026-11-18 | Ag–C无负极全固态软包的低温失效与首次合金活化；operando QEXAFS / XRD / CCP-SEM/EDS / temperature-history controls / DFT | 局部＋篇级通览 |
